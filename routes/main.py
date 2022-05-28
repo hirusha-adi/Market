@@ -2,4 +2,4 @@ from flask import render_template
 
 
 def index():
-    return "Hello World"
+    return render_template('items/desktop.html')
