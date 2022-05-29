@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Vehicles for Sale in Sri Lanka - Largest Automobile Marketplace</title>
+    <title>{{ title }}</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=5, width=device-width" />
@@ -17,8 +17,9 @@
     <div id="main">
         <div id="logo">
             <div style="position:relative;float:left;text-align:left;padding:5px 0px 5px 5px;"><a
-                    href="//riyasewana.com"><img src="{{ url_for('static', filename='images/others/logo-long.png') }}"
-                        width="105" height="35" alt="Buy &amp; Sell Vehicles in Sri Lanka" /></a></div>
+                    href="{{ url_for('index_no_page') }}"><img
+                        src="{{ url_for('static', filename='images/others/logo-long.png') }}" width="105" height="35"
+                        alt="{{ title }}" /></a></div>
             <div style="position:relative;float:right;margin-top:10px;margin-right:5px;"><a
                     href="https://riyasewana.com/account.php"><img alt="Login"
                         src="https://riyasewana.com/images/login.png" width="24" height="24" /></a></div>
@@ -29,6 +30,7 @@
         </div>
         <div id="content">
             <div class="homebox" style="padding-bottom:4px;">
+                <br>
                 <h1 style="font-size:14px;padding:0px 2px 4px 2px;line-height:1.3em;">Search Vehicles</h1>
                 <div id="srhboxar" style="display:none;">
 
