@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ title }}</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=5, width=device-width" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/others/favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pagination.css') }}">
+
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    <div id="main">
+        <div id="logo">
+            <div style="position:relative;float:left;text-align:left;padding:5px 0px 5px 5px;"><a
+                    href="{{ url_for('index_no_page') }}"><img
+                        src="{{ url_for('static', filename='images/others/logo-long.png') }}" width="105" height="35"
+                        alt="{{ title }}" /></a></div>
+            <div style="position:relative;float:right;margin-top:10px;margin-right:5px;"><a
+                    href="https://riyasewana.com/account.php"><img alt="Login"
+                        src="https://riyasewana.com/images/login.png" width="24" height="24" /></a></div>
+            <div style="position:relative;float:right;margin-top:9px;margin-right:10px;"><a class="bbtn"
+                    style="background-image:linear-gradient(#ffc03b, #ff8d2c);background-color:#ff8d2c;border:0;height:12px;padding:8px;font-weight:bold;"
+                    href="https://riyasewana.com/register.php">Post Free Ad</a></div>
+            <div style="clear:both;"></div>
+
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <div id="footer">
+            <div id="foot">
+
+                {% for one_dimention in page_bottom.pages %}
+                <div style="padding-bottom:20px;">
+                    {% for second_dimention in one_dimention %}
+                    <a href="{{ second_dimention.url }}">
+                        {{ second_dimention.name }}
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    {% endfor %}
+                </div>
+                {% endfor %}
+
+                <div style="padding-bottom:5px;">
+                    <ul class="share-buttons" style="list-style:none;padding:0;display:inline;">
+                        {% for item in page_bottom.socials %}
+                        <li>
+                            <a rel="noopener" href="{{ item.redirect }}" title="{{ item.title }}" target="_blank">
+                                <img alt="{{ item.alt }}" src="{{ item.image }}" width="32" height="32" />
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div style="padding-bottom:5px;">Copyright &copy; {{ page_bottom.company_name }}</div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myshow() {
+            document.getElementById("srhboxar").style.display = "block";
+            document.getElementById("sfilters").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
