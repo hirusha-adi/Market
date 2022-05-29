@@ -1,0 +1,484 @@
+{% extends "base/mobile.html" %}
+
+{% block head %}
+<style>
+    a,
+    b,
+    body,
+    center,
+    div,
+    font,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    html,
+    img,
+    li,
+    p,
+    table,
+    td,
+    tr,
+    u,
+    ul,
+    var {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: 0 0
+    }
+
+    ul {
+        list-style: none
+    }
+
+    :focus {
+        outline: 0
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0
+    }
+
+    body,
+    html {
+        height: 100%;
+        width: 100%
+    }
+
+    body {
+        font-family: 'Open Sans', sans-serif, Arial;
+        background-color: #f5f5f5;
+        line-height: 1;
+        color: #636b75
+    }
+
+    h3 {
+        padding: 5px 0;
+        text-align: center
+    }
+
+    h3 a {
+        font-size: 14px;
+        text-align: center
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        line-height: 1.2em
+    }
+
+    p {
+        padding: 3px 0 2px 0
+    }
+
+    table td {
+        padding: 5px;
+        vertical-align: middle
+    }
+
+    .moret tr td {
+        border-bottom: 1px solid #ddd;
+        padding: 5px;
+        line-height: normal;
+        text-align: left;
+        font-size: 13px;
+        vertical-align: middle;
+    }
+
+    #main {
+        text-align: center;
+        height: 100%;
+        width: 100%
+    }
+
+    #logo,
+    #footer {
+        background-color: #039BE6;
+    }
+
+    #logo img {
+        display: block
+    }
+
+    #content {
+        padding: 6px 0 0 0;
+        background-color: #f5f5f5;
+        clear: both;
+    }
+
+    #foot {
+        margin: auto;
+        padding: 15px 0;
+        font-size: 10px
+    }
+
+    #foot a {
+        color: #f1f1f1;
+        text-decoration: none
+    }
+
+    #foot a:hover {
+        text-decoration: underline
+    }
+
+    .more {
+        text-align: center
+    }
+
+    .more a {
+        color: #3e911b
+    }
+
+    .more a:hover {
+        color: #030
+    }
+
+    .moreh {
+        font-size: 13px;
+        font-weight: 700
+    }
+
+    .moreph {
+        font-size: 15px;
+        color: #036;
+        font-weight: 700
+    }
+
+    .moreph a {
+        text-decoration: none;
+        color: #3683dc;
+    }
+
+    .clear {
+        clear: both
+    }
+
+    ul.share-buttons {
+        list-style: none;
+        padding: 0
+    }
+
+    ul.share-buttons li {
+        display: inline;
+        padding-right: 5px
+    }
+
+    .moret {
+        width: 100%;
+    }
+
+    #sliderFrame {
+        position: relative;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+
+    #slider {
+        width: 100%;
+        height: 200px;
+        background: transparent url(https://riyasewana.com/images/loading.gif) no-repeat 50% 50%;
+        position: relative;
+        margin: 0 auto;
+        transform: translate3d(0, 0, 0);
+    }
+
+    #thumbs {
+        margin: 5px 0px;
+        text-align: center;
+        font-size: 0;
+    }
+
+    #thumbs .thumb {
+        display: inline-block;
+        margin: 0 1px;
+        border: 1px solid #555;
+        padding: 2px 3px;
+    }
+
+    #thumbs .thumb img {
+        cursor: pointer;
+        width: 44px;
+        height: 33px;
+    }
+
+    .vml {
+        text-decoration: none;
+    }
+
+    .bbtn {
+        display: inline-block;
+        border: 1px solid #f1f1f1;
+        border-radius: 2px;
+        padding: 4px;
+        background-color: #3683dc;
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    .bbtn:hover {
+        text-decoration: underline;
+    }
+
+    .boxl {
+        position: relative;
+        float: left;
+    }
+
+    .rpt {
+        color: #B64926;
+        text-decoration: none;
+        font-size: 11px;
+    }
+
+    .fm {
+        font-size: 12px;
+        color: #3683dc;
+        text-decoration: none;
+    }
+
+    .fm2 {
+        display: inline-block;
+        font-size: 14px;
+        color: #3683dc;
+        text-decoration: none;
+        padding: 7px 1px;
+        margin: 5px 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div id="content">
+    <h1 style="font-size:14px;">Peugeot 3008 2011 SUV (Used)</h1>
+    <div id="sliderFrame">
+
+        <div id="slider">
+            <a id="slidpa" href="https://riyasewana.com/uploads/peugeot-3008-2011-2823033912621.jpg">
+                <img style="max-width:100%;max-height:100%;" id="main-image" onclick="loadLarge(); return false;"
+                    src="https://riyasewana.com/uploads/peugeot-3008-2011-2823033912621.jpg"
+                    alt="Peugeot 3008 SUV Sri Lanka" title="Peugeot 3008 SUV Sri Lanka" importance="high">
+            </a>
+        </div>
+
+        <div id="thumbs">
+            <div class="thumb">
+                <a title="Peugeot 3008 SUV Image 1"
+                    href="https://riyasewana.com/uploads/peugeot-3008-2011-2823033912621.jpg"
+                    rel="https://riyasewana.com/uploads/peugeot-3008-2011-2823033912621.jpg"
+                    onclick="loadImage(this, 0); return false;"><img width="48" height="36"
+                        src="https://riyasewana.com/thumb/thumbpeugeot-3008-2011-2823033912621.jpg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div style="clear:both;"></div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="topad"
+        style="width:100%;min-height:250px;padding:8px 0px;border-top:1px solid #ddd;border-bottom:1px solid #ddd;">
+        <script async=""
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3142824530179326"
+            crossorigin="anonymous"></script>
+
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3142824530179326"
+            data-ad-slot="2642052899" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <table class="moret">
+        <tbody>
+            <tr>
+                <td>
+                    <p class="moreh">Contact</p>
+                </td>
+                <td>
+                    <div style="padding-top:6px;" class="moreph boxl"><a title="Call"
+                            href="tel:0705699252">0705699252</a></div>
+                    <div style="position:relative;float:right;"><img src="https://riyasewana.com/images/besafe-m4.png"
+                            width="110" height="30" alt="" style="vertical-align:middle;"></div>
+                    <div class="clear"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh"> Price</p>
+                </td>
+                <td>Negotiable</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p class="moreh">Location</p>
+                </td>
+                <td>Nittambuwa</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">YOM</p>
+                </td>
+                <td>2011</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Mileage (km)</p>
+                </td>
+                <td>132000</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Ad Date</p>
+                </td>
+                <td>2022 May 28 11:03 pm</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Review</p>
+                </td>
+                <td><a style="text-decoration:underline dotted;font-weight:bold;" title="Peugeot 3008 Video Review"
+                        href="https://www.youtube.com/watch?v=ooj7oBpi9rg">Peugeot 3008 Review Video</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Name</p>
+                </td>
+                <td>Tharindu</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Make</p>
+                </td>
+                <td>Peugeot</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh"> Model</p>
+                </td>
+                <td>3008</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Transmission </p>
+                </td>
+                <td>Automatic</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Fuel Type</p>
+                </td>
+                <td>Petrol</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Engine (cc) </p>
+                </td>
+                <td>1600</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Options</p>
+                </td>
+                <td>AIR CONDITION, POWER STEERING, POWER MIRROR, POWER WINDOW</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">More Details</p>
+                </td>
+                <td>📞0701167328<br>
+                    <br>
+                    Peugeot 3008 <br>
+                    2011 brand new <br>
+                    1600 turbo <br>
+                    Previous 2 <br>
+                    Car mart registered <br>
+                    Some service history available <br>
+                    Leather seats <br>
+                    Fully moonroof <br>
+                    Auto parking <br>
+                    8 airbags<br>
+                    Cruise control <br>
+                    Multifunction <br>
+                    Hedup display <br>
+                    Seat heater<br>
+                    Auto retractable mirror <br>
+                    Auto light , auto wipper <br>
+                    Day time running lights<br>
+                    132000km <br>
+                    Fully loaded vehicle <br>
+                    <br>
+                    Home used vehicle <br>
+                    Accident free Minit condition
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Views</p>
+                </td>
+                <td>91</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div style="display:block;position:relative;float:left;margin:0 5px 0 5px"><span
+                            style="color:#e1365d;font-size:15px;">⚠ </span><a class="fm2"
+                            href="https://riyasewana.com/contact.php">Report Ad</a></div>
+                    <div class="bb" style="display:block;position:relative;float:right;margin:0 15px 0 5px"><a
+                            class="vml" rel="nofollow" href="https://riyasewana.com/add-favorite.php?id=4637445"
+                            style="font-size:28px;color:#000;">☆</a></div>
+                    <div class="clear"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div>
+                        <div style="font-weight:bold;text-align:center;padding:3px;">Share this page</div>
+                        <ul class="share-buttons" style="text-align:center;">
+                            <center>
+                                <li>
+                                    <a rel="noopener"
+                                        href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Friyasewana.com&amp;t="
+                                        title="Share on Facebook" target="_blank"
+                                        onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&amp;t=' + encodeURIComponent(document.URL)); return false;">
+                                        <img src="//riyasewana.com/images/Facebook.png" width="30" height="30" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a rel="noopener"
+                                        href="https://twitter.com/intent/tweet?source=http%3A%2F%2Friyasewana.com&amp;text=:%20http%3A%2F%2Friyasewana.com&amp;via=riyasewana"
+                                        target="_blank" title="Tweet"
+                                        onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">
+                                        <img src="//riyasewana.com/images/Twitter.png" width="30" height="30" alt="">
+                                    </a>
+                                </li>
+                            </center>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="clear"></div>
+</div>
+
+{% endblock %}
+
+{% block bottom %}
+<script>
+    var cons_index = 0; function loadImage(obj, index) { cons_index = index; document.getElementById("main-image").src = obj.getAttribute("href"); document.getElementById("slidpa").href = obj.getAttribute("href"); }
+    function loadLarge() {
+        var rep_url = "https://riyasewana.com/large-images-mobile.php?id=4637445&index=" + cons_index;
+        window.open(rep_url, "_self")
+    }
+</script>
+{% endblock %}
