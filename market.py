@@ -1,5 +1,6 @@
 from flask import Flask, g
 from routes.main import *
+from routes.post import *
 from database import settings
 
 app = Flask(__name__)
@@ -10,6 +11,7 @@ app.add_url_rule("/", 'index_no_page', index_no_page, methods=['GET'])
 app.add_url_rule("/<page>", 'index', index, methods=['GET'])
 app.add_url_rule("/login", 'login', login, methods=['GET', 'POST'])
 app.add_url_rule("/profile", 'profile', profile, methods=['GET'])
+app.add_url_rule("/one_post", 'one_post', one_post, methods=['GET'])
 
 
 @app.before_request
