@@ -6,10 +6,13 @@ with open(filenames.settings, "r", encoding="utf-8") as _file:
 
 
 class Web:
-    host: str = data["web"]["host"]
-    port: int = data["web"]["port"]
-    debug: bool = data["web"]["debug"]
+    web = data["web"]
+    host: str = web["host"]
+    port: int = web["port"]
+    debug: bool = web["debug"]
 
 
 class Dekstop:
-    pass
+    desktop = data["desktop"]
+    top = desktop["top"]
+    bottom = desktop["bottom"]
