@@ -8,6 +8,8 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=5, width=device-width" />
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/others/favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pagination.css') }}">
 
 </head>
 
@@ -500,17 +502,16 @@
                 </div>
             </div>
             <div style="padding:0px 10px 2px 10px;">
-                <div style="position:relative;float:left;font-size:13px;padding-top:4px;">&nbsp;48093 Results</div>
+                <div style="position:relative;float:left;font-size:13px;padding-top:4px;">{{ pagination.info }}
+                </div>
                 <div id="sfilters" style="position:relative;float:right;"><input type="button" class="bbtn round"
                         onclick="myshow();"
                         style="background-color:#00b159;width:100px;padding:3px;font-weight:bold;border-color:#00b159;"
                         value="Search Filters" /></div>
                 <div class="clear"></div>
             </div>
-            <div class="pagination"> <a class="current">1</a> <a href="//riyasewana.com/search?page=2">2</a> <a
-                    href="//riyasewana.com/search?page=3">3</a> <a href="//riyasewana.com/search?page=4">4</a> <a
-                    href="//riyasewana.com/search?page=5">5</a> <a href="//riyasewana.com/search?page=2">Next</a> <a
-                    href="//riyasewana.com">Home</a>
+            <div class="pagination">
+                {{ pagination.links }}
                 <div class="clear"></div>
             </div>
             <ul>
@@ -535,32 +536,33 @@
                         <div class="clear"></div>
                     </div>
                 </li>
+                {% for item in items %}
                 <li>
                     <div class="item">
-                        <h2 class="more"><a title="Peugeot 3008 2011 SUV"
-                                href="https://riyasewana.com/buy/peugeot-3008-sale-nittambuwa-4637445">Peugeot 3008 2011
-                                SUV</a></h2>
-                        <div class="imgbox"><a title="Peugeot 3008 2011 SUV"
+                        <h2 class="more"><a title="{{ item.title }}"
+                                href="https://riyasewana.com/buy/peugeot-3008-sale-nittambuwa-4637445">
+                                {{ item.title }}
+                            </a></h2>
+                        <div class="imgbox"><a title="{{ item.title }}"
                                 href="https://riyasewana.com/buy/peugeot-3008-sale-nittambuwa-4637445"><img
-                                    src="//riyasewana.com/thumb/thumbpeugeot-3008-2011-2823033912621.jpg"
-                                    alt="Peugeot 3008 2011 SUV" width="100" height="75" importance="high" />
+                                    src="{{ item.thumnail }}" alt="{{ item.title }}" width="100" height="75"
+                                    importance="high" />
                                 <div class="clear"></div>
                             </a></div>
                         <div class="boxtext">
-                            <div class="boxintxt"> Nittambuwa</div>
-                            <div class="boxintxt b"> Negotiable</div>
-                            <div class="boxintxt"> 132000 (km)</div>
-                            <div class="boxintxt s"> 2022-05-28</div>
+                            <div class="boxintxt">{{ item.location }}</div>
+                            <div class="boxintxt b"> {{ item.price }}</div>
+                            <div class="boxintxt"> {{ item.description }}</div>
+                            <div class="boxintxt s">{{ item.date }}</div>
                         </div>
                         <div class="clear"></div>
                     </div>
                 </li>
+                {% endfor %}
             </ul>
             <div class="clear"></div>
-            <div class="pagination"> <a class="current">1</a> <a href="//riyasewana.com/search?page=2">2</a> <a
-                    href="//riyasewana.com/search?page=3">3</a> <a href="//riyasewana.com/search?page=4">4</a> <a
-                    href="//riyasewana.com/search?page=5">5</a> <a href="//riyasewana.com/search?page=2">Next</a> <a
-                    href="//riyasewana.com">Home</a>
+            <div class="pagination">
+                {{ pagination.info }}{{ pagination.links }}
                 <div class="clear"></div>
             </div>
             <div style="text-align:center;padding:10px;">
