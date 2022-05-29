@@ -12,7 +12,7 @@ def index(page):
     current_page = int(page)
     list_all = test.items
     list_length = len(list_all)
-    per_page = 3
+    per_page = 4
 
     pagination = Pagination(
         per_page=per_page,
