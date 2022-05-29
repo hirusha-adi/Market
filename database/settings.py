@@ -15,4 +15,5 @@ class Web:
 class Dekstop:
     desktop = data["desktop"]
     top = desktop["top"]
+    header = desktop["header"]
     bottom = desktop["bottom"]
