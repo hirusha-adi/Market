@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, g, session
 from routes.main import *
 from database import settings
 
@@ -8,6 +8,17 @@ app.secret_key = "VerySecret12345"
 
 app.add_url_rule("/", 'index_no_page', index_no_page, methods=['GET'])
 app.add_url_rule("/<page>", 'index', index, methods=['GET'])
+app.add_url_rule("/login", 'login', login, methods=['GET', 'POST'])
+app.add_url_rule("/profile", 'profile', profile, methods=['GET'])
+
+
+@app.before_request
+def before_request():
+    g.user = None
+    if 'user_id' in session:
+        user = [x for x in users if x.id == session['user_id']][0]
+        g.user = user
+
 
 app.run(
     settings.Web.host,

@@ -1,5 +1,5 @@
 from django.shortcuts import redirect
-from flask import render_template, request, url_for, redirect, session
+from flask import render_template, request, url_for, redirect, session, g
 import utils.test as test
 from flask_paginate import Pagination
 from database.settings import Dekstop
@@ -57,8 +57,15 @@ def login():
         user = [x for x in users if x.username == username][0]
         if user and user.password == password:
             session['user_id'] = user.id
-            return render_template('test.html')
+            return redirect(url_for('profile'))
         else:
             return redirect(url_for('login'))
     else:
         return render_template('login.html')
+
+
+def profile():
+    if not g.user:
+        return redirect(url_for('login'))
+
+    return render_template('test.html')
