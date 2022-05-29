@@ -9,8 +9,8 @@
             "image_path_from_static": "",
             "menu_items": [
                 {
-                    "title": "Contact Us",
-                    "url": "index_no_page"
+                    "title": "My Profile",
+                    "url": "profile"
                 },
                 {
                     "title": "Contact Us",
