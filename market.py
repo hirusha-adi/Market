@@ -1,4 +1,4 @@
-from flask import Flask, g, session
+from flask import Flask, g
 from routes.main import *
 from database import settings
 
