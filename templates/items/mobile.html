@@ -568,13 +568,13 @@
 
                 <div style="padding-bottom:5px;">
                     <ul class="share-buttons" style="list-style:none;padding:0;display:inline;">
+                        {% for item in page_bottom.socials %}
                         <li>
-                            <a rel="noopener" href="https://www.youtube.com/c/RiyasewanaCom" title="Youtube Channel"
-                                target="_blank">
-                                <img alt="Youtube Channel" src="//riyasewana.com/images/icons/youtube-light.svg"
-                                    width="32" height="32" />
+                            <a rel="noopener" href="{{ item.redirect }}" title="{{ item.title }}" target="_blank">
+                                <img alt="{{ item.alt }}" src="{{ item.image }}" width="32" height="32" />
                             </a>
                         </li>
+                        {% endfor %}
                     </ul>
                 </div>
 
