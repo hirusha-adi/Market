@@ -1,152 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base/desktop.html" %}
 
-<head>
-    <title>{{ title }}</title>
+{% block content %}
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/desktop-base.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/desktop.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/pagination.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='images/others/favicon.png') }}">
-</head>
-
-<body>
-    <div id="wrapper">
-        <div id="header">
-            <div id="head_wrap">
-                <div id="logo"><a href="/" title="Riyasewana"><img height="50"
-                            src="{{ url_for('static', filename='images/others/logo-long.png') }}"
-                            alt="Riyasewana" /></a></div>
-                <div id="menu">
-                    <ul>
-                        {% for item in page_header.menu_items %}
-                        <li>
-                            <a href="{{ url_for(item.url) }}">
-                                {{ item.title }}
-                            </a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-        <div id="mdle_inr">
-            <div id="middlebtm">
-                <div id="midbtmctn">
-
-                    {% for item in page_top.buttons %}
-                    <a title="{{ item.title }}" href="{{ item.href }}" class="gbtn round">
-                        {% for text_line in item.text %}
-                        {{ text_line }}<br>
-                        {% endfor %}
-                    </a>
-                    {% endfor %}
-
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-        <div style="width:1000px;margin:auto;padding-top:6px;">
-            <div
-                style="width:990px;margin:auto 10px 10px auto;box-shadow:0 2px 4.9px .1px rgba(0,0,0,.6);background-color:#f9f9f9;border-radius:6px;opacity:0.7;">
-                <div style="margin-left:9px;width:975px;padding:5px;">
-                    <h1 style="color:#1C1D21;">Search Vehicles</h1>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-        <div id="mbody" style="width:1085px;">
-            <div id="content" style="margin-left:25px;">
-                <h2 class="results" style="text-align:left;margin-left:17px;">
-                    {{ pagination.info }}
-                </h2>
-                <div class="pagination">
-                    {{ pagination.links }}
-                    <div class="clear"></div>
-                </div>
-
-                <ul style="padding-left:17px;">
-
-                    {% for item in items %}
-                    <li class="item round">
-                        <h2 class="more">
-                            <a title="{{ item.title }}" href="https://google.com">
-                                {{ item.title }}
-                            </a>
-                        </h2>
-                        <div class="imgbox">
-                            <a title="{{ item.title }}"
-                                href="https://riyasewana.com/buy/mazda-familia-sale-matara-4637380">
-                                <img src="{{ item.thumnail }}" alt="{{ item.title }}" width="100" height="75"
-                                    loading="lazy" />
-                            </a>
-                        </div>
-                        <div class="boxtext">
-                            <div class="boxintxt">{{ item.location }}</div>
-                            <div class="boxintxt b"> {{ item.price }}</div>
-                            <div class="boxintxt"> {{ item.description }}</div>
-                            <div class="boxintxt s">{{ item.date }}</div>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <div class="pagination">
-                    {{ pagination.links }}
-                    <div class="clear"></div>
-                </div>
-                <h2 class="results" style="text-align:left;margin-left:17px;">
-                    {{ pagination.info }}
-                </h2>
-            </div>
-        </div>
-        <div id="sidebar" style="width:340px;">
-            <div id="sidead">
-                <div style="padding:15px 0;min-height:250px;">
-                    <h3>
-                        gbcfdgfd
-                    </h3>
-                </div>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
-
-    <br>
-    <br>
-    <div id="footer">
-        <div id="foot">
-            <div style="position:relative;float:left;padding-top:5px;margin-left:50px;">
-                Copyright &copy; {{ page_bottom.company_name }} &nbsp;
-                <a href="//riyasewana.com/terms.php">
-                    Terms &amp; Conditions
-                </a>
-                |
-                <a href="//riyasewana.com/privacy.php">
-                    Privacy Policy
-                </a>
-            </div>
-            <div style="position:relative;float:right;margin-right:45px;">
-                <ul class="share-buttons">
-                    {% for item in page_bottom.socials %}
-                    <li>
-                        <a rel="noopener" href="{{ item.redirect }}" title="{{ item.title }}" target="_blank">
-                            <img style="padding:0 6px 5px 0;" alt="{{ item.alt }}" src="{{ item.image }}" width="35"
-                                height="35" />
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+<div id="mbody" style="width:1085px;">
+    <div id="content" style="margin-left:25px;">
+        <h2 class="results" style="text-align:left;margin-left:17px;">
+            {{ pagination.info }}
+        </h2>
+        <div class="pagination">
+            {{ pagination.links }}
             <div class="clear"></div>
         </div>
-    </div>
+
+        <ul style="padding-left:17px;">
+
+            {% for item in items %}
+            <li class="item round">
+                <h2 class="more">
+                    <a title="{{ item.title }}" href="https://google.com">
+                        {{ item.title }}
+                    </a>
+                </h2>
+                <div class="imgbox">
+                    <a title="{{ item.title }}" href="https://riyasewana.com/buy/mazda-familia-sale-matara-4637380">
+                        <img src="{{ item.thumnail }}" alt="{{ item.title }}" width="100" height="75" loading="lazy" />
+                    </a>
+                </div>
+                <div class="boxtext">
+                    <div class="boxintxt">{{ item.location }}</div>
+                    <div class="boxintxt b"> {{ item.price }}</div>
+                    <div class="boxintxt"> {{ item.description }}</div>
+                    <div class="boxintxt s">{{ item.date }}</div>
+                </div>
+                <div class="clear"></div>
+            </li>
+            {% endfor %}
+
+        </ul>
+
+        <div class="pagination">
+            {{ pagination.links }}
+            <div class="clear"></div>
+        </div>
+        <h2 class="results" style="text-align:left;margin-left:17px;">
+            {{ pagination.info }}
+        </h2>
 
     </div>
-</body>
+</div>
 
-</html>
+<div id="sidebar" style="width:340px;">
+    <div id="sidead">
+        <div style="padding:15px 0;min-height:250px;">
+            <h3>
+                gbcfdgfd
+            </h3>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+
+{% endblock %}
