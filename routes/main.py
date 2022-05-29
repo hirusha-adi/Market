@@ -61,11 +61,11 @@ def login():
         else:
             return redirect(url_for('login'))
     else:
-        return render_template('login.html')
+        return render_template('user/login.html')
 
 
 def profile():
     if not g.user:
         return redirect(url_for('login'))
 
-    return render_template('test.html')
+    return render_template('user/profile.html')
