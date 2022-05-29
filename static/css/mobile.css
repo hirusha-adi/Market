@@ -277,29 +277,6 @@ input {
     color: #495057;
 }
 
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('https://riyasewana.com/fonts/open-sans-v18-latin-regular.eot');
-    src: local(''), url('https://riyasewana.com/fonts/open-sans-v18-latin-regular.eot?#iefix') format('embedded-opentype'), url('https://riyasewana.com/fonts/open-sans-v18-latin-regular.woff2') format('woff2'), url('https://riyasewana.com/fonts/open-sans-v18-latin-regular.woff') format('woff'), url('https://riyasewana.com/fonts/open-sans-v18-latin-regular.ttf') format('truetype'), url('https://riyasewana.com/fonts/open-sans-v18-latin-regular.svg#OpenSans') format('svg');
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('https://riyasewana.com/fonts/open-sans-v18-latin-700.eot');
-    src: local(''), url('https://riyasewana.com/fonts/open-sans-v18-latin-700.eot?#iefix') format('embedded-opentype'), url('https://riyasewana.com/fonts/open-sans-v18-latin-700.woff2') format('woff2'), url('https://riyasewana.com/fonts/open-sans-v18-latin-700.woff') format('woff'), url('https://riyasewana.com/fonts/open-sans-v18-latin-700.ttf') format('truetype'), url('https://riyasewana.com/fonts/open-sans-v18-latin-700.svg#OpenSans') format('svg');
-}
-
-.google-ad {
-    margin: 6px auto;
-    padding-bottom: 4px;
-}
-
 .vnum {
     position: absolute;
     right: 15px;
