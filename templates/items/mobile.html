@@ -544,68 +544,42 @@
                 {{ pagination.info }}{{ pagination.links }}
                 <div class="clear"></div>
             </div>
+
             <div style="text-align:center;padding:10px;">
-                <h2 style="font-size:14px;color:#333;">Latest Vehicle Review Video</h2><iframe width="320" height="188"
-                    src="https://www.youtube.com/embed/DF4xnwsZgtw" title="Latest Vehicle Review Video" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <h2 style="font-size:14px;color:#333;">Latest Vehicle Review Video</h2>
+                <!-- Any other more code can be places here -->
             </div>
-            <div style="padding-bottom:5px;">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3142824530179326"
-                    data-ad-slot="8901638596" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+
         </div>
         <div class="clear"></div>
         <div id="footer">
             <div id="foot">
-                <div style="padding-bottom:20px;"><a href="//riyasewana.com">Home</a> &nbsp;&nbsp;&nbsp;&nbsp; <a
-                        href="https://riyasewana.com/account.php">Sell Vehicles</a> &nbsp;&nbsp;&nbsp;&nbsp; <a
-                        href="https://riyasewana.com/contact.php">Contact Us</a></div>
-                <div style="padding-bottom:15px;"><a href="//riyasewana.com/terms.php">Terms</a>
-                    &nbsp;&nbsp;&nbsp;&nbsp; <a href="//riyasewana.com/privacy.php">Privacy</a> &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="https://riyasewana.com/contribute.php">Contribute</a> &nbsp;&nbsp;&nbsp;&nbsp; <a
-                        title="Vehicle Leasing" href="https://riyasewana.com/leasing-offers.php">Leasing Offers</a>
+
+                {% for one_dimention in page_bottom.pages %}
+                <div style="padding-bottom:20px;">
+                    {% for second_dimention in one_dimention %}
+                    <a href="{{ second_dimention.url }}">
+                        {{ second_dimention.name }}
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    {% endfor %}
                 </div>
+                {% endfor %}
+
                 <div style="padding-bottom:5px;">
                     <ul class="share-buttons" style="list-style:none;padding:0;display:inline;">
-                        <li><a rel="noopener" href="https://www.youtube.com/c/RiyasewanaCom" title="Youtube Channel"
-                                target="_blank"><img alt="Youtube Channel"
-                                    src="//riyasewana.com/images/icons/youtube-light.svg" width="32" height="32" /></a>
+                        <li>
+                            <a rel="noopener" href="https://www.youtube.com/c/RiyasewanaCom" title="Youtube Channel"
+                                target="_blank">
+                                <img alt="Youtube Channel" src="//riyasewana.com/images/icons/youtube-light.svg"
+                                    width="32" height="32" />
+                            </a>
                         </li>
-                        <li><a rel="noopener" href="https://www.facebook.com/riyasewana" title="Facebook"
-                                target="_blank"><img alt="" src="//riyasewana.com/images/icons/facebook-light.svg"
-                                    width="32" height="32" /></a></li>
-                        <li><a rel="noopener" href="https://www.instagram.com/riyasewanacom/"
-                                title="Riyasewana Instagram" target="_blank"><img alt=""
-                                    src="//riyasewana.com/images/icons/instagram-light.svg" width="32"
-                                    height="32" /></a></li>
-                        <li><a rel="noopener" href="https://www.facebook.com/groups/riyasewana.lk"
-                                title="Facebook Group" target="_blank"><img alt=""
-                                    src="//riyasewana.com/images/icons/group-light.svg" width="32" height="32" /></a>
-                        </li>
-                        <li><a rel="noopener" href="https://www.linkedin.com/company/riyasewana"
-                                title="Riyasewana Linkedin" target="_blank"><img alt=""
-                                    src="//riyasewana.com/images/icons/linkedin-light.svg" width="32" height="32" /></a>
-                        </li>
-                        <li><a rel="noopener" href="https://twitter.com/riyasewana" target="_blank" title="Tweet"><img
-                                    alt="" src="//riyasewana.com/images/icons/twitter-light.svg" width="32"
-                                    height="32" /></a></li>
                     </ul>
                 </div>
-                <div style="padding:5px 0;"><a rel="noopener"
-                        href="https://play.google.com/store/apps/details?id=com.riyasewana.android.riyasewana"
-                        target="_blank" title="Riyasewana Android App Available on Google Play"><img
-                            alt="Available on Google Play" src="//riyasewana.com/images/a-google-play.png" width="100"
-                            height="30" /></a></div>
-                <div style="padding:5px 0;"><a rel="noopener"
-                        href="https://apps.apple.com/us/app/riyasewana/id1583270163?itsct=apps_box_badge&amp;itscg=30200"
-                        target="_blank" title="Download Riyasewana iOS App on the App Store"><img
-                            alt="Download on the App Store" src="//riyasewana.com/images/app-store.png" width="100"
-                            height="33" /></a></div>
-                <div style="padding-bottom:5px;">Copyright &copy; Riyasewana Lanka (Pvt) Ltd.</div>
+
+                <div style="padding-bottom:5px;">Copyright &copy; {{ page_bottom.company_name }}</div>
+
             </div>
         </div>
     </div>
