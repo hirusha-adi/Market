@@ -9,7 +9,8 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/desktop-base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/desktop.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pagination.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/others/favicon.png') }}">
 </head>
 
 <body>
@@ -120,64 +121,50 @@
                         <div class="clear"></div>
                     </li>
                 </ul>
-
-                <div class="clear"></div>
-                <div class="pagination"> <a class="current">1</a> <a href="//riyasewana.com/search?page=2">2</a> <a
-                        href="//riyasewana.com/search?page=3">3</a> <a href="//riyasewana.com/search?page=4">4</a> <a
-                        href="//riyasewana.com/search?page=5">5</a> <a href="//riyasewana.com/search?page=6">6</a> <a
-                        href="//riyasewana.com/search?page=7">7</a> <a href="//riyasewana.com/search?page=8">8</a> <a
-                        href="//riyasewana.com/search?page=9">9</a> <a href="//riyasewana.com/search?page=10">10</a> <a
-                        href="//riyasewana.com/search?page=11">11</a> <a href="//riyasewana.com/search?page=12">12</a>
-                    <a href="//riyasewana.com/search?page=13">13</a> <a href="//riyasewana.com/search?page=14">14</a> <a
-                        href="//riyasewana.com/search?page=15">15</a> <a href="//riyasewana.com/search?page=16">16</a>
-                    <a href="//riyasewana.com/search?page=17">17</a> <a href="//riyasewana.com/search?page=18">18</a> <a
-                        href="//riyasewana.com/search?page=19">19</a> <a href="//riyasewana.com/search?page=20">20</a>
-                    <a href="//riyasewana.com/search?page=802">...802</a> <a
-                        href="//riyasewana.com/search?page=2">Next</a>
-                    <div class="clear"></div>
+                {{ pagination.links }}
+            </div>
+        </div>
+        <div id="sidebar" style="width:340px;">
+            <div id="sidead">
+                <div style="padding:15px 0;min-height:250px;">
+                    <h3>
+                        gbcfdgfd
+                    </h3>
                 </div>
             </div>
-            <div id="sidebar" style="width:340px;">
-                <div id="sidead">
-                    <div style="padding:15px 0;min-height:250px;">
-                        <h3>
-                            gbcfdgfd
-                        </h3>
-                    </div>
-                </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div id="footer">
+        <div id="foot">
+            <div style="position:relative;float:left;padding-top:5px;margin-left:50px;">Copyright &copy; Riyasewana
+                Lanka (Pvt) Ltd. &nbsp;<a href="//riyasewana.com/terms.php">Terms &amp; Conditions</a> | <a
+                    href="//riyasewana.com/privacy.php">Privacy Policy</a></div>
+            <div style="position:relative;float:right;margin-right:45px;">
+                <ul class="share-buttons">
+                    <li><a rel="noopener" href="https://www.youtube.com/c/RiyasewanaCom" title="Youtube"
+                            target="_blank"><img style="padding:0 6px 5px 0;" alt="Youtube Channel"
+                                src="//riyasewana.com/images/yout.png" width="32" height="22" /></a></li>
+                    <li><a rel="noopener" href="https://www.facebook.com/riyasewana" title="Facebook"
+                            target="_blank"><img alt="" src="//riyasewana.com/images/simfb.png" width="32"
+                                height="32" /></a></li>
+                    <li><a rel="noopener" href="https://twitter.com/riyasewana" target="_blank" title="Tweet"><img
+                                alt="" src="//riyasewana.com/images/simtwit.png" width="32" height="32" /></a></li>
+                    <li><a rel="noopener" href="https://www.facebook.com/groups/riyasewana.lk"
+                            title="Riyasewana Facebook Group" target="_blank"><img style="padding:0 3px 1px 3px;" alt=""
+                                src="//riyasewana.com/images/fb-group.png" width="30" height="30" /></a></li>
+                    <li><a rel="noopener" href="https://www.instagram.com/riyasewanacom/" title="Riyasewana Instagram"
+                            target="_blank"><img style="padding:0 3px 3px 3px;" alt=""
+                                src="//riyasewana.com/images/instagram.png" width="24" height="24" /></a></li>
+                    <li><a rel="noopener" href="https://www.linkedin.com/company/riyasewana" title="Riyasewana Linkedin"
+                            target="_blank"><img style="padding:0 3px 3px 3px;" alt=""
+                                src="//riyasewana.com/images/linkedin.png" width="24" height="24" /></a></li>
+                </ul>
             </div>
             <div class="clear"></div>
         </div>
-
-        <div id="footer">
-            <div id="foot">
-                <div style="position:relative;float:left;padding-top:5px;margin-left:50px;">Copyright &copy; Riyasewana
-                    Lanka (Pvt) Ltd. &nbsp;<a href="//riyasewana.com/terms.php">Terms &amp; Conditions</a> | <a
-                        href="//riyasewana.com/privacy.php">Privacy Policy</a></div>
-                <div style="position:relative;float:right;margin-right:45px;">
-                    <ul class="share-buttons">
-                        <li><a rel="noopener" href="https://www.youtube.com/c/RiyasewanaCom" title="Youtube"
-                                target="_blank"><img style="padding:0 6px 5px 0;" alt="Youtube Channel"
-                                    src="//riyasewana.com/images/yout.png" width="32" height="22" /></a></li>
-                        <li><a rel="noopener" href="https://www.facebook.com/riyasewana" title="Facebook"
-                                target="_blank"><img alt="" src="//riyasewana.com/images/simfb.png" width="32"
-                                    height="32" /></a></li>
-                        <li><a rel="noopener" href="https://twitter.com/riyasewana" target="_blank" title="Tweet"><img
-                                    alt="" src="//riyasewana.com/images/simtwit.png" width="32" height="32" /></a></li>
-                        <li><a rel="noopener" href="https://www.facebook.com/groups/riyasewana.lk"
-                                title="Riyasewana Facebook Group" target="_blank"><img style="padding:0 3px 1px 3px;"
-                                    alt="" src="//riyasewana.com/images/fb-group.png" width="30" height="30" /></a></li>
-                        <li><a rel="noopener" href="https://www.instagram.com/riyasewanacom/"
-                                title="Riyasewana Instagram" target="_blank"><img style="padding:0 3px 3px 3px;" alt=""
-                                    src="//riyasewana.com/images/instagram.png" width="24" height="24" /></a></li>
-                        <li><a rel="noopener" href="https://www.linkedin.com/company/riyasewana"
-                                title="Riyasewana Linkedin" target="_blank"><img style="padding:0 3px 3px 3px;" alt=""
-                                    src="//riyasewana.com/images/linkedin.png" width="24" height="24" /></a></li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
+    </div>
 
     </div>
 </body>
