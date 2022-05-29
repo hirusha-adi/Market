@@ -5,6 +5,53 @@
         "debug": true
     },
     "desktop": {
-        "bottom": ""
+        "header": {
+            "image_path_from_static": "",
+            "items": [
+                {
+                    "title": "Contact Us",
+                    "url": "index_no_page"
+                }
+            ]
+        },
+        "top": {
+            "buttons": [
+                {
+                    "title": "Buy Vehicles in Sri Lanka",
+                    "href": "https://google.com",
+                    "text": [
+                        "Buy",
+                        "Vehicles"
+                    ] 
+                },
+                {
+                    "title": "Buy Vehicles in Sri Lanka",
+                    "href": "https://google.com",
+                    "text": [
+                        "Buy",
+                        "Vehicles"
+                    ] 
+                },
+                {
+                    "title": "Buy Vehicles in Sri Lanka",
+                    "href": "https://google.com",
+                    "text": [
+                        "Buy",
+                        "Vehicles"
+                    ] 
+                }
+            ] 
+        },
+        "bottom": {
+            "company_name": "Hirusha Adikari",
+            "socials": [
+                {
+                    "title": "YouTube",
+                    "alt": "Youtube Channel",
+                    "image": "https://riyasewana.com/images/simtwit.png",
+                    "redirect": "https://hirusha.xyz"
+                }
+            ] 
+        }
     }
 }
