@@ -22,14 +22,13 @@
                             alt="Riyasewana" /></a></div>
                 <div id="menu">
                     <ul>
-                        <li><a style="color:#FF983C;font-weight:bold;" href="https://riyasewana.com/register.php"
-                                title="Post Vehicle Ads FREE">Post a Free Ad</a></li>
-                        <li><a href="https://riyasewana.com/login.php">Login</a></li>
-                        <li><a href="https://riyasewana.com/account.php">Edit My Ad</a></li>
-                        <li><a title="Vehicle Lease" href="https://riyasewana.com/leasing-offers.php">Leasing Offer</a>
+                        {% for item in page_header.menu_items %}
+                        <li>
+                            <a href="{{ url_for(item.url) }}">
+                                {{ item.title }}
+                            </a>
                         </li>
-                        <li><a href="https://riyasewana.com/contact.php">Contact Us</a></li>
-                        <li><a class="lastmenu" href="https://riyasewana.com/contribute.php">Contribute</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="clear"></div>
