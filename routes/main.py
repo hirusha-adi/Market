@@ -2,7 +2,6 @@ from django.shortcuts import redirect
 from flask import render_template, request, url_for, redirect
 import utils.test as test
 from flask_paginate import Pagination
-import random
 
 
 def index_no_page():
@@ -11,7 +10,7 @@ def index_no_page():
 
 def index(page):
     current_page = int(page)
-    list_all = [i for i in range(10)]
+    list_all = test.items
     list_length = len(list_all)
     per_page = 3
 
