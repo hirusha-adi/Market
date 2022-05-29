@@ -1,8 +1,13 @@
 from django.shortcuts import redirect
-from flask import render_template, request, url_for, redirect
+from flask import render_template, request, url_for, redirect, session
 import utils.test as test
 from flask_paginate import Pagination
 from database.settings import Dekstop
+from models.user import User
+
+users = test.users
+users.append(User(id=1, username='hi', password='pwd'))
+users.append(User(id=2, username='admin', password='123'))
 
 
 def index_no_page():
@@ -41,3 +46,19 @@ def index(page):
         return render_template('items/mobile.html', **data)
     else:
         return render_template('items/desktop.html', **data)
+
+
+def login():
+    if request.method == 'POST':
+        session.pop('user_id', None)
+        username = request.form['username']
+        password = request.form['password']
+
+        user = [x for x in users if x.username == username][0]
+        if user and user.password == password:
+            session['user_id'] = user.id
+            return render_template('test.html')
+        else:
+            return redirect(url_for('login'))
+    else:
+        return render_template('login.html')
