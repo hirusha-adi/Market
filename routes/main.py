@@ -34,6 +34,7 @@ def index(page):
     data['pagination'] = pagination
     data['page_bottom'] = Dekstop.bottom
     data['page_top'] = Dekstop.top
+    data['page_header'] = Dekstop.header
 
     user_agent = request.headers.get('User-Agent').lower()
     if ("iphone" in user_agent) or ("android" in user_agent):
