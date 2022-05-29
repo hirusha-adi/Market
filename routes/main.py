@@ -2,6 +2,7 @@ from django.shortcuts import redirect
 from flask import render_template, request, url_for, redirect
 import utils.test as test
 from flask_paginate import Pagination
+from database.settings import Dekstop
 
 
 def index_no_page():
@@ -31,6 +32,8 @@ def index(page):
     data['title'] = "Hirusha"
     data['items'] = list_all[min_index:max_index]
     data['pagination'] = pagination
+    data['page_bottom'] = Dekstop.bottom
+    data['page_top'] = Dekstop.top
 
     user_agent = request.headers.get('User-Agent').lower()
     if ("iphone" in user_agent) or ("android" in user_agent):
