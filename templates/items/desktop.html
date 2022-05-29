@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Vehicles for Sale in Sri Lanka - Largest Automobile Marketplace</title>
+    <title>{{ title }}</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -37,23 +37,16 @@
         </div>
         <div id="mdle_inr">
             <div id="middlebtm">
-                <div id="midbtmctn"><a title="Advertise your Vehicle FREE and Spare Parts"
-                        href="https://riyasewana.com/account.php" class="gbtn obtn round">Sell Vehicles<br />and
-                        Parts</a><a title="Buy Vehicles in Sri Lanka" href="//riyasewana.com/search"
-                        class="gbtn round">Buy<br />Vehicles</a><a title="Buy Cars in Sri Lanka"
-                        href="//riyasewana.com/search/cars" class="gbtn round">Buy<br />Cars</a><a
-                        title="Buy Motorbikes in Sri Lanka" href="//riyasewana.com/search/motorcycles"
-                        class="gbtn round">Buy<br /> MotorBikes</a><a title="Buy Vans in Sri Lanka"
-                        href="//riyasewana.com/search/vans" class="gbtn round">Buy<br />Vans</a><a
-                        title="Buy SUVs in Sri Lanka" href="//riyasewana.com/search/suvs"
-                        class="gbtn round">Buy<br />SUVs / Jeeps</a><a title="Buy Lorries in Sri Lanka"
-                        href="//riyasewana.com/search/lorries" class="gbtn round">Buy<br />Lorry</a><a
-                        title="Buy Three Wheels in Sri Lanka" href="//riyasewana.com/search/three-wheels"
-                        class="gbtn round">Buy<br />Three Wheel</a><a
-                        title="Buy Spare Parts and Accessories in Sri Lanka"
-                        href="//riyasewana.com/spare-parts-accessories.php" class="gbtn round">Buy<br />Spare
-                        Parts</a><a title="Wanted Vehicles in Sri Lanka" href="//riyasewana.com/wanted.php"
-                        class="gbtn round">Search<br />Wanted</a>
+                <div id="midbtmctn">
+
+                    {% for item in page_top.buttons %}
+                    <a title="{{ item.title }}" href="{{ item.href }}" class="gbtn round">
+                        {% for text_line in item.text %}
+                        {{ text_line }}<br>
+                        {% endfor %}
+                    </a>
+                    {% endfor %}
+
                     <div class="clear"></div>
                 </div>
             </div>
@@ -124,10 +117,12 @@
         <div class="clear"></div>
     </div>
 
+    <br>
+    <br>
     <div id="footer">
         <div id="foot">
             <div style="position:relative;float:left;padding-top:5px;margin-left:50px;">
-                Copyright &copy; Riyasewana Lanka (Pvt) Ltd. &nbsp;
+                Copyright &copy; {{ page_bottom.company_name }} &nbsp;
                 <a href="//riyasewana.com/terms.php">
                     Terms &amp; Conditions
                 </a>
@@ -138,44 +133,14 @@
             </div>
             <div style="position:relative;float:right;margin-right:45px;">
                 <ul class="share-buttons">
+                    {% for item in page_bottom.socials %}
                     <li>
-                        <a rel="noopener" href="https://www.youtube.com/c/RiyasewanaCom" title="Youtube"
-                            target="_blank">
-                            <img style="padding:0 6px 5px 0;" alt="Youtube Channel"
-                                src="//riyasewana.com/images/yout.png" width="32" height="22" />
+                        <a rel="noopener" href="{{ item.redirect }}" title="{{ item.title }}" target="_blank">
+                            <img style="padding:0 6px 5px 0;" alt="{{ item.alt }}" src="{{ item.image }}" width="35"
+                                height="35" />
                         </a>
                     </li>
-                    <li>
-                        <a rel="noopener" href="https://www.facebook.com/riyasewana" title="Facebook" target="_blank">
-                            <img alt="" src="//riyasewana.com/images/simfb.png" width="32" height="32" />
-                        </a>
-                    </li>
-                    <li>
-                        <a rel="noopener" href="https://twitter.com/riyasewana" target="_blank" title="Tweet">
-                            <img alt="" src="//riyasewana.com/images/simtwit.png" width="32" height="32" />
-                        </a>
-                    </li>
-                    <li>
-                        <a rel="noopener" href="https://www.facebook.com/groups/riyasewana.lk"
-                            title="Riyasewana Facebook Group" target="_blank">
-                            <img style="padding:0 3px 1px 3px;" alt="" src="//riyasewana.com/images/fb-group.png"
-                                width="30" height="30" />
-                        </a>
-                    </li>
-                    <li>
-                        <a rel="noopener" href="https://www.instagram.com/riyasewanacom/" title="Riyasewana Instagram"
-                            target="_blank">
-                            <img style="padding:0 3px 3px 3px;" alt="" src="//riyasewana.com/images/instagram.png"
-                                width="24" height="24" />
-                        </a>
-                    </li>
-                    <li>
-                        <a rel="noopener" href="https://www.linkedin.com/company/riyasewana" title="Riyasewana Linkedin"
-                            target="_blank">
-                            <img style="padding:0 3px 3px 3px;" alt="" src="//riyasewana.com/images/linkedin.png"
-                                width="24" height="24" />
-                        </a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="clear"></div>
