@@ -61,7 +61,12 @@ def login():
         else:
             return redirect(url_for('login'))
     else:
-        return render_template('user/login.html')
+        data = {}
+        data['title'] = "Hirusha"
+        data['page_bottom'] = Dekstop.bottom
+        data['page_top'] = Dekstop.top
+        data['page_header'] = Dekstop.header
+        return render_template('user/login.html', **data)
 
 
 def profile():
