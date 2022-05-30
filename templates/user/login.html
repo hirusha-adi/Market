@@ -1,52 +1,259 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=5, width=device-width" />
+    <meta name="description" content="Login to Riyasewana.com account. Post and manage your ads easily at any time." />
+    <link rel="prefetch" as="image" href="//riyasewana.com/images/logo-mobile.png" />
+    <link rel="stylesheet" type="text/css" href="css/m8.css" />
+    <style>
+        .tx {
+            font-size: 13px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+
+        .red {
+            color: darkred;
+        }
+
+        .intext {
+            width: 220px;
+            height: 27px;
+            border: 1px solid #ced4da;
+            border-radius: 3px;
+            font-size: 13px;
+            padding: 0px 5px;
+            color: #495057;
+        }
+
+        .intext:focus {
+            border: 1px solid #3db2d0;
+        }
+
+        table td {
+            padding: 5px 5px 12px 5px;
+        }
+
+        td strong {
+            font-size: 13px;
+        }
+
+        .btnintxt {
+            width: 234px;
+            height: 34px;
+            background-color: #3683dc;
+            border-radius: 3px;
+            color: #fff;
+            font-weight: bold;
+            border: 1px solid #3683dc;
+            -webkit-appearance: button;
+        }
+
+        .blubtn {
+            width: 75px;
+            height: 31px;
+            background-color: #52bad5;
+            border-radius: 3px;
+            color: #fff;
+            font-weight: bold;
+            border: 2px solid #52bad5;
+        }
+
+        .blubtn:hover {
+            cursor: pointer;
+            opacity: 0.85;
+        }
+    </style>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Login to Your RiyaSewana.com Account</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#fpu").click(function () {
+                $("#f_form").show();
+            });
+            $("#fbut").click(function () {
+                if ($('#email').val() != '') {
+                    var postdata = $('#email').val();
+                    $('#fimg').show();
+                    $.ajax({
+                        type: 'post',
+                        url: 'forgot.php',
+                        data: { ename: postdata },
+                        success: function (data) {
+                            $('#fimg').hide();
+                            if (data == 'done') { $('#redm').html(''); $('#gm').html('Password reset link has been mailed to your email address.'); }
+                            else { $('#redm').html(data); $('#gm').html(''); }
+                        }
+                    });
+                }
+                else {
+                    $('#redm').html('Please enter email'); $('#gm').html('');
+                }
+            });
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9103580-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-9103580-1');
+    </script>
 </head>
 
 <body>
-    <section class="hero is-info is-fullheight">
-        <div class="hero-body">
-            <div class="container">
-                <div class="columns is-centered">
-                    <div class="column is-half">
-                        <form method="POST">
-                            <div class="field">
-                                <label class="label">Username</label>
-                                <div class="control has-icons-left has-icons-right">
-                                    <input class="input" type="text" name="username" placeholder="Username">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-user"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Password</label>
-                                <p class="control has-icons-left">
-                                    <input class="input" type="password" name="password" placeholder="Password">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-lock"></i>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="field">
-                                <p class="control">
-                                    <button type="submit" class="button is-success">
-                                        Login
-                                    </button>
-                                </p>
-                            </div>
-                        </form>
-                    </div>
+    <div id="main">
+        <div id="logo">
+            <nav role="navigation">
+                <div id="menuToggle"><input type="checkbox" /><span></span><span></span><span></span>
+                    <ul id="menu">
+                        <a href="https://riyasewana.com">
+                            <li>Home</li>
+                        </a>
+                        <a title="Advertise your Vehicle FREE" href="https://riyasewana.com/register.php">
+                            <li>Post Free Ad</li>
+                        </a>
+                        <a href="https://riyasewana.com/login.php">
+                            <li>Login</li>
+                        </a>
+                        <a title="Buy Vehicles in Sri Lanka" href="https://riyasewana.com/search">
+                            <li>Buy Vehicles</li>
+                        </a>
+                        <a title="Buy Cars in Sri Lanka" href="https://riyasewana.com/search/cars">
+                            <li>Buy Cars</li>
+                        </a>
+                        <a title="Buy SUVs in Sri Lanka" href="https://riyasewana.com/search/suvs">
+                            <li>Buy SUVs / Jeeps</li>
+                        </a>
+                        <a title="Buy Vans in Sri Lanka" href="https://riyasewana.com/search/vans">
+                            <li>Buy Vans</li>
+                        </a>
+                        <a title="Buy Motorbikes in Sri Lanka" href="https://riyasewana.com/search/motorcycles">
+                            <li>Buy Motorbikes</li>
+                        </a>
+                        <a title="Buy Double Cab Pickups in Sri Lanka" href="https://riyasewana.com/search/pickups">
+                            <li>Buy Pickup</li>
+                        </a>
+                        <a title="Buy Lorries in Sri Lanka" href="https://riyasewana.com/search/lorries">
+                            <li>Buy Lorry</li>
+                        </a>
+                        <a title="Vehicle Leasing Offer" href="https://riyasewana.com/leasing-offers.php">
+                            <li>Vehicle Leasing</li>
+                        </a>
+                        <a title="Contribute to this free service" href="https://riyasewana.com/contribute.php">
+                            <li>Contribute</li>
+                        </a>
+                        <a href="https://riyasewana.com/contact.php">
+                            <li>Contact Us</li>
+                        </a>
+                    </ul>
+                </div>
+                <div style="padding:5px 0px;"><a href="//riyasewana.com"><img style="margin:auto;"
+                            src="//riyasewana.com/images/logo-mobile.png" width="105" height="35"
+                            alt="Riyasewana Logo" /></a></div>
+            </nav>
+        </div>
+        <div id="content">
+            <h2 style="font-size:16px;padding-top:15px;">Log in</h2><br />
+            <form action="" method="post" name="form1">
+                <table style="width:250px;margin:auto;">
+                    <tr>
+                        <td align="left">
+                            <div class="tx"><label for="uname">Username</label></div><input type="text" class="intext"
+                                name="uname" id="uname" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <div class="tx"><label for="pass">Password</label></div><input type="password"
+                                class="intext" name="pass" id="pass" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left"><input type="submit" name="sub" id="sub" value="Login" class="btnintxt" /></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><input style="vertical-align:middle;" type="checkbox" name="f" id="f"
+                                value="yes" /><span style="vertical-align:middle;font-size:13px;"><label
+                                    for="f">Remember me</label></span></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><a href="#" id="fpu"
+                                style="text-decoration:none;cursor:pointer;font-size:12px;color:#3683dc;">Forgot
+                                password or username?</a></td>
+                    </tr>
+                </table>
+            </form>
+            <div style="display:none;" id="f_form">
+                <div style="padding:5px;font-size:13px;">Please enter the email address that you used in the
+                    registration.</div>
+                <div style="padding:5px;font-size:13px;font-weight:bold;"><label for="email">Email:</label> <input
+                        style="width:150px;" class="intext" type="email" name="email" id="email" size="20" required />
+                    <input type="button" name="fbut" id="fbut" value="Send" class="blubtn" /><img
+                        src="images/ajax-loader.gif" style="display:none;" id="fimg" alt="" width="16"
+                        height="16" /><br /> <span id="redm" style="color:#900;"></span> <span id="gm"
+                        style="color:#030;"></span>
                 </div>
             </div>
+            <div id="already">Need a free Riyasewana.com account?<br />
+                <a href="register.php" title="Register Free">Register Free</a>
+            </div>
         </div>
-    </section>
+        <div class="clear"></div>
+        <div id="footer">
+            <div id="foot">
+                <div style="padding-bottom:20px;"><a href="//riyasewana.com">Home</a> &nbsp;&nbsp;&nbsp;&nbsp; <a
+                        href="https://riyasewana.com/account.php">Sell Vehicles</a> &nbsp;&nbsp;&nbsp;&nbsp; <a
+                        href="https://riyasewana.com/contact.php">Contact Us</a></div>
+                <div style="padding-bottom:15px;"><a href="//riyasewana.com/terms.php">Terms</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <a href="//riyasewana.com/privacy.php">Privacy</a> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://riyasewana.com/contribute.php">Contribute</a> &nbsp;&nbsp;&nbsp;&nbsp; <a
+                        title="Vehicle Leasing" href="https://riyasewana.com/leasing-offers.php">Leasing Offers</a>
+                </div>
+                <div style="padding-bottom:5px;">
+                    <ul class="share-buttons" style="list-style:none;padding:0;display:inline;">
+                        <li><a rel="noopener" href="https://www.youtube.com/c/RiyasewanaCom" title="Youtube Channel"
+                                target="_blank"><img alt="Youtube Channel"
+                                    src="//riyasewana.com/images/icons/youtube-light.svg" width="32" height="32" /></a>
+                        </li>
+                        <li><a rel="noopener" href="https://www.facebook.com/riyasewana" title="Facebook"
+                                target="_blank"><img alt="" src="//riyasewana.com/images/icons/facebook-light.svg"
+                                    width="32" height="32" /></a></li>
+                        <li><a rel="noopener" href="https://www.instagram.com/riyasewanacom/"
+                                title="Riyasewana Instagram" target="_blank"><img alt=""
+                                    src="//riyasewana.com/images/icons/instagram-light.svg" width="32"
+                                    height="32" /></a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/groups/riyasewana.lk"
+                                title="Facebook Group" target="_blank"><img alt=""
+                                    src="//riyasewana.com/images/icons/group-light.svg" width="32" height="32" /></a>
+                        </li>
+                        <li><a rel="noopener" href="https://www.linkedin.com/company/riyasewana"
+                                title="Riyasewana Linkedin" target="_blank"><img alt=""
+                                    src="//riyasewana.com/images/icons/linkedin-light.svg" width="32" height="32" /></a>
+                        </li>
+                        <li><a rel="noopener" href="https://twitter.com/riyasewana" target="_blank" title="Tweet"><img
+                                    alt="" src="//riyasewana.com/images/icons/twitter-light.svg" width="32"
+                                    height="32" /></a></li>
+                    </ul>
+                </div>
+                <div style="padding:5px 0;"><a rel="noopener"
+                        href="https://play.google.com/store/apps/details?id=com.riyasewana.android.riyasewana"
+                        target="_blank" title="Riyasewana Android App Available on Google Play"><img
+                            alt="Available on Google Play" src="//riyasewana.com/images/a-google-play.png" width="100"
+                            height="30" /></a></div>
+                <div style="padding:5px 0;"><a rel="noopener"
+                        href="https://apps.apple.com/us/app/riyasewana/id1583270163?itsct=apps_box_badge&amp;itscg=30200"
+                        target="_blank" title="Download Riyasewana iOS App on the App Store"><img
+                            alt="Download on the App Store" src="//riyasewana.com/images/app-store.png" width="100"
+                            height="33" /></a></div>
+                <div style="padding-bottom:5px;">Copyright &copy; Riyasewana Lanka (Pvt) Ltd.</div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
