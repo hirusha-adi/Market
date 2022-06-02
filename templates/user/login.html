@@ -125,25 +125,28 @@
             <tr>
                 <td align="center">
                     <a href="#" id="fpu" style="text-decoration:none;cursor:pointer;font-size:12px;color:#3683dc;">
-                        Forgot
-                        password or username?
+                        Forgot password or username?
                     </a>
                 </td>
             </tr>
         </table>
     </form>
     <div style="display:none;" id="f_form">
-        <div style="padding:5px;font-size:13px;">Please enter the email address that you used in the
-            registration.</div>
-        <div style="padding:5px;font-size:13px;font-weight:bold;"><label for="email">Email:</label> <input
-                style="width:150px;" class="intext" type="email" name="email" id="email" size="20" required />
-            <input type="button" name="fbut" id="fbut" value="Send" class="blubtn" /><img src="images/ajax-loader.gif"
-                style="display:none;" id="fimg" alt="" width="16" height="16" /><br /> <span id="redm"
-                style="color:#900;"></span> <span id="gm" style="color:#030;"></span>
+        <div style="padding:5px;font-size:13px;">
+            Please enter the email address that you used in the registration.
+        </div>
+        <div style="padding:5px;font-size:13px;font-weight:bold;">
+            <label for="email">Email:</label>
+            <input style="width:150px;" class="intext" type="email" name="email" id="email" size="20" required />
+            <input type="button" name="fbut" id="fbut" value="Send" class="blubtn" />
+            <img src="images/ajax-loader.gif" style="display:none;" id="fimg" alt="" width="16" height="16" />
+            <br />
+            <span id="redm" style="color:#900;"></span>
+            <span id="gm" style="color:#030;"></span>
         </div>
     </div>
     <div id="already">Need a new Account?<br />
-        <a href="register.php" title="Register">Register</a>
+        <a href="{{ url_for('register') }}" title="Register">Register</a>
     </div>
     <br>
     <br>
