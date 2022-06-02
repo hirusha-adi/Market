@@ -96,45 +96,60 @@
     <h1 style="font-size:15px;padding-top:5px;line-height:1.3em;">Advertise your vehicle for free with Riyasewana</h1>
     <div id="already" style="padding:12px;font-size:13px;">Already a member of Riyasewana.com? <a href="login.php">Log
             in here</a></div>
-    <form method="post">
+    <form method="post" action="{{ url_for('register') }}">
         <table style="width:250px;margin:auto;">
             <tbody>
                 <tr>
                     <td align="left">
-                        <div class="tx"><label for="username">Username</label></div><input type="text" class="intext"
-                            name="username" id="username" value="" required="">
+                        <div class="tx">
+                            <label for="username">Username</label>
+                        </div>
+                        <input type="text" class="intext" name="username" id="username" value="" required="">
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx"><label for="password">Password</label></div><input type="password"
-                            class="intext" name="password" id="password" value="" required="">
+                        <div class="tx">
+                            <label for="password">Password</label>
+                        </div>
+                        <input type="password" class="intext" name="password" id="password" value="" required="">
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx"><label for="rpassword">Re-enter password</label></div><input type="password"
-                            class="intext" name="rpassword" id="rpassword" value="" required="">
+                        <div class="tx">
+                            <label for="rpassword">Re-enter password</label>
+                        </div>
+                        <input type="password" class="intext" name="rpassword" id="rpassword" value="" required="">
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx"><label for="name">Name</label></div><input type="text" class="intext"
-                            name="name" id="name" value="" required="">
+                        <div class="tx">
+                            <label for="name">Name</label>
+                        </div>
+                        <input type="text" class="intext" name="name" id="name" value="" required="">
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx"><label for="email">Email</label></div><input type="email" class="intext"
-                            name="email" id="email" value="" required=""><br><span style="font-size:11px;">(Should be a
-                            Valid Email Address)</span>
+                        <div class="tx">
+                            <label for="email">Email</label>
+                        </div>
+                        <input type="email" class="intext" name="email" id="email" value="" required="">
+                        <br>
+                        <span style="font-size:11px;">(Should be a Valid Email Address)
+                        </span>
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx"><label for="phone">Phone number</label></div><input maxlength="10" type="number"
-                            class="intext" name="phone" id="phone" value="" required=""><br><span
-                            style="font-size:11px;">(10 Numbers)</span>
+                        <div class="tx">
+                            <label for="phone">Phone number</label>
+                        </div>
+                        <input maxlength="10" type="number" class="intext" name="phone" id="phone" value="" required="">
+                        <br>
+                        <span style="font-size:11px;">(10 Numbers)</span>
                     </td>
                 </tr>
                 <tr>
