@@ -32,6 +32,18 @@ def login():
         return render_template('user/login.html', **data)
 
 
+def register():
+    if request.method == 'POST':
+        return "to do"
+    else:
+        data = {}
+        data['title'] = "Hirusha"
+        data['page_bottom'] = Dekstop.bottom
+        data['page_top'] = Dekstop.top
+        data['page_header'] = Dekstop.header
+        return render_template('user/register.html', **data)
+
+
 def profile():
     if not g.user:
         return redirect(url_for('login'))
