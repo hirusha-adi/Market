@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Log In to Your RiyaSewana.com Account</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main7.css') }}" />
+    <style>
+        .intext {
+            width: 250px;
+            height: 30px;
+            border: 2px solid #a6a6a6;
+            border-radius: 3px;
+            font-size: 14px;
+            padding: 0px 5px;
+        }
+
+        .intext:focus {
+            border: 2px solid #3db2d0;
+        }
+
+        .tbltxt {
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        table td {
+            padding-bottom: 16px;
+        }
+
+        .btnintxt {
+            width: 264px;
+            height: 34px;
+            background-color: #e67e22;
+            border-radius: 3px;
+            color: #fff;
+            font-weight: bold;
+            border: 2px solid #e67e22;
+            -webkit-appearance: button;
+        }
+
+        .btnintxt:hover {
+            opacity: 0.85;
+            cursor: pointer;
+        }
+
+        .blubtn {
+            width: 100px;
+            height: 36px;
+            background-color: #52bad5;
+            border-radius: 3px;
+            color: #fff;
+            font-weight: bold;
+            border: 2px solid #52bad5;
+        }
+
+        .blubtn:hover {
+            cursor: pointer;
+            opacity: 0.85;
+        }
+
+        #already a:hover {
+            color: #e98421;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="mdle_inr">
+            <div id="middlebtm">
+                <div id="midbtmctn"><a title="Advertise your Vehicle FREE and Spare Parts"
+                        href="https://riyasewana.com/account.php" class="gbtn obtn round">Sell Vehicles<br />and
+                        Parts</a><a title="Buy Vehicles in Sri Lanka" href="//riyasewana.com/search"
+                        class="gbtn round">Buy<br />Vehicles</a><a title="Buy Cars in Sri Lanka"
+                        href="//riyasewana.com/search/cars" class="gbtn round">Buy<br />Cars</a><a
+                        title="Buy Motorbikes in Sri Lanka" href="//riyasewana.com/search/motorcycles"
+                        class="gbtn round">Buy<br /> MotorBikes</a><a title="Buy Vans in Sri Lanka"
+                        href="//riyasewana.com/search/vans" class="gbtn round">Buy<br />Vans</a><a
+                        title="Buy SUVs in Sri Lanka" href="//riyasewana.com/search/suvs"
+                        class="gbtn round">Buy<br />SUVs / Jeeps</a><a title="Buy Lorries in Sri Lanka"
+                        href="//riyasewana.com/search/lorries" class="gbtn round">Buy<br />Lorry</a><a
+                        title="Buy Three Wheels in Sri Lanka" href="//riyasewana.com/search/three-wheels"
+                        class="gbtn round">Buy<br />Three Wheel</a><a
+                        title="Buy Spare Parts and Accessories in Sri Lanka"
+                        href="//riyasewana.com/spare-parts-accessories.php" class="gbtn round">Buy<br />Spare
+                        Parts</a><a title="Wanted Vehicles in Sri Lanka" href="//riyasewana.com/wanted.php"
+                        class="gbtn round">Search<br />Wanted</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div id="mbody">
+            <div id="sidebar">
+                <div id="already" style="margin-right:60px;padding-top:25px;">Need a free Riyasewana.com account?<div
+                        style=" padding-top:8px;">
+                        <a href="register.php" title="Register Free">Register Free</a>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <div style="margin-left:35px;">
+                    <h2 style="padding-top:25px;">Account Log In</h2><br />
+                    <form action="" method="post" name="form1">
+                        <table style="border:none;">
+                            <tr>
+                                <td align="right" class="tbltxt">
+                                    <div><label for="uname">User Name</label><span class="red">*</span></div>
+                                </td>
+                                <td><input type="text" class="intext" name="uname" id="uname" required /></td>
+                            </tr>
+                            <tr>
+                                <td align="right" class="tbltxt">
+                                    <div><label for="pass">Password</label><span class="red">*</span></div>
+                                </td>
+                                <td><input type="password" class="intext" name="pass" id="pass" required /></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><input class="btnintxt" type="submit" name="sub" id="sub" value="Log In" />
+                                    <div style="margin-top:15px;text-align:center;;font-size:13px;"><input
+                                            type="checkbox" name="f" id="f" value="yes" /><span
+                                            style="vertical-align:top;"> <label for="f">Remember me next
+                                                time</label></span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <div style="text-align:center;"><a href="#" id="fpu"
+                                            style="text-decoration:none;cursor:pointer;font-size:13px;">Forgot password
+                                            or username?</a></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <br />
+                    <div style="display:none;" id="f_form">
+                        <div style="padding:5px;">Please enter the email address that you used in the registration.
+                        </div>
+                        <div style="padding:5px 0px 10px 0px;"><span style="font-size:13px;font-weight:bold;"><label
+                                    for="email">Email:</label> </span><input class="intext" type="text" name="email"
+                                id="email" size="30" /> <input type="button" name="fbut" id="fbut" value="Send"
+                                class="blubtn" /><img alt="" width="16" height="16" src="images/ajax-loader.gif"
+                                style="display:none;" id="fimg" /> <span id="redm" style="color:#900;"></span>
+                            <div id="gm" style="color:#030;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="footer">
+            <div id="foot">
+                <div style="position:relative;float:left;padding-top:5px;margin-left:50px;">Copyright &copy; Riyasewana
+                    Lanka (Pvt) Ltd. &nbsp;<a href="//riyasewana.com/terms.php">Terms &amp; Conditions</a> | <a
+                        href="//riyasewana.com/privacy.php">Privacy Policy</a></div>
+                <div style="position:relative;float:right;margin-right:45px;">
+                    <ul class="share-buttons">
+                        <li><a rel="noopener" href="https://www.youtube.com/c/RiyasewanaCom" title="Youtube"
+                                target="_blank"><img style="padding:0 6px 5px 0;" alt="Youtube Channel"
+                                    src="//riyasewana.com/images/yout.png" width="32" height="22" /></a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/riyasewana" title="Facebook"
+                                target="_blank"><img alt="" src="//riyasewana.com/images/simfb.png" width="32"
+                                    height="32" /></a></li>
+                        <li><a rel="noopener" href="https://twitter.com/riyasewana" target="_blank" title="Tweet"><img
+                                    alt="" src="//riyasewana.com/images/simtwit.png" width="32" height="32" /></a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/groups/riyasewana.lk"
+                                title="Riyasewana Facebook Group" target="_blank"><img style="padding:0 3px 1px 3px;"
+                                    alt="" src="//riyasewana.com/images/fb-group.png" width="30" height="30" /></a></li>
+                        <li><a rel="noopener" href="https://www.instagram.com/riyasewanacom/"
+                                title="Riyasewana Instagram" target="_blank"><img style="padding:0 3px 3px 3px;" alt=""
+                                    src="//riyasewana.com/images/instagram.png" width="24" height="24" /></a></li>
+                        <li><a rel="noopener" href="https://www.linkedin.com/company/riyasewana"
+                                title="Riyasewana Linkedin" target="_blank"><img style="padding:0 3px 3px 3px;" alt=""
+                                    src="//riyasewana.com/images/linkedin.png" width="24" height="24" /></a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

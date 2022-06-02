@@ -1,6 +1,7 @@
 from flask import Flask, g
 from routes.main import *
 from routes.post import *
+from routes.user import *
 from database import settings
 
 app = Flask(__name__)
