@@ -29,7 +29,7 @@ def login():
         data['page_top'] = Dekstop.top
         data['page_header'] = Dekstop.header
 
-        return render_template('user/mobile/login.html', **data)
+        return render_template('user/login.html', **data)
 
 
 def profile():
