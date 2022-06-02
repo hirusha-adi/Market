@@ -29,11 +29,7 @@ def login():
         data['page_top'] = Dekstop.top
         data['page_header'] = Dekstop.header
 
-        # user_agent = request.headers.get('User-Agent').lower()
-        # if ("iphone" in user_agent) or ("android" in user_agent):
         return render_template('user/mobile/login.html', **data)
-        # else:
-        # return render_template('user/desktop/login.html', **data)
 
 
 def profile():

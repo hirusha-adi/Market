@@ -36,8 +36,4 @@ def index(page):
     data['page_top'] = Dekstop.top
     data['page_header'] = Dekstop.header
 
-    # user_agent = request.headers.get('User-Agent').lower()
-    # if ("iphone" in user_agent) or ("android" in user_agent):
     return render_template('items/mobile.html', **data)
-    # else:
-    # return render_template('items/desktop.html', **data)
