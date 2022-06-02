@@ -62,7 +62,6 @@
     }
 </style>
 <link rel="shortcut icon" href="favicon.ico" />
-<title>Login to Your RiyaSewana.com Account</title>
 <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -93,65 +92,224 @@
 {% endblock %}
 
 {% block content %}
-</head>
-
 <div id="content">
-    <h2 style="font-size:16px;padding-top:15px;">Log in</h2><br />
-    <form action="" method="post" name="form1">
+    <h1 style="font-size:15px;padding-top:5px;line-height:1.3em;">Advertise your vehicle for free with Riyasewana</h1>
+    <div id="already" style="padding:12px;font-size:13px;">Already a member of Riyasewana.com? <a href="login.php">Log
+            in here</a></div>
+    <form method="post">
         <table style="width:250px;margin:auto;">
-            <tr>
-                <td align="left">
-                    <div class="tx">
-                        <label for="username">
-                            Username
-                        </label>
-                    </div>
-                    <input type="text" class="intext" name="username" id="username" required />
-                </td>
-            </tr>
-            <tr>
-                <td align="left">
-                    <div class="tx">
-                        <label for="password">
-                            Password
-                        </label>
-                    </div>
-                    <input type="password" class="intext" name="password" id="password" required />
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><input type="submit" name="sub" id="sub" value="Login" class="btnintxt" /></td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <a href="#" id="fpu" style="text-decoration:none;cursor:pointer;font-size:12px;color:#3683dc;">
-                        Forgot password or username?
-                    </a>
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td align="left">
+                        <div class="tx"><label for="username">Username</label></div><input type="text" class="intext"
+                            name="username" id="username" value="" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx"><label for="password">Password</label></div><input type="password"
+                            class="intext" name="password" id="password" value="" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx"><label for="rpassword">Re-enter password</label></div><input type="password"
+                            class="intext" name="rpassword" id="rpassword" value="" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx"><label for="name">Name</label></div><input type="text" class="intext"
+                            name="name" id="name" value="" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx"><label for="email">Email</label></div><input type="email" class="intext"
+                            name="email" id="email" value="" required=""><br><span style="font-size:11px;">(Should be a
+                            Valid Email Address)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx"><label for="phone">Phone number</label></div><input maxlength="10" type="number"
+                            class="intext" name="phone" id="phone" value="" required=""><br><span
+                            style="font-size:11px;">(10 Numbers)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx"><label for="city">City</label></div>
+                        <select style="width:234px;height:31px;" name="city" id="city" class="intext" required="">
+                            <option value="">Select City</option>
+                            <optgroup label="Colombo District">
+                                <option value="Colombo">Colombo</option>
+                                <option value="Dehiwala-Mount-Lavinia">Dehiwala-Mount-Lavinia</option>
+                                <option value="Moratuwa">Moratuwa</option>
+                                <option value="Kotte">Kotte</option>
+                                <option value="Battaramulla">Battaramulla</option>
+                                <option value="Maharagama">Maharagama</option>
+                                <option value="Kotikawatta">Kotikawatta</option>
+                                <option value="Kolonnawa">Kolonnawa</option>
+                                <option value="Keselwatta">Keselwatta</option>
+                                <option value="Homagama">Homagama</option>
+                                <option value="Mulleriyawa">Mulleriyawa</option>
+                                <option value="Kesbewa">Kesbewa</option>
+                                <option value="Avissawella">Avissawella</option>
+                                <option value="Kaduwela">Kaduwela</option>
+                                <option value="Boralesgamuwa">Boralesgamuwa</option>
+                                <option value="Piliyandala">Piliyandala</option>
+                                <option value="Nugegoda">Nugegoda</option>
+                                <option value="Nawala">Nawala</option>
+                                <option value="Padukka">Padukka</option>
+                                <option value="Kottawa">Kottawa</option>
+                                <option value="Pannipitiya">Pannipitiya</option>
+                                <option value="Malabe">Malabe</option>
+                                <option value="Hanwella">Hanwella</option>
+                            </optgroup>
+                            <optgroup label="Gampaha District">
+                                <option value="Gampaha">Gampaha</option>
+                                <option value="Negombo">Negombo</option>
+                                <option value="Katunayake">Katunayake</option>
+                                <option value="Hendala">Hendala</option>
+                                <option value="Welisara">Welisara</option>
+                                <option value="Ragama">Ragama</option>
+                                <option value="Kandana">Kandana</option>
+                                <option value="Ja-Ela">Ja-Ela</option>
+                                <option value="Wattala">Wattala</option>
+                                <option value="Kelaniya">Kelaniya</option>
+                                <option value="Peliyagoda">Peliyagoda</option>
+                                <option value="Minuwangoda">Minuwangoda</option>
+                                <option value="Kadawatha">Kadawatha</option>
+                                <option value="Dompe">Dompe</option>
+                                <option value="Divulapitiya">Divulapitiya</option>
+                                <option value="Nittambuwa">Nittambuwa</option>
+                                <option value="Mirigama">Mirigama</option>
+                                <option value="Kiribathgoda">Kiribathgoda</option>
+                                <option value="Veyangoda">Veyangoda</option>
+                                <option value="Ganemulla">Ganemulla</option>
+                            </optgroup>
+                            <optgroup label="Kandy District">
+                                <option value="Kandy">Kandy</option>
+                                <option value="Gampola">Gampola</option>
+                                <option value="Nawalapitiya">Nawalapitiya</option>
+                                <option value="Wattegama">Wattegama</option>
+                                <option value="Harispattuwa">Harispattuwa</option>
+                                <option value="Kadugannawa">Kadugannawa</option>
+                            </optgroup>
+                            <optgroup label="Kurunegala District">
+                                <option value="Kurunegala">Kurunegala</option>
+                                <option value="Kuliyapitiya">Kuliyapitiya</option>
+                                <option value="Polgahawela">Polgahawela</option>
+                            </optgroup>
+                            <optgroup label="Ratnapura District">
+                                <option value="Ratnapura">Ratnapura</option>
+                                <option value="Balangoda">Balangoda</option>
+                                <option value="Eheliyagoda">Eheliyagoda</option>
+                                <option value="Kalawana">Kalawana</option>
+                                <option value="Embilipitiya">Embilipitiya</option>
+                            </optgroup>
+                            <optgroup label="Kalutara District">
+                                <option value="Kalutara">Kalutara</option>
+                                <option value="Beruwala">Beruwala</option>
+                                <option value="Panadura">Panadura</option>
+                                <option value="Horana">Horana</option>
+                                <option value="Matugama">Matugama</option>
+                                <option value="Bandaragama">Bandaragama</option>
+                            </optgroup>
+                            <optgroup label="Puttalam District">
+                                <option value="Puttalam">Puttalam</option>
+                                <option value="Chilaw">Chilaw</option>
+                                <option value="Nattandiya">Nattandiya</option>
+                                <option value="Wennappuwa">Wennappuwa</option>
+                                <option value="Marawila">Marawila</option>
+                            </optgroup>
+                            <optgroup label="Kegalle District">
+                                <option value="Kegalle">Kegalle</option>
+                                <option value="Mawanella">Mawanella</option>
+                                <option value="Warakapola">Warakapola</option>
+                            </optgroup>
+                            <optgroup label="Matale District">
+                                <option value="Matale">Matale</option>
+                                <option value="Dambulla">Dambulla</option>
+                                <option value="Sigiriya">Sigiriya</option>
+                            </optgroup>
+                            <optgroup label="Badulla District">
+                                <option value="Badulla">Badulla</option>
+                                <option value="Bandarawela">Bandarawela</option>
+                                <option value="Haputale">Haputale</option>
+                                <option value="Welimada">Welimada</option>
+                                <option value="Mahiyanganaya">Mahiyanganaya</option>
+                            </optgroup>
+                            <optgroup label="Nuwara-Eliya District">
+                                <option value="Nuwara-Eliya">Nuwara-Eliya</option>
+                                <option value="Hatton">Hatton</option>
+                                <option value="Talawakele">Talawakele</option>
+                            </optgroup>
+                            <optgroup label="Galle District">
+                                <option value="Galle">Galle</option>
+                                <option value="Ambalangoda">Ambalangoda</option>
+                            </optgroup>
+                            <optgroup label="Matara District">
+                                <option value="Matara">Matara</option>
+                                <option value="Weligama">Weligama</option>
+                            </optgroup>
+                            <optgroup label="Hambantota District">
+                                <option value="Hambantota">Hambantota</option>
+                                <option value="Tangalle">Tangalle</option>
+                            </optgroup>
+                            <optgroup label="Batticaloa District">
+                                <option value="Batticaloa">Batticaloa</option>
+                                <option value="Kattankudy">Kattankudy</option>
+                                <option value="Eravur">Eravur</option>
+                            </optgroup>
+                            <optgroup label="Ampara District">
+                                <option value="Ampara">Ampara</option>
+                                <option value="Kalmunai">Kalmunai</option>
+                            </optgroup>
+                            <optgroup label="Jaffna District">
+                                <option value="Jaffna">Jaffna</option>
+                                <option value="Chavakacheri">Chavakacheri</option>
+                                <option value="Valvettithurai">Valvettithurai</option>
+                            </optgroup>
+                            <optgroup label="Anuradapura District">
+                                <option value="Anuradapura">Anuradapura</option>
+                            </optgroup>
+                            <optgroup label="Polonnaruwa District">
+                                <option value="Polonnaruwa">Polonnaruwa</option>
+                            </optgroup>
+                            <optgroup label="Moneragala District">
+                                <option value="Moneragala">Moneragala</option>
+                            </optgroup>
+                            <optgroup label="Trincomalee District">
+                                <option value="Trincomalee">Trincomalee</option>
+                            </optgroup>
+                            <optgroup label="Mannar District">
+                                <option value="Mannar">Mannar</option>
+                            </optgroup>
+                            <optgroup label="Vavuniya District">
+                                <option value="Vavuniya">Vavuniya</option>
+                            </optgroup>
+                            <optgroup label="Kilinochchi District">
+                                <option value="Kilinochchi">Kilinochchi</option>
+                            </optgroup>
+                            <optgroup label="Mullaitivu District">
+                                <option value="Mullaitivu">Mullaitivu</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <input type="submit" name="sub" id="sub" value="Register" class="btnintxt">
+                    </td>
+                </tr>
+            </tbody>
         </table>
+        <!-- <input type="hidden" name="token" value="657b356dc9cf289cc6daed0e8cf38c2a"> -->
     </form>
-    <div style="display:none;" id="f_form">
-        <div style="padding:5px;font-size:13px;">
-            Please enter the email address that you used in the registration.
-        </div>
-        <div style="padding:5px;font-size:13px;font-weight:bold;">
-            <label for="email">Email:</label>
-            <input style="width:150px;" class="intext" type="email" name="email" id="email" size="20" required />
-            <input type="button" name="fbut" id="fbut" value="Send" class="blubtn" />
-            <img src="images/ajax-loader.gif" style="display:none;" id="fimg" alt="" width="16" height="16" />
-            <br />
-            <span id="redm" style="color:#900;"></span>
-            <span id="gm" style="color:#030;"></span>
-        </div>
+    <div style="font-size:13px;padding:10px 0px;">By registering you agree to our <a
+            style="color:#015db9;text-decoration:none;" target="_blank" href="terms.php">Terms &amp; Conditions</a>
     </div>
-    <div id="already">Need a new Account?<br />
-        <a href="register.php" title="Register">Register</a>
-    </div>
-    <br>
-    <br>
 </div>
-<div class="clear"></div>
-
-</html>
 {% endblock %}
