@@ -108,3 +108,8 @@ def profile_edit():
     data['page_header'] = Dekstop.header
 
     return render_template('user/profile.html', page_edit=True, **data)
+
+
+def logout():
+    session.pop('user_id', None)
+    return redirect(url_for('login'))
