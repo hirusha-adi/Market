@@ -108,33 +108,57 @@
         </div>
     </div>
     <h2 style="font-size:14px;padding:20px 0px 10px 0px;">Edit Profile</h2>
-    <div style="font-size:11px;padding-bottom:20px;">Items marked with <span class="red">*</span> are required. </div>
-    <form action="" method="post">
+    <div style="font-size:11px;padding-bottom:20px;">
+        Items marked with
+        <span class="red">
+            *
+        </span>
+        are required.
+    </div>
+    <form method="post">
         <table style="width:250px;margin:auto;">
             <tbody>
                 <tr>
                     <td align="left">
-                        <div class="tx">User Name<span class="red">*</span></div><span
-                            style="font-size:13px;">hirusha-adi (Cannot Change)</span>
+                        <div class="tx">
+                            User Name
+                            <span class="red">*</span>
+                        </div>
+                        <span style="font-size:13px;">
+                            <b><i>{{ g.user.username }}</i></b>
+                            (Cannot Change)
+                        </span>
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Name<span class="red">*</span></div><input type="text" class="intext"
-                            name="fname" id="fname" value="Hirusha Adikari" required="">
+                        <div class="tx">
+                            Name
+                            <span class="red">*</span>
+                        </div>
+                        <input type="text" class="intext" name="fname" id="fname" value="Hirusha Adikari" required="">
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Email<span class="red">*</span></div><input type="email" class="intext"
-                            name="email" id="email" value="zesta5j7k@gmail.com" required="">
+                        <div class="tx">
+                            Email
+                            <span class="red">*</span>
+                        </div>
+                        <input type="email" class="intext" name="email" id="email" value="{{ g.user.email }}"
+                            required="">
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Phone number<span class="red">*</span></div><input maxlength="10" type="number"
-                            class="intext" name="phn" id="phn" value="0721062356" required=""><br><span
-                            style="font-size:11px;">(10 Numbers)</span>
+                        <div class="tx">
+                            Phone number
+                            <span class="red">*</span>
+                        </div>
+                        <input maxlength="10" type="text" class="intext" name="phn" id="phn" value="{{ g.user.phone }}"
+                            required="">
+                        <br>
+                        <span style="font-size:11px;">(10 Numbers)</span>
                     </td>
                 </tr>
                 <tr>
@@ -248,41 +272,51 @@
                     </td>
                 </tr>
                 <tr>
-                    <td align="left"><input class="btnintxt" type="submit" name="esub" id="esub" value="Edit Profile">
+                    <td align="left">
+                        <input class="btnintxt" type="submit" name="esub" id="esub" value="Update Profile">
                     </td>
                 </tr>
             </tbody>
         </table>
         <input type="hidden" name="token" value="9adc3d48e03cdae0be1570a0fdae54de">
     </form>
-    <form action="" method="post" data-bitwarden-watching="1">
+
+    <form method="post">
         <table style="width:250px;margin:auto;">
             <tbody>
                 <tr>
                     <td align="left">
-                        <div class="tx">Old password<span class="red">*</span></div><input type="password"
-                            class="intext" name="pass" id="pass" required="">
+                        <div class="tx">Old password
+                            <span class="red">*</span>
+                        </div>
+                        <input type="password" class="intext" name="pass" id="pass" required="">
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">New password<span class="red">*</span></div><input type="password"
-                            class="intext" name="npass" id="npass" required="">
+                        <div class="tx">
+                            New password
+                            <span class="red">*</span>
+                        </div>
+                        <input type="password" class="intext" name="npass" id="npass" required="">
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Re enter new password<span class="red">*</span></div><input type="password"
-                            class="intext" name="rpass" id="rpass" required="">
+                        <div class="tx">
+                            Re enter new password
+                            <span class="red">*</span>
+                        </div>
+                        <input type="password" class="intext" name="rpass" id="rpass" required="">
                     </td>
                 </tr>
                 <tr>
-                    <td align="left"><input class="btnintxt" type="submit" name="csub" id="csub"
-                            value="Change Password"></td>
+                    <td align="left">
+                        <input class="btnintxt" type="submit" name="csub" id="csub" value="Change Password">
+                    </td>
                 </tr>
             </tbody>
         </table>
-        <input type="hidden" name="token2" value="9adc3d48e03cdae0be1570a0fdae54de">
     </form>
 </div>
 {% endif %}
