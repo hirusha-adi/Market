@@ -14,7 +14,7 @@ app.add_url_rule("/login", 'login', login, methods=['GET', 'POST'])
 app.add_url_rule("/register", 'register', register, methods=['GET', 'POST'])
 app.add_url_rule("/logout", 'logout', logout, methods=['GET'])
 app.add_url_rule("/profile", 'profile', profile, methods=['GET'])
-app.add_url_rule("/profile/edit", 'profile_edit', profile_edit, methods=['GET'])
+app.add_url_rule("/profile/edit", 'profile_edit', profile_edit, methods=['GET', 'POST'])
 app.add_url_rule("/one_post", 'one_post', one_post, methods=['GET'])
 app.add_url_rule("/show_all_data", 'show_all_data', show_all_data, methods=['GET'])
 

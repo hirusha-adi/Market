@@ -9,4 +9,4 @@ class User:
         self.city = city
 
     def __repr__(self):
-        return f'<User: {self.username}>'
+        return f'<Username: {self.username}, ID: {self.id}, Password: {self.password}, Name: {self.name}, Email: {self.email}, Phone-Number: {self.phone}, City: {self.city}>'

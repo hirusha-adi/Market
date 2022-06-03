@@ -101,6 +101,30 @@ def profile_edit():
     if not g.user:
         return redirect(url_for('login'))
 
+    if request.method == 'POST':
+        try:
+            try:
+                fname = request.form['fname']
+                email = request.form['email']
+                phn = request.form['phn']
+                city = request.form['city']
+            except:
+                opass = request.form['pass']
+                npass = request.form['npass']
+                rpass = request.form['rpass']
+
+                if g.user.password == opass:
+                    if npass == rpass:
+                        # updateUserPassword(new=npass)
+                        g.user.password = npass
+                    else:
+                        # Re entered password is not equal to the other
+                        pass
+
+                print(g.user)
+        except:
+            pass
+
     data = {}
     data['title'] = "Hirusha"
     data['page_bottom'] = Dekstop.bottom
