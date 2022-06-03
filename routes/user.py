@@ -88,4 +88,23 @@ def profile():
     if not g.user:
         return redirect(url_for('login'))
 
-    return render_template('user/profile.html')
+    data = {}
+    data['title'] = "Hirusha"
+    data['page_bottom'] = Dekstop.bottom
+    data['page_top'] = Dekstop.top
+    data['page_header'] = Dekstop.header
+
+    return render_template('user/profile.html', page_home=True, **data)
+
+
+def profile_edit():
+    if not g.user:
+        return redirect(url_for('login'))
+
+    data = {}
+    data['title'] = "Hirusha"
+    data['page_bottom'] = Dekstop.bottom
+    data['page_top'] = Dekstop.top
+    data['page_header'] = Dekstop.header
+
+    return render_template('user/profile.html', page_edit=True, **data)

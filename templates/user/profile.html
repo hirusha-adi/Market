@@ -1,20 +1,298 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base/mobile.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% block head %}
+{% if page_edit == True %}
+<style>
+    .mocls a {
+        color: #3683dc;
+        text-decoration: none;
+    }
 
-<body>
+    .tx {
+        font-size: 13px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .red {
+        color: darkred;
+    }
+
+    .intext {
+        width: 220px;
+        height: 27px;
+        border: 2px solid #a6a6a6;
+        border-radius: 3px;
+        font-size: 13px;
+        padding: 0px 5px;
+        background-color: #fff;
+    }
+
+    .intext:focus {
+        border: 2px solid #3db2d0;
+    }
+
+    table td {
+        padding: 5px 5px 12px 5px;
+    }
+
+    td strong {
+        font-size: 13px;
+    }
+
+    .btnintxt {
+        width: 234px;
+        height: 34px;
+        background-color: #e67e22;
+        border-radius: 3px;
+        color: #fff;
+        font-weight: bold;
+        border: 2px solid #e67e22;
+        -webkit-appearance: button;
+    }
+
+    .btnintxt:hover {
+        opacity: 0.85;
+        cursor: pointer;
+    }
+</style>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if page_home == True %}
+<div id="content">
+    <div id="acctop" style="color:#036; text-decoration:none; text-align:center;">
+        <div style="padding:10px 0px;">
+            <a href="https://geyakidamak.com/register.php">
+                <img style="border:2px #eee solid; margin-left: auto; margin-right: auto; width: 200px;"
+                    src="https://cdn.discordapp.com/attachments/980165687232319538/982333423039443034/unknown.png"
+                    alt="Sell Rent Property">
+            </a>
+        </div>
+        <br>
+        <div style="width:275px;margin:auto;">
+            <div style="padding-bottom:5px;font-size:13px;">Welcome
+                <b>
+                    {{g.user.username}}
+                </b>
+            </div>
+            <div style="font-size:13px;font-weight:bold;line-height:1.3;" class="mocls"><a
+                    href="https://riyasewana.com/account.php">My Ads</a> | <a
+                    href="https://riyasewana.com/editprofile.php">Edit Profile</a> | <a
+                    href="https://riyasewana.com/favorite.php">Favorites</a> | <a href="logout.php">Logout</a></div>
+        </div>
+    </div>
+    <div style="width:250px;margin:10px auto;">
+        <div class="addstyl" style="float:left;"><a href="add_vehicle.php">Sell Vehicle</a></div>
+        <div class="addstyl" style="float:right;"><a href="add_bike.php">Sell MotorBike</a></div>
+        <div class="clear"></div>
+        <div class="addstyl" style="float:left;"><a href="add_parts.php">Sell Parts</a></div>
+        <div class="addstyl" style="float:left;float:right;"><a href="add_wanted.php">Add Wanted</a></div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div style="line-height:1.3em;font-size:14px;margin:20px 0px;text-align:center;">You currently have no vehicles
+        saved in your account.</div><br>
+</div>
+{% endif %}
+{% if page_edit == True %}
+<div id="content">
+    <div id="acctop" style="color:#036;text-decoration:none;text-align:center;">
+        <div style="width:275px;margin:auto;">
+            <div style="padding-bottom:5px;font-size:13px;">Welcome hirusha-adi</div>
+            <div style="font-size:13px;font-weight:bold;line-height:1.3;" class="mocls"><a
+                    href="https://riyasewana.com/account.php">My Ads</a> | <a
+                    href="https://riyasewana.com/editprofile.php">Edit Profile</a> | <a
+                    href="https://riyasewana.com/favorite.php">Favorites</a> | <a href="logout.php">Logout</a></div>
+        </div>
+    </div>
+    <h2 style="font-size:14px;padding:20px 0px 10px 0px;">Edit Profile</h2>
+    <div style="font-size:11px;padding-bottom:20px;">Items marked with <span class="red">*</span> are required. </div>
+    <form action="" method="post">
+        <table style="width:250px;margin:auto;">
+            <tbody>
+                <tr>
+                    <td align="left">
+                        <div class="tx">User Name<span class="red">*</span></div><span
+                            style="font-size:13px;">hirusha-adi (Cannot Change)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Name<span class="red">*</span></div><input type="text" class="intext"
+                            name="fname" id="fname" value="Hirusha Adikari" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Email<span class="red">*</span></div><input type="email" class="intext"
+                            name="email" id="email" value="zesta5j7k@gmail.com" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Phone number<span class="red">*</span></div><input maxlength="10" type="number"
+                            class="intext" name="phn" id="phn" value="0721062356" required=""><br><span
+                            style="font-size:11px;">(10 Numbers)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">City<span class="red">*</span></div>
+                        <select name="city" id="city" class="intext" style="width:234px;height:31px;">
+                            <option value="Ambalangoda">Ambalangoda</option>
+                            <option value="Ampara">Ampara</option>
+                            <option value="Anuradapura">Anuradapura</option>
+                            <option value="Avissawella">Avissawella</option>
+                            <option value="Bandaragama">Bandaragama</option>
+                            <option value="Badulla">Badulla</option>
+                            <option value="Balangoda">Balangoda</option>
+                            <option value="Bandarawela">Bandarawela</option>
+                            <option value="Battaramulla">Battaramulla</option>
+                            <option value="Batticaloa">Batticaloa</option>
+                            <option value="Beruwala">Beruwala</option>
+                            <option value="Boralesgamuwa">Boralesgamuwa</option>
+                            <option value="Chavakacheri">Chavakacheri</option>
+                            <option value="Chilaw">Chilaw</option>
+                            <option value="Colombo">Colombo</option>
+                            <option value="Daluguma">Daluguma</option>
+                            <option value="Dambulla">Dambulla</option>
+                            <option value="Dehiwala-Mount-Lavinia">Dehiwala-Mount-Lavinia</option>
+                            <option value="Divulapitiya">Divulapitiya</option>
+                            <option value="Dompe">Dompe</option>
+                            <option value="Eheliyagoda">Eheliyagoda</option>
+                            <option value="Embilipitiya">Embilipitiya</option>
+                            <option value="Eravur">Eravur</option>
+                            <option value="Galle">Galle</option>
+                            <option value="Gampaha">Gampaha</option>
+                            <option value="Gampola">Gampola</option>
+                            <option value="Ganemulla">Ganemulla</option>
+                            <option value="Hambantota">Hambantota</option>
+                            <option value="Hanwella">Hanwella</option>
+                            <option value="Haputale">Haputale</option>
+                            <option value="Harispattuwa">Harispattuwa</option>
+                            <option value="Hatton">Hatton</option>
+                            <option value="Hendala">Hendala</option>
+                            <option value="Homagama">Homagama</option>
+                            <option value="Horana">Horana</option>
+                            <option value="Ja-Ela">Ja-Ela</option>
+                            <option value="Jaffna">Jaffna</option>
+                            <option value="Kadawatha">Kadawatha</option>
+                            <option value="Kadugannawa">Kadugannawa</option>
+                            <option value="Kaduwela">Kaduwela</option>
+                            <option value="Kalawana">Kalawana</option>
+                            <option value="Kalmunai">Kalmunai</option>
+                            <option value="Kalutara">Kalutara</option>
+                            <option value="Kandana">Kandana</option>
+                            <option value="Kandy">Kandy</option>
+                            <option value="Kattankudy">Kattankudy</option>
+                            <option value="Katunayake">Katunayake</option>
+                            <option value="Kegalle">Kegalle</option>
+                            <option value="Kelaniya">Kelaniya</option>
+                            <option value="Kesbewa">Kesbewa</option>
+                            <option value="Keselwatta">Keselwatta</option>
+                            <option value="Kilinochchi">Kilinochchi</option>
+                            <option value="Kiribathgoda">Kiribathgoda</option>
+                            <option value="Kolonnawa">Kolonnawa</option>
+                            <option value="Kotikawatta">Kotikawatta</option>
+                            <option value="Kotte">Kotte</option>
+                            <option value="Kottawa">Kottawa</option>
+                            <option value="Kuliyapitiya">Kuliyapitiya</option>
+                            <option selected="selected" value="Kurunegala">Kurunegala</option>
+                            <option value="Maharagama">Maharagama</option>
+                            <option value="Mahiyanganaya">Mahiyanganaya</option>
+                            <option value="Malabe">Malabe</option>
+                            <option value="Mannar">Mannar</option>
+                            <option value="Marawila">Marawila</option>
+                            <option value="Matale">Matale</option>
+                            <option value="Matara">Matara</option>
+                            <option value="Matugama">Matugama</option>
+                            <option value="Mawanella">Mawanella</option>
+                            <option value="Minuwangoda">Minuwangoda</option>
+                            <option value="Mirigama">Mirigama</option>
+                            <option value="Moneragala">Moneragala</option>
+                            <option value="Moratuwa">Moratuwa</option>
+                            <option value="Mullaitivu">Mullaitivu</option>
+                            <option value="Mulleriyawa">Mulleriyawa</option>
+                            <option value="Nawalapitiya">Nawalapitiya</option>
+                            <option value="Negombo">Negombo</option>
+                            <option value="Nittambuwa">Nittambuwa</option>
+                            <option value="Nuwara-Eliya">Nuwara-Eliya</option>
+                            <option value="Nugegoda">Nugegoda</option>
+                            <option value="Padukka">Padukka</option>
+                            <option value="Panadura">Panadura</option>
+                            <option value="Pannipitiya">Pannipitiya</option>
+                            <option value="Peliyagoda">Peliyagoda</option>
+                            <option value="Piliyandala">Piliyandala</option>
+                            <option value="Polgahawela">Polgahawela</option>
+                            <option value="Polonnaruwa">Polonnaruwa</option>
+                            <option value="Puttalam">Puttalam</option>
+                            <option value="Ragama">Ragama</option>
+                            <option value="Ratnapura">Ratnapura</option>
+                            <option value="Seethawakapura">Seethawakapura</option>
+                            <option value="Sigiriya">Sigiriya</option>
+                            <option value="Talawakele">Talawakele</option>
+                            <option value="Tangalle">Tangalle</option>
+                            <option value="Trincomalee">Trincomalee</option>
+                            <option value="Valvettithurai">Valvettithurai</option>
+                            <option value="Vavuniya">Vavuniya</option>
+                            <option value="Wattala">Wattala</option>
+                            <option value="Wattegama">Wattegama</option>
+                            <option value="Warakapola">Warakapola</option>
+                            <option value="Weligama">Weligama</option>
+                            <option value="Welimada">Welimada</option>
+                            <option value="Welisara">Welisara</option>
+                            <option value="Wennappuwa">Wennappuwa</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left"><input class="btnintxt" type="submit" name="esub" id="esub" value="Edit Profile">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="hidden" name="token" value="9adc3d48e03cdae0be1570a0fdae54de">
+    </form>
+    <form action="" method="post" data-bitwarden-watching="1">
+        <table style="width:250px;margin:auto;">
+            <tbody>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Old password<span class="red">*</span></div><input type="password"
+                            class="intext" name="pass" id="pass" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">New password<span class="red">*</span></div><input type="password"
+                            class="intext" name="npass" id="npass" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Re enter new password<span class="red">*</span></div><input type="password"
+                            class="intext" name="rpass" id="rpass" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left"><input class="btnintxt" type="submit" name="csub" id="csub"
+                            value="Change Password"></td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="hidden" name="token2" value="9adc3d48e03cdae0be1570a0fdae54de">
+    </form>
+</div>
+{% endif %}
+<!-- <body>
     {{g.user.username}}
     {{g.user.password}}
     {{g.user.email}}
     {{g.user.name}}
     {{g.user.phone}}
     {{g.user.city}}
-</body>
+</body> -->
 
-</html>
+{% endblock %}
