@@ -136,7 +136,7 @@
                             Name
                             <span class="red">*</span>
                         </div>
-                        <input type="text" class="intext" name="fname" id="fname" value="Hirusha Adikari" required="">
+                        <input type="text" class="intext" name="fname" id="fname" value="{{ g.user.name }}" required="">
                     </td>
                 </tr>
                 <tr>
@@ -152,8 +152,7 @@
                 <tr>
                     <td align="left">
                         <div class="tx">
-                            Phone number
-                            <span class="red">*</span>
+                            Phone number<span class="red">*</span>
                         </div>
                         <input maxlength="10" type="text" class="intext" name="phn" id="phn" value="{{ g.user.phone }}"
                             required="">
@@ -278,7 +277,6 @@
                 </tr>
             </tbody>
         </table>
-        <input type="hidden" name="token" value="9adc3d48e03cdae0be1570a0fdae54de">
     </form>
 
     <form method="post">
@@ -320,13 +318,11 @@
     </form>
 </div>
 {% endif %}
+
 <!-- <body>
     {{g.user.username}}
     {{g.user.password}}
-    {{g.user.email}}
     {{g.user.name}}
-    {{g.user.phone}}
-    {{g.user.city}}
 </body> -->
 
 {% endblock %}
