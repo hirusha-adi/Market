@@ -108,6 +108,11 @@ def profile_edit():
                 email = request.form['email']
                 phn = request.form['phn']
                 city = request.form['city']
+
+                g.user.name = fname
+                g.user.email = email
+                g.user.phn = phn
+                g.user.city = city
             except:
                 opass = request.form['pass']
                 npass = request.form['npass']
@@ -115,13 +120,12 @@ def profile_edit():
 
                 if g.user.password == opass:
                     if npass == rpass:
-                        # updateUserPassword(new=npass)
                         g.user.password = npass
                     else:
                         # Re entered password is not equal to the other
                         pass
 
-                print(g.user)
+            print(g.user)
         except:
             pass
 
