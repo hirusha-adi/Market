@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "username": "admin",
+        "password": "123",
+        "name": "Hirusha Adikari",
+        "phone": "+9478768973",
+        "city": "Lanka"
+    },
+    {
+        "id": 2,
+        "username": "user",
+        "password": "abc",
+        "name": "Chamod",
+        "phone": "+9474536654",
+        "city": "Lanka"
+    }
+]
