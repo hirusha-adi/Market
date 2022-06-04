@@ -43,12 +43,6 @@ def login():
         return render_template('user/login.html', **data)
 
 
-def show_all_data():
-    global users
-    print(users)
-    return "hello world"
-
-
 def register():
     if request.method == 'POST':
         session.pop('user_id', None)
@@ -63,7 +57,7 @@ def register():
                       name=name, phone=phone, email=email, city=city)
 
         user = Users.getUserByUsername(username=username)
-        session['user_id'] = user.id
+        session['user_id'] = user['id']
 
         return redirect(url_for('profile'))
     else:
@@ -109,10 +103,10 @@ def profile_edit():
                 phn = request.form['phn']
                 city = request.form['city']
 
-                g.user.name = fname
-                g.user.email = email
-                g.user.phn = phn
-                g.user.city = city
+                g.user['name'] = fname
+                g.user['email'] = email
+                g.user['phn'] = phn
+                g.user['city'] = city
             except:
                 opass = request.form['pass']
                 npass = request.form['npass']
@@ -120,7 +114,7 @@ def profile_edit():
 
                 if g.user.password == opass:
                     if npass == rpass:
-                        g.user.password = npass
+                        g.user['password'] = npass
                     else:
                         data['page_edit_errors_show'] = True
                         data['page_edit_errors_list'].append(
