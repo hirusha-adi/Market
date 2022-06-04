@@ -43,6 +43,12 @@ def login():
         return render_template('user/login.html', **data)
 
 
+def show_all_data():
+    global users
+    print(users)
+    return "hello world"
+
+
 def register():
     if request.method == 'POST':
         session.pop('user_id', None)
