@@ -29,6 +29,12 @@ class Users:
             temp.append(user)
         return temp
 
+    def getLastUser():
+        temp = []
+        for user in users.find().sort([('timestamp', -1)]).limit(1):
+            temp.append(user)
+        return temp
+
     def getUserByUsername(username: str):
         temp = []
         for user in users.find({'username': username}):
