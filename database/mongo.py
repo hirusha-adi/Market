@@ -1,16 +1,9 @@
 
 import urllib.parse
 from pymongo import MongoClient
-from database.settings import Mongo
+# from database.settings import Mongo
 from bson import ObjectId
 
-client = MongoClient('mongodb://%s:%s@%s:27017/' %
-                     (
-                         urllib.parse.quote_plus(Mongo.username),
-                         urllib.parse.quote_plus(Mongo.password),
-                         Mongo.ip
-                     )
-                     )
 
 users = client['Market']['users']
 
@@ -34,8 +27,58 @@ class Users:
         temp = []
         for user in users.find({}):
             temp.append(user)
-        print(temp)
         return temp
 
-    def addUser():
-        pass
+    def getUserByUsername(username: str):
+        temp = []
+        for user in users.find({'username': username}):
+            temp.append(user)
+        return temp
+
+    def getUserByName(name: str):
+        temp = []
+        for user in users.find(
+            {
+                "name": {
+                    "$regex": f'.*{name}*.',
+                    "$options": 'i'  # ignore case
+                }
+            }
+        ):
+            temp.append(user)
+        return temp
+
+    def addUser(username, password, name, phone, city):
+        users.insert_one(
+            {
+                'username': username,
+                'password': password,
+                'name': name,
+                'phone': phone,
+                'city': city
+            }
+        )
+
+    def updateUser(username, password, name, phone, city):
+        temp = []
+        for user in users.find(
+            {
+                "username": username
+            },
+            {
+                "$set": {
+                    'username': username,
+                    'password': password,
+                    'name': name,
+                    'phone': phone,
+                    'city': city
+                }
+            },
+            upsert=True
+        ):
+            temp.append(user)
+        return temp
+
+
+x = Users.getUserByName()
+print(x)
