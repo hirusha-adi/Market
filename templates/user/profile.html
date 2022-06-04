@@ -116,6 +116,7 @@
             </div>
         </div>
     </div>
+
     <h2 style="font-size:14px;padding:20px 0px 10px 0px;">Edit Profile</h2>
     <div style="font-size:11px;padding-bottom:20px;">
         Items marked with
@@ -124,6 +125,21 @@
         </span>
         are required.
     </div>
+
+    {% if page_edit_errors_show == True %}
+    <div style="background-color:#E1C1B9;padding:5px;font-size:12px;color:#333;">
+        <img src="https://cdn.discordapp.com/attachments/980165687232319538/982627251357118464/unknown.png" width="13"
+            border="0" alt="">
+        Please check the following error(s)
+        <br>
+        <ul style="margin:2em;padding:5px;list-style:inside;color:#333;">
+            {% for error_item in page_edit_errors_list %}
+            <li>{{ error_item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
     <form method="post">
         <table style="width:250px;margin:auto;">
             <tbody>

@@ -101,6 +101,15 @@ def profile_edit():
     if not g.user:
         return redirect(url_for('login'))
 
+    data = {}
+    data['title'] = "Hirusha"
+    data['page_bottom'] = Dekstop.bottom
+    data['page_top'] = Dekstop.top
+    data['page_header'] = Dekstop.header
+    data['page_edit'] = True
+    data['page_edit_errors_show'] = False
+    data['page_edit_errors_list'] = []
+
     if request.method == 'POST':
         try:
             try:
@@ -122,20 +131,22 @@ def profile_edit():
                     if npass == rpass:
                         g.user.password = npass
                     else:
-                        # Re entered password is not equal to the other
-                        pass
+                        data['page_edit_errors_show'] = True
+                        data['page_edit_errors_list'].append(
+                            'New password doesn\'t match with re-entered password'
+                        )
+                else:
+                    data['page_edit_errors_show'] = True
+                    data['page_edit_errors_list'].append(
+                        'Old password is wrong'
+                    )
 
             print(g.user)
+
         except:
             pass
 
-    data = {}
-    data['title'] = "Hirusha"
-    data['page_bottom'] = Dekstop.bottom
-    data['page_top'] = Dekstop.top
-    data['page_header'] = Dekstop.header
-
-    return render_template('user/profile.html', page_edit=True, **data)
+    return render_template('user/profile.html', **data)
 
 
 def logout():
