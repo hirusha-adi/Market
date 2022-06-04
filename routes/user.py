@@ -18,21 +18,6 @@ users.append(User(id=2, username='hi', password='123',
                   phone="+94719929929", city="home sweet home"))
 
 
-def addUser(**kwargs):
-    global users
-    users.append(
-        User(
-            id=int(users[-1].id)+1,
-            username=kwargs.get("username"),
-            password=kwargs.get("password"),
-            name=kwargs.get("name"),
-            email=kwargs.get("email"),
-            phone=kwargs.get("phone"),
-            city=kwargs.get("city"),
-        )
-    )
-
-
 def login():
     if request.method == 'POST':
         session.pop('user_id', None)
@@ -71,8 +56,8 @@ def register():
         phone = request.form['phone']
         city = request.form['city']
 
-        addUser(username=username, password=password,
-                name=name, email=email, phone=phone, city=city)
+        Users.addUser(username=username, password=password,
+                      name=name, phone=phone, city=city)
 
         user = [x for x in users if x.username == username][0]
         session['user_id'] = user.id
