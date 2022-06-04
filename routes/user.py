@@ -1,4 +1,3 @@
-from django.shortcuts import redirect
 from flask import render_template, request, url_for, redirect, session, g
 import utils.test as test
 from flask_paginate import Pagination
@@ -104,17 +103,34 @@ def profile_edit():
                 phn = request.form['phn']
                 city = request.form['city']
 
+                Users.updateUser(
+                    username=g.user['username'],
+                    password=g.user['password'],
+                    name=fname,
+                    phone=phn,
+                    email=email,
+                    city=city
+                )
                 g.user['name'] = fname
                 g.user['email'] = email
                 g.user['phn'] = phn
                 g.user['city'] = city
+
             except:
                 opass = request.form['pass']
                 npass = request.form['npass']
                 rpass = request.form['rpass']
 
-                if g.user.password == opass:
+                if g.user['password'] == opass:
                     if npass == rpass:
+                        Users.updateUser(
+                            username=g.user['username'],
+                            password=npass,
+                            name=g.user['name'],
+                            phone=g.user['phone'],
+                            email=g.user['email'],
+                            city=g.user['city']
+                        )
                         g.user['password'] = npass
                     else:
                         data['page_edit_errors_show'] = True
@@ -126,8 +142,6 @@ def profile_edit():
                     data['page_edit_errors_list'].append(
                         'Old password is wrong'
                     )
-
-            print(g.user)
 
         except Exception as _err:
             data['page_edit_errors_show'] = True
