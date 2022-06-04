@@ -17,3 +17,10 @@ class Dekstop:
     top = desktop["top"]
     header = desktop["header"]
     bottom = desktop["bottom"]
+
+
+class Mongo:
+    mongo = data["mongo"]
+    ip: str = mongo["ip"]
+    username: str = mongo["username"]
+    password: str = mongo["password"]
