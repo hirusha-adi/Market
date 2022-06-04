@@ -60,7 +60,7 @@ def register():
         city = request.form['city']
 
         Users.addUser(username=username, password=password,
-                      name=name, phone=phone, city=city)
+                      name=name, phone=phone, email=email, city=city)
 
         user = Users.getUserByUsername(username=username)
         session['user_id'] = user.id
