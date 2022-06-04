@@ -20,6 +20,7 @@ class Users:
         "password": "",
         "name": "",
         "phone": "",
+        "email": "",
         "city": ""
     }
     """
