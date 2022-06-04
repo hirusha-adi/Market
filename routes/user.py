@@ -143,8 +143,11 @@ def profile_edit():
 
             print(g.user)
 
-        except:
-            pass
+        except Exception as _err:
+            data['page_edit_errors_show'] = True
+            data['page_edit_errors_list'].append(
+                f'{_err}'
+            )
 
     return render_template('user/profile.html', **data)
 
