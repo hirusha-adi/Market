@@ -3,6 +3,7 @@ from routes.main import *
 from routes.post import *
 from routes.user import *
 from database import settings
+from database.mongo import Users
 
 app = Flask(__name__)
 app.secret_key = "VerySecret12345"
@@ -23,7 +24,7 @@ app.add_url_rule("/show_all_data", 'show_all_data', show_all_data, methods=['GET
 def before_request():
     g.user = None
     if 'user_id' in session:
-        user = [x for x in users if x.id == session['user_id']][0]
+        user = Users.getUserByID()
         g.user = user
 
 
