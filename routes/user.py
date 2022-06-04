@@ -24,11 +24,14 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-        user = [x for x in users if x.username == username][0]
-        if user and user.password == password:
-            session['user_id'] = user.id
-            return redirect(url_for('profile'))
-        else:
+        user = Users.getUserByUsername(username=username)
+        try:
+            if user and user['password'] == password:
+                session['user_id'] = user.id
+                return redirect(url_for('profile'))
+            else:
+                return redirect(url_for('login'))
+        except:
             return redirect(url_for('login'))
     else:
         data = {}
@@ -59,7 +62,7 @@ def register():
         Users.addUser(username=username, password=password,
                       name=name, phone=phone, city=city)
 
-        user = [x for x in users if x.username == username][0]
+        user = Users.getUserByUsername(username=username)
         session['user_id'] = user.id
 
         return redirect(url_for('profile'))
