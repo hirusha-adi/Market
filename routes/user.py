@@ -6,17 +6,6 @@ from database.settings import Dekstop
 from models.user import User
 from database.mongo import Users
 
-Users.getAllUsers()
-
-users = test.users
-users.append(User(id=1, username='admin', password='123',
-                  name="Hirusha Adikari", email="i@love.you",
-                  phone="+94719929929", city="home sweet home"))
-
-users.append(User(id=2, username='hi', password='123',
-                  name="Hirusha Adikari", email="i@love.you",
-                  phone="+94719929929", city="home sweet home"))
-
 
 def login():
     if request.method == 'POST':
@@ -24,14 +13,20 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
+        print("1")
         user = Users.getUserByUsername(username=username)
+        print(user)
         try:
+            print("try 1")
             if user and user['password'] == password:
-                session['user_id'] = user.id
+                print("try true")
+                session['user_id'] = user['id']
                 return redirect(url_for('profile'))
             else:
+                print("try false")
                 return redirect(url_for('login'))
         except:
+            print("except")
             return redirect(url_for('login'))
     else:
         data = {}

@@ -5,10 +5,6 @@ import pymongo
 # from database.settings import Mongo
 from bson import ObjectId
 
-client = MongoClient('mongodb://%s:%s@%s:27017/' %
-
-                     )
-
 
 users = client['Market']['users']
 
@@ -48,7 +44,13 @@ class Users:
         temp = []
         for user in users.find({'username': username}):
             temp.append(user)
-        return temp
+        return temp[0]
+
+    def getUserByID(id):
+        temp = []
+        for user in users.find({'id': id}):
+            temp.append(user)
+        return temp[0]
 
     def getUserByName(name: str):
         temp = []
@@ -63,20 +65,21 @@ class Users:
             temp.append(user)
         return temp
 
-    def addUser(username, password, name, phone, city):
+    def addUser(username, password, name, phone, email, city):
         users.insert_one(
             {
+                'id': int(Users.getLastUser()['id']) + 1,
                 'username': username,
                 'password': password,
                 'name': name,
                 'phone': phone,
+                'email': email,
                 'city': city
             }
         )
 
-    def updateUser(username, password, name, phone, city):
-        temp = []
-        for user in users.find(
+    def updateUser(username, password, name, phone, email, city):
+        users.find_one_and_update(
             {
                 "username": username
             },
@@ -86,14 +89,11 @@ class Users:
                     'password': password,
                     'name': name,
                     'phone': phone,
+                    'email': email,
                     'city': city
                 }
             },
             upsert=True
-        ):
-            temp.append(user)
-        return temp
-
-
-x = Users.getLastUser()
-print(x)
+        )
+        print("Updated")
+        return True
