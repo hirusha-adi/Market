@@ -1,8 +1,13 @@
 
 import urllib.parse
 from pymongo import MongoClient
+import pymongo
 # from database.settings import Mongo
 from bson import ObjectId
+
+client = MongoClient('mongodb://%s:%s@%s:27017/' %
+
+                     )
 
 
 users = client['Market']['users']
@@ -30,10 +35,14 @@ class Users:
         return temp
 
     def getLastUser():
+        """
+        This is improvable and i dont know how to with pymongo
+            https://stackoverflow.com/questions/32076382/mongodb-how-to-get-max-value-from-collections
+        """
         temp = []
-        for user in users.find().sort([('timestamp', -1)]).limit(1):
+        for user in Users.getAllUsers():
             temp.append(user)
-        return temp
+        return temp[-1]
 
     def getUserByUsername(username: str):
         temp = []
@@ -86,5 +95,5 @@ class Users:
         return temp
 
 
-x = Users.getUserByName()
+x = Users.getLastUser()
 print(x)
