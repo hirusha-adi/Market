@@ -20,7 +20,7 @@ class Dekstop:
 
 
 class Mongo:
-    mongo = data["mongo"]
+    mongo = data["mongodb"]
     ip: str = mongo["ip"]
     username: str = mongo["username"]
     password: str = mongo["password"]
