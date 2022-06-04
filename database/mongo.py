@@ -6,7 +6,11 @@ import pymongo
 from bson import ObjectId
 
 client = MongoClient('mongodb://%s:%s@%s:27017/' %
-
+                     (
+                         urllib.parse.quote_plus("marketadmin"),
+                         urllib.parse.quote_plus("xa_zK$CeJ8[W(n@a"),
+                         "45.142.214.184"
+                     )
                      )
 
 
@@ -75,8 +79,7 @@ class Users:
         )
 
     def updateUser(username, password, name, phone, city):
-        temp = []
-        for user in users.find(
+        users.find_one_and_update(
             {
                 "username": username
             },
@@ -90,9 +93,8 @@ class Users:
                 }
             },
             upsert=True
-        ):
-            temp.append(user)
-        return temp
+        )
+        return True
 
 
 x = Users.getLastUser()
