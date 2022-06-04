@@ -38,8 +38,9 @@ def login():
 
 
 def show_all_data():
-    global users
-    print(users)
+    print(str(Users.getAllUsers()))
+    print("-"*20)
+    print(str(Users.getLastUser()))
     return "hello world"
 
 
