@@ -4,6 +4,11 @@
         "port": 8080,
         "debug": true
     },
+    "mongodb": {
+        "ip": "",
+        "username": "",
+        "password": ""
+    },
     "desktop": {
         "header": {
             "image_path_from_static": "",
