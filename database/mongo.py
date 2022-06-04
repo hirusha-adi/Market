@@ -16,4 +16,26 @@ users = client['Market']['users']
 
 
 class Users:
-    pass
+    """
+    {
+        "_id": {
+            "$oid": ""
+        },
+        "id": 1,
+        "username": "",
+        "password": "",
+        "name": "",
+        "phone": "",
+        "city": ""
+    }
+    """
+
+    def getAllUsers():
+        temp = []
+        for user in users.find({}):
+            temp.append(user)
+        print(temp)
+        return temp
+
+    def addUser():
+        pass

@@ -6,6 +6,7 @@ from database.settings import Dekstop
 from models.user import User
 from database.mongo import Users
 
+
 users = test.users
 users.append(User(id=1, username='admin', password='123',
                   name="Hirusha Adikari", email="i@love.you",
