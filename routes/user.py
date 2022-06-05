@@ -12,20 +12,14 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-        print("1")
         user = Users.getUserByUsername(username=username)
-        print(user)
         try:
-            print("try 1")
             if user and user['password'] == password:
-                print("try true")
                 session['user_id'] = user['id']
                 return redirect(url_for('profile'))
             else:
-                print("try false")
                 return redirect(url_for('login'))
         except:
-            print("except")
             return redirect(url_for('login'))
     else:
         data = {}
