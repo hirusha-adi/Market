@@ -141,8 +141,34 @@ class Posts:
     }
     """
 
-    def getAllPosts():
-        temp = []
-        for post in posts.find({}):
-            temp.append(post)
-        return temp
+    class Car:
+        """
+        {
+            "id": 1,
+            "username": "",
+            "date": "",
+            "price": "",
+            "name": "",
+            "details": "",
+            "type": "car",
+            "fields": {
+                "make": "",
+                "model": "",
+                "yom": "",
+                "mileage": "",
+                "transmission": "",
+                "fueltype": "",
+                "engine": "",
+                "options": ""
+            },
+            "images": [
+                "http://hirusha.xyz",
+                "http://example.com"
+            ]
+        }
+        """
+        def getAllPosts():
+            temp = []
+            for post in posts.find({}):
+                temp.append(post)
+            return temp
