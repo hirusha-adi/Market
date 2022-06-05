@@ -32,10 +32,10 @@ def login():
 
 
 def show_all_data():
-    print(str(Users.getAllUsers()))
     print("-"*20)
-    print(str(Users.getLastUser()))
-    return "hello world"
+    data = str(Users.getLastUser())
+    print(data)
+    return data
 
 
 def register():
