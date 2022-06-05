@@ -123,12 +123,20 @@ class Posts:
         "fields": {
             "make": "",
             "model": "",
+            "yom": "",
+            "mileage": "",
             "transmission": "",
             "fueltype": "",
             "engine": "",
             "options": "",
             "size": ""
-        }
+            "whatfor": "",
+
+        },
+        "images": [
+            "",
+            ""
+        ]
 
     }
     """
