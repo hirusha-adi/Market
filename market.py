@@ -36,8 +36,9 @@ def before_request():
         g.user = user
 
 
-app.run(
-    settings.Web.host,
-    port=settings.Web.port,
-    debug=settings.Web.debug
-)
+if __name__ == "__main__":
+    app.run(
+        settings.Web.host,
+        port=settings.Web.port,
+        debug=settings.Web.debug
+    )
