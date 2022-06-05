@@ -11,6 +11,7 @@ client = MongoClient('mongodb://%s:%s@%s:27017/' % (
 ))
 
 users = client['Market']['users']
+posts = client['Market']['posts']
 
 
 class Users:
@@ -102,3 +103,38 @@ class Users:
         )
         print("Updated")
         return True
+
+
+class Posts:
+    """
+    {
+
+        "_id": {
+            "$oid": ""
+        },
+        "id": 1,
+        "username": "",
+        "date": "",
+        "price": "",
+        "name": "",
+        "details": "",
+
+        "type": "",         --> car | land | electronics | part
+        "fields": {
+            "make": "",
+            "model": "",
+            "transmission": "",
+            "fueltype": "",
+            "engine": "",
+            "options": "",
+            "size": ""
+        }
+
+    }
+    """
+
+    def getAllPosts():
+        temp = []
+        for post in posts.find({}):
+            temp.append(post)
+        return temp
