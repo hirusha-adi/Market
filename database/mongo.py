@@ -1,4 +1,5 @@
 
+from enum import Flag
 import urllib.parse
 from pymongo import MongoClient
 from database.settings import Mongo
@@ -50,7 +51,10 @@ class Users:
         temp = []
         for user in users.find({'username': username}):
             temp.append(user)
-        return temp[0]
+        try:
+            return temp[0]
+        except:
+            return False
 
     def getUserByID(id):
         temp = []

@@ -21,6 +21,10 @@ app.add_url_rule("/profile", 'profile', profile, methods=['GET'])
 app.add_url_rule("/profile/edit", 'profile_edit',
                  profile_edit, methods=['GET', 'POST'])
 
+# Posts
+app.add_url_rule("/post", 'post_no_id', post_no_id, methods=['GET'])
+app.add_url_rule("/post/<id>", 'one_post', one_post, methods=['GET'])
+
 
 # DEBUG
 app.add_url_rule("/one_post", 'one_post', one_post, methods=['GET'])
