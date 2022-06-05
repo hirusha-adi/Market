@@ -411,3 +411,9 @@ class Posts:
             ):
                 temp.append(post)
             return temp
+
+    def getAllPosts():
+        temp = []
+        for post in posts.find():
+            temp.append(post)
+        return temp
