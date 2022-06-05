@@ -366,3 +366,9 @@ class Posts:
             ]
         }
         """
+
+        def getAllPosts():
+            temp = []
+            for post in posts.find({"type", "parts"}):
+                temp.append(post)
+            return temp
