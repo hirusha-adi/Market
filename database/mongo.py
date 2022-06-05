@@ -169,7 +169,7 @@ class Posts:
         """
         def getAllPosts():
             temp = []
-            for post in posts.find({}):
+            for post in posts.find({"type": "car"}):
                 temp.append(post)
             return temp
 
@@ -177,6 +177,7 @@ class Posts:
             temp = []
             for post in posts.find(
                 {
+                    "type": "car",
                     "username": username
                 }
             ):
@@ -187,7 +188,8 @@ class Posts:
             temp = []
             for post in posts.find(
                 {
-                    "username": int(id)
+                    "type": "car",
+                    "id": int(id)
                 }
             ):
                 temp.append(post)
@@ -198,9 +200,10 @@ class Posts:
             for post in posts.find(
                 {
                     "name": {
-                    "$regex": f'.*{name}*.',
-                    "$options": 'i'  # ignore case
-                    }
+                        "$regex": f'.*{name}*.',
+                        "$options": 'i'  # ignore case
+                    },
+                    "type": "car"
                 }
             ):
                 temp.append(post)
