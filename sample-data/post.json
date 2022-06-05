@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "username": "admin",
+        "date": "2022 May 28 11:03",
+        "price": "9999",
+        "name": "Ad Name Comes Here",
+        "details": "Very long markdown description goes here",
+        "type": "car",
+        "fields": {
+            "make": "make",
+            "model": "model",
+            "yom": "2018",
+            "mileage": "130 KM",
+            "transmission": "trans",
+            "fueltype": "fuel",
+            "engine": "engine",
+            "options": "options"
+        },
+        "images": [
+            "http://hirusha.xyz",
+            "http://example.com"
+        ]
+    },
+    {
+        "id": 2,
+        "username": "admin",
+        "date": "3033 May 33 11:03",
+        "price": "888",
+        "name": "Ad Name Comes Here",
+        "details": "Very long markdown description goes here",
+        "type": "land",
+        "fields": {
+            "options": "options",
+            "size": "99 perches"
+        },
+        "images": [
+            "http://hirusha.xyz",
+            "http://example.com"
+        ]
+    },
+    {
+        "id": 3,
+        "username": "admin",
+        "date": "7077 May 77 11:03",
+        "price": "7777",
+        "name": "Ad Name Comes Here",
+        "details": "Very long markdown description goes here",
+        "type": "electronics",
+        "fields": {
+            "make": "make",
+            "model": "model",
+            "options": "options"
+        },
+        "images": [
+            "http://hirusha.xyz",
+            "http://example.com"
+        ]
+    },
+    {
+        "id": 4,
+        "username": "admin",
+        "date": "5055 May 55 11:03",
+        "price": "5555",
+        "name": "Ad Name Comes Here",
+        "details": "Very long markdown description goes here",
+        "type": "car",
+        "fields": {
+            "whatfor": "for this item",
+            "make": "make",
+            "model": "model",
+            "options": "options",
+            "size": "small"
+        },
+        "images": [
+            "http://hirusha.xyz",
+            "http://example.com"
+        ]
+    }
+]
