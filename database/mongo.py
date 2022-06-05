@@ -343,4 +343,26 @@ class Posts:
                 temp.append(post)
             return temp
 
-    class Part
+    class Parts:
+        """
+        {
+            "id": 4,
+            "username": "",
+            "date": "",
+            "price": "",
+            "name": "",
+            "details": "",
+            "type": "parts",
+            "fields": {
+                "whatfor": "",
+                "make": "",
+                "model": "",
+                "options": "",
+                "size": ""
+            },
+            "images": [
+                "",
+                ""
+            ]
+        }
+        """
