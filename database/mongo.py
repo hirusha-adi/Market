@@ -303,3 +303,14 @@ class Posts:
             for post in posts.find({"type", "electronics"}):
                 temp.append(post)
             return temp
+
+        def getPostsByUsername(username):
+            temp = []
+            for post in posts.find(
+                {
+                    "type": "electronics",
+                    "username": username
+                }
+            ):
+                temp.append(post)
+            return temp
