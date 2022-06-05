@@ -1,7 +1,6 @@
 
 import urllib.parse
 from pymongo import MongoClient
-import pymongo
 from database.settings import Mongo
 from bson import ObjectId
 
