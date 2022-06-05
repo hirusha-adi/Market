@@ -397,3 +397,17 @@ class Posts:
                 return temp[0]
             except:
                 return False
+
+        def getPostsByName(name):
+            temp = []
+            for post in posts.find(
+                {
+                    "name": {
+                        "$regex": f'.*{name}*.',
+                        "$options": 'i'  # ignore case
+                    },
+                    "type": "parts"
+                }
+            ):
+                temp.append(post)
+            return temp
