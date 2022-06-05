@@ -119,7 +119,7 @@ class Posts:
         "name": "",
         "details": "",
 
-        "type": "",         --> car | land | electronics | part
+        "type": "",         --> car | land | electronics | parts
         "fields": {
             "make": "",
             "model": "",
@@ -342,3 +342,5 @@ class Posts:
             ):
                 temp.append(post)
             return temp
+
+    class Part

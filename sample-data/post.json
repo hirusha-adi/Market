@@ -64,7 +64,7 @@
         "price": "5555",
         "name": "Ad Name Comes Here",
         "details": "Very long markdown description goes here",
-        "type": "part",
+        "type": "parts",
         "fields": {
             "whatfor": "for this item",
             "make": "make",
