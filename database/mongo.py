@@ -131,7 +131,6 @@ class Posts:
             "options": "",
             "size": ""
             "whatfor": "",
-
         },
         "images": [
             "",
@@ -162,8 +161,8 @@ class Posts:
                 "options": ""
             },
             "images": [
-                "http://hirusha.xyz",
-                "http://example.com"
+                "",
+                ""
             ]
         }
         """
@@ -227,8 +226,8 @@ class Posts:
                 "size": ""
             },
             "images": [
-                "http://hirusha.xyz",
-                "http://example.com"
+                "",
+                ""
             ]
         }
         """
@@ -276,3 +275,25 @@ class Posts:
             ):
                 temp.append(post)
             return temp
+
+    class Electronics:
+        """
+        {
+            "id": 3,
+            "username": "",
+            "date": "",
+            "price": "",
+            "name": "",
+            "details": "",
+            "type": "electronics",
+            "fields": {
+                "make": "",
+                "model": "",
+                "options": ""
+            },
+            "images": [
+                "",
+                ""
+            ]
+        }
+    """
