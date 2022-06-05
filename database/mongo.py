@@ -427,3 +427,16 @@ class Posts:
         ):
             temp.append(post)
         return temp
+
+    def getPostByID(id):
+        temp = []
+        for post in posts.find(
+            {
+                "id": int(id)
+            }
+        ):
+            temp.append(post)
+        try:
+            return temp[0]
+        except:
+            return False
