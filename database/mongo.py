@@ -172,3 +172,13 @@ class Posts:
             for post in posts.find({}):
                 temp.append(post)
             return temp
+
+        def getPostsByUsername(username):
+            temp = []
+            for post in posts.find(
+                {
+                    "username": username
+                }
+            ):
+                temp.append(post)
+            return temp
