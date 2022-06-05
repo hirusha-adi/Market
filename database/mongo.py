@@ -193,7 +193,10 @@ class Posts:
                 }
             ):
                 temp.append(post)
-            return temp
+            try:
+                return temp[0]
+            except:
+                return False
 
         def getPostsByName(name):
             temp = []
