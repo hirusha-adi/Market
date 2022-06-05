@@ -237,3 +237,14 @@ class Posts:
             for post in posts.find({"type", "land"}):
                 temp.append(post)
             return temp
+
+        def getPostsByUsername(username):
+            temp = []
+            for post in posts.find(
+                {
+                    "type": "land",
+                    "username": username
+                }
+            ):
+                temp.append(post)
+            return temp
