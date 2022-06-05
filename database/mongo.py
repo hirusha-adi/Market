@@ -296,4 +296,10 @@ class Posts:
                 ""
             ]
         }
-    """
+        """
+
+        def getAllPosts():
+            temp = []
+            for post in posts.find({"type", "electronics"}):
+                temp.append(post)
+            return temp
