@@ -208,3 +208,29 @@ class Posts:
             ):
                 temp.append(post)
             return temp
+
+    class Land:
+        """
+        {
+            "id": 2,
+            "username": "",
+            "date": "",
+            "price": "",
+            "name": "",
+            "details": "",
+            "type": "land",
+            "fields": {
+                "options": "",
+                "size": ""
+            },
+            "images": [
+                "http://hirusha.xyz",
+                "http://example.com"
+            ]
+        }
+        """
+        def getAllPosts():
+            temp = []
+            for post in posts.find({"type", "land"}):
+                temp.append(post)
+            return temp
