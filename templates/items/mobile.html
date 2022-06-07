@@ -90,16 +90,18 @@
         {% for item in items %}
         <li>
             <div class="item">
-                <h2 class="more"><a title="{{ item.title }}"
-                        href="https://riyasewana.com/buy/peugeot-3008-sale-nittambuwa-4637445">
-                        {{ item.title }}
-                    </a></h2>
+                <h2 class="more">
+                    <a title="{{ item.name }}" href="https://riyasewana.com/buy/peugeot-3008-sale-nittambuwa-4637445">
+                        {{ item.name }}
+                    </a>
+                </h2>
                 <div class="imgbox"><a title="{{ item.title }}"
-                        href="https://riyasewana.com/buy/peugeot-3008-sale-nittambuwa-4637445"><img
-                            src="{{ item.thumnail }}" alt="{{ item.title }}" width="100" height="75"
+                        href="https://riyasewana.com/buy/peugeot-3008-sale-nittambuwa-4637445">
+                        <img src="{{ item.thumnail }}" alt="{{ item.title }}" width="100" height="75"
                             importance="high" />
                         <div class="clear"></div>
-                    </a></div>
+                    </a>
+                </div>
                 <div class="boxtext">
                     <div class="boxintxt">{{ item.location }}</div>
                     <div class="boxintxt b"> {{ item.price }}</div>
