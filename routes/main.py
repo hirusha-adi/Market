@@ -12,7 +12,7 @@ def index_no_page():
 
 def index(page):
     current_page = int(page)
-    list_all = test.items
+    list_all = Posts.getAllPosts()
     list_length = len(list_all)
     per_page = 4
 
@@ -36,7 +36,5 @@ def index(page):
     data['page_bottom'] = Dekstop.bottom
     data['page_top'] = Dekstop.top
     data['page_header'] = Dekstop.header
-
-    data['all_posts'] = Posts.getAllPosts()
 
     return render_template('items/mobile.html', **data)
