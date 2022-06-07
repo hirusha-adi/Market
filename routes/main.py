@@ -3,6 +3,7 @@ from flask import render_template, request, url_for, redirect, session, g
 import utils.test as test
 from flask_paginate import Pagination
 from database.settings import Dekstop
+from database.mongo import Posts
 
 
 def index_no_page():
@@ -35,5 +36,7 @@ def index(page):
     data['page_bottom'] = Dekstop.bottom
     data['page_top'] = Dekstop.top
     data['page_header'] = Dekstop.header
+
+    data['all_posts'] = Posts.getAllPosts()
 
     return render_template('items/mobile.html', **data)
