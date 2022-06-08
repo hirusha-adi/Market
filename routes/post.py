@@ -32,4 +32,9 @@ def one_post(id):
     except:
         return redirect(url_for('index_no_page'))
 
+    try:
+        pass
+    except:
+        return redirect(url_for('index_no_page'))
+
     return render_template('post/mobile.html', **data)
