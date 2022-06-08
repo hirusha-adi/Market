@@ -387,6 +387,22 @@
                 <td>{{ post_info.fields.engine }}</td>
             </tr>
             {% endif %}
+            {% if post_info.type == "land" %}
+            <tr>
+                <td>
+                    <p class="moreh">Size</p>
+                </td>
+                <td>{{ post_info.fields.size }}</td>
+            </tr>
+            {% endif %}
+            {% if post_info.type == "parts" %}
+            <tr>
+                <td>
+                    <p class="moreh">For</p>
+                </td>
+                <td>{{ post_info.fields.whatfor }}</td>
+            </tr>
+            {% endif %}
             <tr>
                 <td>
                     <p class="moreh">Options</p>
