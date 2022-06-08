@@ -1,5 +1,3 @@
-from os import EX_CANTCREAT
-from django.shortcuts import redirect
 from flask import render_template, request, url_for, redirect, session, g
 from database.settings import Dekstop
 from models.user import User
