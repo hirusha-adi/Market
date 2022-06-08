@@ -310,98 +310,95 @@
                 <td>
                     <p class="moreh"> Price</p>
                 </td>
-                <td>Negotiable</td>
+                <td>{{ post_info.price }}</td>
             </tr>
 
             <tr>
                 <td>
                     <p class="moreh">Location</p>
                 </td>
-                <td>Nittambuwa</td>
+                <td>{{ user_info.city }}</td>
             </tr>
+            {% if post_info.type == "car" %}
             <tr>
                 <td>
                     <p class="moreh">YOM</p>
                 </td>
-                <td>2011</td>
+                <td>{{ post_info.fields.yom }}</td>
             </tr>
+            {% endif %}
+            {% if post_info.type == "car" %}
             <tr>
                 <td>
                     <p class="moreh">Mileage (km)</p>
                 </td>
-                <td>132000</td>
+                <td>{{ post_info.fields.mileage }}</td>
             </tr>
+            {% endif %}
             <tr>
                 <td>
                     <p class="moreh">Ad Date</p>
                 </td>
-                <td>2022 May 28 11:03 pm</td>
-            </tr>
-            <tr>
-                <td>
-                    <p class="moreh">Review</p>
-                </td>
-                <td><a style="text-decoration:underline dotted;font-weight:bold;" title="Peugeot 3008 Video Review"
-                        href="https://www.youtube.com/watch?v=ooj7oBpi9rg">Peugeot 3008 Review Video</a></td>
+                <td>{{ post_info.date }}</td>
             </tr>
             <tr>
                 <td>
                     <p class="moreh">Name</p>
                 </td>
-                <td>Tharindu</td>
+                <td>{{ user_info.name }}</td>
             </tr>
+            {% if (post_info.type == "car") or (post_info.type == "electronics") or (post_info.type == "parts") %}
             <tr>
                 <td>
                     <p class="moreh">Make</p>
                 </td>
-                <td>Peugeot</td>
+                <td>{{ post_info.fields.make }}</td>
             </tr>
+            {% endif %}
+            {% if (post_info.type == "car") or (post_info.type == "electronics") or (post_info.type == "parts") %}
             <tr>
                 <td>
                     <p class="moreh"> Model</p>
                 </td>
-                <td>3008</td>
+                <td>{{ post_info.fields.model }}</td>
             </tr>
+            {% endif %}
+            {% if post_info.type == "car" %}
             <tr>
                 <td>
                     <p class="moreh">Transmission </p>
                 </td>
-                <td>Automatic</td>
+                <td>{{ post_info.fields.transmission }}</td>
             </tr>
+            {% endif %}
+            {% if post_info.type == "car" %}
             <tr>
                 <td>
                     <p class="moreh">Fuel Type</p>
                 </td>
-                <td>Petrol</td>
+                <td>{{ post_info.fields.fueltype }}</td>
             </tr>
+            {% endif %}
+            {% if post_info.type == "car" %}
             <tr>
                 <td>
                     <p class="moreh">Engine (cc) </p>
                 </td>
-                <td>1600</td>
+                <td>{{ post_info.fields.engine }}</td>
             </tr>
+            {% endif %}
             <tr>
                 <td>
                     <p class="moreh">Options</p>
                 </td>
-                <td>AIR CONDITION, POWER STEERING, POWER MIRROR, POWER WINDOW</td>
+                <td>{{ post_info.fields.options }}</td>
             </tr>
             <tr>
                 <td>
                     <p class="moreh">More Details</p>
                 </td>
                 <td>
-                    📞0701167328<br>
-                    Peugeot 3008 <br>
-                    Peugeot 3008 <br>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <div style="display:block;position:relative;float:left;margin:0 5px 0 5px"><span
-                            style="color:#e1365d;font-size:15px;">⚠ </span><a class="fm2"
-                            href="https://riyasewana.com/contact.php">Report Ad</a></div>
-                    <div class="clear"></div>
+                    {{ post_info.details }}
                 </td>
             </tr>
             <tr>
