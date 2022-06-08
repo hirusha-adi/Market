@@ -19,15 +19,18 @@ def one_post(id):
 
     # Get Post Info
     try:
-        post = Posts.getPostByID()
-        if bool(post) is False:
+        _post = Posts.getPostByID(id=int(id))
+        if bool(_post) is False:
             return redirect(url_for('index_no_page'))
-        data['post_info'] = post
+        data['post_info'] = _post
     except:
         return redirect(url_for('index_no_page'))
 
     try:
-        user = Users.getUserByUsername()
+        _user = Users.getUserByUsername(username=_post['username'])
+        if bool(_user) is False:
+            return redirect(url_for('index_no_page'))
+        data['user_info'] = _user
     except:
         return redirect(url_for('index_no_page'))
 
