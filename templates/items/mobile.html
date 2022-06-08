@@ -95,18 +95,18 @@
                         {{ item.name }}
                     </a>
                 </h2>
-                <div class="imgbox"><a title="{{ item.title }}"
+                <div class="imgbox"><a title="{{ item.name }}"
                         href="https://riyasewana.com/buy/peugeot-3008-sale-nittambuwa-4637445">
-                        <img src="{{ item.thumnail }}" alt="{{ item.title }}" width="100" height="75"
+                        <img src="{{ item.images[0] }}" alt="{{ item.name }}" width="100" height="75"
                             importance="high" />
                         <div class="clear"></div>
                     </a>
                 </div>
                 <div class="boxtext">
-                    <div class="boxintxt">{{ item.location }}</div>
                     <div class="boxintxt b"> {{ item.price }}</div>
-                    <div class="boxintxt"> {{ item.description }}</div>
-                    <div class="boxintxt s">{{ item.date }}</div>
+                    <div class="boxintxt"> {{ item.details }}</div>
+                    <div class="boxintxt"> by {{ item.username }}</div>
+                    <div class="boxintxt s">on {{ item.date }}</div>
                 </div>
                 <div class="clear"></div>
             </div>
