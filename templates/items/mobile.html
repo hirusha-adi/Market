@@ -91,12 +91,11 @@
         <li>
             <div class="item">
                 <h2 class="more">
-                    <a title="{{ item.name }}" href="https://riyasewana.com/buy/peugeot-3008-sale-nittambuwa-4637445">
+                    <a title="{{ item.name }}" href="{{ url_for('one_post', id=item.id) }}">
                         {{ item.name }}
                     </a>
                 </h2>
-                <div class="imgbox"><a title="{{ item.name }}"
-                        href="https://riyasewana.com/buy/peugeot-3008-sale-nittambuwa-4637445">
+                <div class="imgbox"><a title="{{ item.name }}" href="{{ url_for('one_post', id=item.id) }}">
                         <img src="{{ item.images[0] }}" alt="{{ item.name }}" width="100" height="75"
                             importance="high" />
                         <div class="clear"></div>
