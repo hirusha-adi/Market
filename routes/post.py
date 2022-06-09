@@ -42,3 +42,13 @@ def one_post(id):
                     "https://www.w3schools.com/w3css/img_forest.jpg"]
 
     return render_template('post/mobile.html', **data)
+
+
+def new_post_car():
+    data = {}
+    data['title'] = "Hirusha"
+    data['page_bottom'] = Dekstop.bottom
+    data['page_top'] = Dekstop.top
+    data['page_header'] = Dekstop.header
+
+    return render_template('new/car.html', **data)
