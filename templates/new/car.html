@@ -79,13 +79,19 @@
 {% block content %}
 <div id="content">
     <div id="acctop" style="color:#036;text-decoration:none;text-align:center;">
-
         <div style="width:275px;margin:auto;">
-            <div style="padding-bottom:5px;font-size:13px;">Welcome hirusha-adi</div>
-            <div style="font-size:13px;font-weight:bold;line-height:1.3;" class="mocls"><a
-                    href="https://riyasewana.com/account.php">My Ads</a> | <a
-                    href="https://riyasewana.com/editprofile.php">Edit Profile</a> | <a
-                    href="https://riyasewana.com/favorite.php">Favorites</a> | <a href="logout.php">Logout</a></div>
+            <div style="padding-bottom:5px;font-size:13px;">Welcome
+                <b>
+                    {{g.user.username}}
+                </b>
+            </div>
+            <div style="font-size:13px;font-weight:bold;line-height:1.3;" class="mocls">
+                <a href="{{ url_for('profile') }}">My Ads</a>
+                |
+                <a href="{{ url_for('profile_edit') }}">Edit Profile</a>
+                |
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </div>
         </div>
     </div>
     <h2 style="font-size:14px;padding:20px 0px 10px 0px;">Add Your Vehicle</h2>
@@ -423,19 +429,15 @@
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Additional Info</div><textarea name="more" id="more" rows="5" class="intext"
-                            style="height:100px;"></textarea>
+                        <div class="tx">Additional Info (Markdown)</div>
+                        <textarea name="more" id="more" rows="5" class="intext" style="height:100px;"></textarea>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <input type="hidden" name="up_hid" id="up_hid" value="ok"><input type="hidden" name="token"
-            value="d7801aea2526604e78b090affd2a6895">
-        <input type="hidden" name="1" id="1" value=""><input type="hidden" name="2" id="2" value=""><input type="hidden"
-            name="3" id="3" value=""><input type="hidden" name="4" id="4" value=""><input type="hidden" name="5" id="5"
-            value=""><input type="hidden" name="6" id="6" value="">
     </form>
-    <table>
+
+    <table style="width:275px;margin:auto;">
         <tbody>
             <tr>
                 <td align="center">
@@ -444,58 +446,57 @@
                 </td>
             </tr>
             <tr>
-                <td align="left">
-                    <div class="tx">Main Image</div><input type="file" name="up1h" id="up1h" accept="image/*"> <span
-                        class="up_style" id="1_res" style="display:none;"></span><img id="preview1"
-                        src="images/ajax-loader.gif" class="gifcss">
+                <td align="center">
+                    <div class="tx">Main Image</div>
+                    <input type="file" name="up1h" id="up1h" accept="image/*">
+                    <span class="up_style" id="1_res" style="display:none;">
+                    </span>
                 </td>
             </tr>
             <tr>
-                <td align="left">
-                    <div class="tx">Image 2</div><input type="file" name="up2h" id="up2h" accept="image/*"> <span
-                        class="up_style" id="2_res" style="display:none;"></span><img id="preview2"
-                        src="images/ajax-loader.gif" class="gifcss">
+                <td align="center">
+                    <div class="tx">Image 2</div>
+                    <input type="file" name="up2h" id="up2h" accept="image/*">
+                    <span class="up_style" id="2_res" style="display:none;">
+                    </span>
                 </td>
             </tr>
             <tr>
-                <td align="left">
-                    <div class="tx">Image 3</div><input type="file" name="up3h" id="up3h" accept="image/*"> <span
-                        class="up_style" id="3_res" style="display:none;"></span><img id="preview3"
-                        src="images/ajax-loader.gif" class="gifcss">
+                <td align="center">
+                    <div class="tx">Image 3</div>
+                    <input type="file" name="up3h" id="up3h" accept="image/*">
+                    <span class="up_style" id="3_res" style="display:none;">
+                    </span>
                 </td>
             </tr>
             <tr>
-                <td align="left">
-                    <div class="tx">Image 4</div><input type="file" name="up4h" id="up4h" accept="image/*"> <span
-                        class="up_style" id="4_res" style="display:none;"></span><img id="preview4"
-                        src="images/ajax-loader.gif" class="gifcss">
+                <td align="center">
+                    <div class="tx">Image 4</div>
+                    <input type="file" name="up4h" id="up4h" accept="image/*">
+                    <span class="up_style" id="4_res" style="display:none;">
+                    </span>
                 </td>
             </tr>
             <tr>
-                <td align="left">
-                    <div class="tx">Image 5</div><input type="file" name="up5h" id="up5h" accept="image/*"> <span
-                        class="up_style" id="5_res" style="display:none;"></span><img id="preview5"
-                        src="images/ajax-loader.gif" class="gifcss">
-                </td>
-            </tr>
-            <tr>
-                <td align="left">
-                    <div class="tx">Image 6</div><input type="file" name="up6h" id="up6h" accept="image/*"> <span
-                        class="up_style" id="6_res" style="display:none;"></span><img id="preview6"
-                        src="images/ajax-loader.gif" class="gifcss">
+                <td align="center">
+                    <div class="tx">Image 5</div>
+                    <input type="file" name="up5h" id="up5h" accept="image/*">
+                    <span class="up_style" id="5_res" style="display:none;">
+                    </span>
                 </td>
             </tr>
             <tr>
                 <td align="center">
                     <br><input class="btnintxt" type="button" name="sub" id="sub" value="Add Vehicle">
                     <input type="hidden" name="exif" id="exif" value="">
-                    <img alt="" id="up_load" src="images/ajax-loader.gif" style="display:none;">
-                    <div class="noScript" style="padding-top: 5px; display: none;">Your browser does not support
-                        JavaScript! Please use Google Chrome</div>
+                    <div class="noScript" style="padding-top: 5px; display: none;">
+                        Your browser does not support JavaScript! Please use the Chromium
+                    </div>
                 </td>
             </tr>
         </tbody>
     </table>
+    <br>
 </div>
 {% endblock %}
 
