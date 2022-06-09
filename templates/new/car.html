@@ -1,0 +1,623 @@
+{% extends "base/mobile.html" %}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div id="acctop" style="color:#036;text-decoration:none;text-align:center;">
+
+        <div style="width:275px;margin:auto;">
+            <div style="padding-bottom:5px;font-size:13px;">Welcome hirusha-adi</div>
+            <div style="font-size:13px;font-weight:bold;line-height:1.3;" class="mocls"><a
+                    href="https://riyasewana.com/account.php">My Ads</a> | <a
+                    href="https://riyasewana.com/editprofile.php">Edit Profile</a> | <a
+                    href="https://riyasewana.com/favorite.php">Favorites</a> | <a href="logout.php">Logout</a></div>
+        </div>
+    </div>
+    <h2 style="font-size:14px;padding:20px 0px 10px 0px;">Add Your Vehicle</h2>
+    <div style="font-size:11px;padding-bottom:20px;">Items marked with <span class="red">*</span> are required. </div>
+    <form action="" method="post" name="form1" id="form1" enctype="multipart/form-data">
+        <table style="width:275px;margin:auto;">
+            <tbody>
+                <tr>
+                    <td align="left">
+                        <div class="wan">Add vehicles that are already in Sri Lanka.</div>
+                        <div class="wan">Japanese auction Ads will be removed.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <h4 style="color:#333;">Contact Info</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Name<span class="red">*</span></div><input type="text" class="intext"
+                            name="fname" id="fname" value="Hirusha Adikari" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Phone number<span class="red">*</span></div><input maxlength="10" type="text"
+                            class="intext" name="phn" id="phn" value="0721062356" required=""><br><span
+                            style="font-size:11px;"> &nbsp;(10 numbers)<br>Do not use land phone numbers</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">City<span class="red">*</span></div>
+                        <select name="city" id="city" class="intext" style="width:234px;height:31px;">
+                            <optgroup label="Colombo District">
+                                <option value="Colombo">Colombo</option>
+                                <option value="Dehiwala-Mount-Lavinia">Dehiwala-Mount-Lavinia</option>
+                                <option value="Moratuwa">Moratuwa</option>
+                                <option value="Kotte">Kotte</option>
+                                <option value="Battaramulla">Battaramulla</option>
+                                <option value="Maharagama">Maharagama</option>
+                                <option value="Kotikawatta">Kotikawatta</option>
+                                <option value="Kolonnawa">Kolonnawa</option>
+                                <option value="Keselwatta">Keselwatta</option>
+                                <option value="Homagama">Homagama</option>
+                                <option value="Mulleriyawa">Mulleriyawa</option>
+                                <option value="Kesbewa">Kesbewa</option>
+                                <option value="Avissawella">Avissawella</option>
+                                <option value="Kaduwela">Kaduwela</option>
+                                <option value="Boralesgamuwa">Boralesgamuwa</option>
+                                <option value="Piliyandala">Piliyandala</option>
+                                <option value="Nugegoda">Nugegoda</option>
+                                <option value="Nawala">Nawala</option>
+                                <option value="Padukka">Padukka</option>
+                                <option value="Kottawa">Kottawa</option>
+                                <option value="Pannipitiya">Pannipitiya</option>
+                                <option value="Malabe">Malabe</option>
+                                <option value="Hanwella">Hanwella</option>
+                            </optgroup>
+                            <optgroup label="Gampaha District">
+                                <option value="Gampaha">Gampaha</option>
+                                <option value="Negombo">Negombo</option>
+                                <option value="Katunayake">Katunayake</option>
+                                <option value="Hendala">Hendala</option>
+                                <option value="Welisara">Welisara</option>
+                                <option value="Ragama">Ragama</option>
+                                <option value="Kandana">Kandana</option>
+                                <option value="Ja-Ela">Ja-Ela</option>
+                                <option value="Wattala">Wattala</option>
+                                <option value="Kelaniya">Kelaniya</option>
+                                <option value="Peliyagoda">Peliyagoda</option>
+                                <option value="Minuwangoda">Minuwangoda</option>
+                                <option value="Kadawatha">Kadawatha</option>
+                                <option value="Dompe">Dompe</option>
+                                <option value="Divulapitiya">Divulapitiya</option>
+                                <option value="Nittambuwa">Nittambuwa</option>
+                                <option value="Mirigama">Mirigama</option>
+                                <option value="Kiribathgoda">Kiribathgoda</option>
+                                <option value="Veyangoda">Veyangoda</option>
+                                <option value="Ganemulla">Ganemulla</option>
+                            </optgroup>
+                            <optgroup label="Kandy District">
+                                <option value="Kandy">Kandy</option>
+                                <option value="Gampola">Gampola</option>
+                                <option value="Nawalapitiya">Nawalapitiya</option>
+                                <option value="Wattegama">Wattegama</option>
+                                <option value="Harispattuwa">Harispattuwa</option>
+                                <option value="Kadugannawa">Kadugannawa</option>
+                            </optgroup>
+                            <optgroup label="Kurunegala District">
+                                <option selected="selected" value="Kurunegala">Kurunegala</option>
+                                <option value="Kuliyapitiya">Kuliyapitiya</option>
+                                <option value="Polgahawela">Polgahawela</option>
+                            </optgroup>
+                            <optgroup label="Ratnapura District">
+                                <option value="Ratnapura">Ratnapura</option>
+                                <option value="Balangoda">Balangoda</option>
+                                <option value="Eheliyagoda">Eheliyagoda</option>
+                                <option value="Kalawana">Kalawana</option>
+                                <option value="Embilipitiya">Embilipitiya</option>
+                            </optgroup>
+                            <optgroup label="Kalutara District">
+                                <option value="Kalutara">Kalutara</option>
+                                <option value="Beruwala">Beruwala</option>
+                                <option value="Panadura">Panadura</option>
+                                <option value="Horana">Horana</option>
+                                <option value="Matugama">Matugama</option>
+                                <option value="Bandaragama">Bandaragama</option>
+                            </optgroup>
+                            <optgroup label="Puttalam District">
+                                <option value="Puttalam">Puttalam</option>
+                                <option value="Chilaw">Chilaw</option>
+                                <option value="Nattandiya">Nattandiya</option>
+                                <option value="Wennappuwa">Wennappuwa</option>
+                                <option value="Marawila">Marawila</option>
+                            </optgroup>
+                            <optgroup label="Kegalle District">
+                                <option value="Kegalle">Kegalle</option>
+                                <option value="Mawanella">Mawanella</option>
+                                <option value="Warakapola">Warakapola</option>
+                            </optgroup>
+                            <optgroup label="Matale District">
+                                <option value="Matale">Matale</option>
+                                <option value="Dambulla">Dambulla</option>
+                                <option value="Sigiriya">Sigiriya</option>
+                            </optgroup>
+                            <optgroup label="Badulla District">
+                                <option value="Badulla">Badulla</option>
+                                <option value="Bandarawela">Bandarawela</option>
+                                <option value="Haputale">Haputale</option>
+                                <option value="Welimada">Welimada</option>
+                                <option value="Mahiyanganaya">Mahiyanganaya</option>
+                            </optgroup>
+                            <optgroup label="Nuwara-Eliya District">
+                                <option value="Nuwara-Eliya">Nuwara-Eliya</option>
+                                <option value="Hatton">Hatton</option>
+                                <option value="Talawakele">Talawakele</option>
+                            </optgroup>
+                            <optgroup label="Galle District">
+                                <option value="Galle">Galle</option>
+                                <option value="Ambalangoda">Ambalangoda</option>
+                            </optgroup>
+                            <optgroup label="Matara District">
+                                <option value="Matara">Matara</option>
+                                <option value="Weligama">Weligama</option>
+                            </optgroup>
+                            <optgroup label="Hambantota District">
+                                <option value="Hambantota">Hambantota</option>
+                                <option value="Tangalle">Tangalle</option>
+                            </optgroup>
+                            <optgroup label="Batticaloa District">
+                                <option value="Batticaloa">Batticaloa</option>
+                                <option value="Kattankudy">Kattankudy</option>
+                                <option value="Eravur">Eravur</option>
+                            </optgroup>
+                            <optgroup label="Ampara District">
+                                <option value="Ampara">Ampara</option>
+                                <option value="Kalmunai">Kalmunai</option>
+                            </optgroup>
+                            <optgroup label="Jaffna District">
+                                <option value="Jaffna">Jaffna</option>
+                                <option value="Chavakacheri">Chavakacheri</option>
+                                <option value="Valvettithurai">Valvettithurai</option>
+                            </optgroup>
+                            <optgroup label="Anuradapura District">
+                                <option value="Anuradapura">Anuradapura</option>
+                            </optgroup>
+                            <optgroup label="Polonnaruwa District">
+                                <option value="Polonnaruwa">Polonnaruwa</option>
+                            </optgroup>
+                            <optgroup label="Moneragala District">
+                                <option value="Moneragala">Moneragala</option>
+                            </optgroup>
+                            <optgroup label="Trincomalee District">
+                                <option value="Trincomalee">Trincomalee</option>
+                            </optgroup>
+                            <optgroup label="Mannar District">
+                                <option value="Mannar">Mannar</option>
+                            </optgroup>
+                            <optgroup label="Vavuniya District">
+                                <option value="Vavuniya">Vavuniya</option>
+                            </optgroup>
+                            <optgroup label="Kilinochchi District">
+                                <option value="Kilinochchi">Kilinochchi</option>
+                            </optgroup>
+                            <optgroup label="Mullaitivu District">
+                                <option value="Mullaitivu">Mullaitivu</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <h4 style="color:#333;">Vehicle Info</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Vehicle Type<span class="red">*</span></div>
+                        <select onchange="chngbike()" name="vtype" id="vtype" class="intext"
+                            style="width:234px;height:31px;" required="">
+                            <option value="">Select Type</option>
+                            <option value="Car">Car</option>
+                            <option value="Van">Van</option>
+                            <option value="SUV">SUV / Jeep</option>
+                            <option value="Crew Cab">Crew Cab</option>
+                            <option value="Pickup">Pickup / Double Cab</option>
+                            <option value="Bus">Bus</option>
+                            <option value="Lorry">Lorry / Tipper</option>
+                            <option value="Three Wheel">Three Wheel</option>
+                            <option value="Tractor">Tractor</option>
+                            <option value="Heavy-Duty">Heavy-Duty</option>
+                            <option value="Other">Other</option>
+                            <option value="motorcycle">Motorcycle</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Vehicle Condition<span class="red">*</span></div>
+                        <select name="vcat" id="vcat" class="intext" style="width:234px;height:31px;" required="">
+                            <option value="">Select Condition</option>
+                            <option value="Antique">Antique</option>
+                            <option value="Brand New">Brand New</option>
+                            <option value="Registered (Used)">Registered (Used)</option>
+                            <option value="Unregistered (Recondition)">Unregistered (Recondition)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Vehicle Make<span class="red">*</span></div>
+                        <select name="make" id="make" class="intext" style="width:234px;height:31px;" required="">
+                            <option value="">Select Make</option>
+                            <option value="Acura">Acura</option>
+                            <option value="Alfa-Romeo">Alfa-Romeo</option>
+                            <option value="Aprilia">Aprilia</option>
+                            <option value="Ashok-Leyland">Ashok-Leyland</option>
+                            <option value="Aston">Aston</option>
+                            <option value="Atco">Atco</option>
+                            <option value="Audi">Audi</option>
+                            <option value="Austin">Austin</option>
+                            <option value="Bajaj">Bajaj</option>
+                            <option value="Bentley">Bentley</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Cadillac">Cadillac</option>
+                            <option value="Cal">Cal</option>
+                            <option value="CAT">CAT</option>
+                            <option value="Ceygra">Ceygra</option>
+                            <option value="Changan">Changan</option>
+                            <option value="Chery">Chery</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Chrysler">Chrysler</option>
+                            <option value="Citroen">Citroen</option>
+                            <option value="Corvette">Corvette</option>
+                            <option value="Daewoo">Daewoo</option>
+                            <option value="Daido">Daido</option>
+                            <option value="Daihatsu">Daihatsu</option>
+                            <option value="Datsun">Datsun</option>
+                            <option value="Demak">Demak</option>
+                            <option value="Dfac">Dfac</option>
+                            <option value="DFSK">DFSK</option>
+                            <option value="Ducati">Ducati</option>
+                            <option value="Eicher">Eicher</option>
+                            <option value="FAW">FAW</option>
+                            <option value="Ferrari">Ferrari</option>
+                            <option value="Fiat">Fiat</option>
+                            <option value="Force">Force</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Foton">Foton</option>
+                            <option value="Hero">Hero</option>
+                            <option value="Hero-Honda">Hero-Honda</option>
+                            <option value="Higer">Higer</option>
+                            <option value="Hillman">Hillman</option>
+                            <option value="HINO">HINO</option>
+                            <option value="Hitachi">Hitachi</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Hummer">Hummer</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="IHI">IHI</option>
+                            <option value="Isuzu">Isuzu</option>
+                            <option value="Iveco">Iveco</option>
+                            <option value="JAC">JAC</option>
+                            <option value="Jaguar">Jaguar</option>
+                            <option value="JCB">JCB</option>
+                            <option value="Jeep">Jeep</option>
+                            <option value="JiaLing">JiaLing</option>
+                            <option value="JMC">JMC</option>
+                            <option value="John-Deere">John-Deere</option>
+                            <option value="Jonway">Jonway</option>
+                            <option value="KAPLA">KAPLA</option>
+                            <option value="Kawasaki">Kawasaki</option>
+                            <option value="Kia">Kia</option>
+                            <option value="Kinetic">Kinetic</option>
+                            <option value="KMC">KMC</option>
+                            <option value="Kobelco">Kobelco</option>
+                            <option value="Komatsu">Komatsu</option>
+                            <option value="KTM">KTM</option>
+                            <option value="Kubota">Kubota</option>
+                            <option value="Lamborghini">Lamborghini</option>
+                            <option value="Land-Rover">Land-Rover</option>
+                            <option value="Lexus">Lexus</option>
+                            <option value="Loncin">Loncin</option>
+                            <option value="Longjia">Longjia</option>
+                            <option value="Lotus">Lotus</option>
+                            <option value="Lti">Lti</option>
+                            <option value="Mahindra">Mahindra</option>
+                            <option value="Maserati">Maserati</option>
+                            <option value="Massey-Ferguson">Massey-Ferguson</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Mercedes-Benz">Mercedes-Benz</option>
+                            <option value="Metrocab">Metrocab</option>
+                            <option value="MG">MG</option>
+                            <option value="Mg-Rover">Mg-Rover</option>
+                            <option value="Micro">Micro</option>
+                            <option value="Mini">Mini</option>
+                            <option value="Minnelli">Minnelli</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                            <option value="Morgan">Morgan</option>
+                            <option value="Morris">Morris</option>
+                            <option value="New-Holland">New-Holland</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Opel">Opel</option>
+                            <option value="Other">Other</option>
+                            <option value="Perodua">Perodua</option>
+                            <option value="Peugeot">Peugeot</option>
+                            <option value="Piaggio">Piaggio</option>
+                            <option value="Porsche">Porsche</option>
+                            <option value="Powertrac">Powertrac</option>
+                            <option value="Proton">Proton</option>
+                            <option value="Range-Rover">Range-Rover</option>
+                            <option value="Ranomoto">Ranomoto</option>
+                            <option value="Renault">Renault</option>
+                            <option value="Reva">Reva</option>
+                            <option value="Rolls-Royce">Rolls-Royce</option>
+                            <option value="Saab">Saab</option>
+                            <option value="Sakai">Sakai</option>
+                            <option value="Seat">Seat</option>
+                            <option value="Singer">Singer</option>
+                            <option value="Skoda">Skoda</option>
+                            <option value="Smart">Smart</option>
+                            <option value="Sonalika">Sonalika</option>
+                            <option value="Subaru">Subaru</option>
+                            <option value="Suzuki">Suzuki</option>
+                            <option value="Swaraj">Swaraj</option>
+                            <option value="Syuk">Syuk</option>
+                            <option value="TAFE">TAFE</option>
+                            <option value="Tata">Tata</option>
+                            <option value="Tesla">Tesla</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Triumph">Triumph</option>
+                            <option value="TVS">TVS</option>
+                            <option value="Vauxhall">Vauxhall</option>
+                            <option value="Vespa">Vespa</option>
+                            <option value="Volkswagen">Volkswagen</option>
+                            <option value="Volvo">Volvo</option>
+                            <option value="Wave">Wave</option>
+                            <option value="Willys">Willys</option>
+                            <option value="Yamaha">Yamaha</option>
+                            <option value="Yanmar">Yanmar</option>
+                            <option value="Yuejin">Yuejin</option>
+                            <option value="Zongshen">Zongshen</option>
+                            <option value="Zotye">Zotye</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Model<span class="red">*</span></div><input type="text" class="intext"
+                            name="model" id="model" value="" maxlength="100" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Manufactured Year<span class="red">*</span></div>
+                        <select name="year" id="year" class="intext" style="width:234px;height:31px;" required="">
+                            <option value="">Manufactured Year</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                            <option value="1997">1997</option>
+                            <option value="1996">1996</option>
+                            <option value="1995">1995</option>
+                            <option value="1994">1994</option>
+                            <option value="1993">1993</option>
+                            <option value="1992">1992</option>
+                            <option value="1991">1991</option>
+                            <option value="1990">1990</option>
+                            <option value="1989">1989</option>
+                            <option value="1988">1988</option>
+                            <option value="1987">1987</option>
+                            <option value="1986">1986</option>
+                            <option value="1985">1985</option>
+                            <option value="1984">1984</option>
+                            <option value="1983">1983</option>
+                            <option value="1982">1982</option>
+                            <option value="1981">1981</option>
+                            <option value="1980">1980</option>
+                            <option value="1979">1979</option>
+                            <option value="1978">1978</option>
+                            <option value="1977">1977</option>
+                            <option value="1976">1976</option>
+                            <option value="1975">1975</option>
+                            <option value="1974">1974</option>
+                            <option value="1973">1973</option>
+                            <option value="1972">1972</option>
+                            <option value="1971">1971</option>
+                            <option value="1970">1970</option>
+                            <option value="1969">1969</option>
+                            <option value="1968">1968</option>
+                            <option value="1967">1967</option>
+                            <option value="1966">1966</option>
+                            <option value="1965">1965</option>
+                            <option value="1964">1964</option>
+                            <option value="1963">1963</option>
+                            <option value="1962">1962</option>
+                            <option value="1961">1961</option>
+                            <option value="1960">1960</option>
+                            <option value="1959">1959</option>
+                            <option value="1958">1958</option>
+                            <option value="1957">1957</option>
+                            <option value="1956">1956</option>
+                            <option value="1955">1955</option>
+                            <option value="1954">1954</option>
+                            <option value="1953">1953</option>
+                            <option value="1952">1952</option>
+                            <option value="1951">1951</option>
+                            <option value="1950">1950</option>
+                            <option value="1949">1949</option>
+                            <option value="1948">1948</option>
+                            <option value="1900">Before 1948</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Price (Rs.)</div><input type="number" class="intext" name="price" id="price"
+                            value="">
+                        <div style="padding:5px 0;"><input title="Check if the vehicle has leasing" type="checkbox"
+                                id="lease" name="lease" value="1"> <span
+                                title="Check if the vehicle has leasing">Ongoing Lease</span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Transmission<span class="red">*</span></div>
+                        <select name="transmission" id="transmission" class="intext" style="width:234px;height:31px;"
+                            required="">
+                            <option value="">Select Transmission</option>
+                            <option value="Automatic">Automatic</option>
+                            <option value="Manual">Manual</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Fuel Type<span class="red">*</span></div>
+                        <select name="fuel" id="fuel" class="intext" style="width:234px;height:31px;" required="">
+                            <option value="">Select Fuel Type</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Petrol">Petrol</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Hybrid">Hybrid</option>
+                            <option value="Gas">Gas</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Engine Capacity</div><input type="text" class="intext" name="ecc" id="ecc"
+                            value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Mileage (km)<span class="red">*</span></div><input type="number" class="intext"
+                            name="vno" id="vno" value="" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Options</div>
+                        <div style="font-size:12px;">
+                            <div class="chstyl"><input style="vertical-align:middle;" type="checkbox" name="options[]"
+                                    value="AIR CONDITION"> <span style="vertical-align:middle;">Air Condition</span>
+                            </div>
+                            <div class="chstyl"><input style="vertical-align:middle;" type="checkbox" name="options[]"
+                                    value="POWER STEERING"> <span style="vertical-align:middle;">Power Steering</span>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="chstyl"><input style="vertical-align:middle;" type="checkbox" name="options[]"
+                                    value="POWER MIRROR"> <span style="vertical-align:middle;">Power Mirror</span></div>
+                            <div class="chstyl"><input style="vertical-align:middle;" type="checkbox" name="options[]"
+                                    value="POWER WINDOW"> <span style="vertical-align:middle;">Power Window</span></div>
+                            <div class="clear"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Additional Info</div><textarea name="more" id="more" rows="5" class="intext"
+                            style="height:100px;"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="hidden" name="up_hid" id="up_hid" value="ok"><input type="hidden" name="token"
+            value="d7801aea2526604e78b090affd2a6895">
+        <input type="hidden" name="1" id="1" value=""><input type="hidden" name="2" id="2" value=""><input type="hidden"
+            name="3" id="3" value=""><input type="hidden" name="4" id="4" value=""><input type="hidden" name="5" id="5"
+            value=""><input type="hidden" name="6" id="6" value="">
+    </form>
+    <table>
+        <tbody>
+            <tr>
+                <td align="center">
+                    <div style="font-size:12px;">If upload is taking too long, please add vehicle without an image.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <div class="tx">Main Image</div><input type="file" name="up1h" id="up1h" accept="image/*"> <span
+                        class="up_style" id="1_res" style="display:none;"></span><img id="preview1"
+                        src="images/ajax-loader.gif" class="gifcss">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <div class="tx">Image 2</div><input type="file" name="up2h" id="up2h" accept="image/*"> <span
+                        class="up_style" id="2_res" style="display:none;"></span><img id="preview2"
+                        src="images/ajax-loader.gif" class="gifcss">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <div class="tx">Image 3</div><input type="file" name="up3h" id="up3h" accept="image/*"> <span
+                        class="up_style" id="3_res" style="display:none;"></span><img id="preview3"
+                        src="images/ajax-loader.gif" class="gifcss">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <div class="tx">Image 4</div><input type="file" name="up4h" id="up4h" accept="image/*"> <span
+                        class="up_style" id="4_res" style="display:none;"></span><img id="preview4"
+                        src="images/ajax-loader.gif" class="gifcss">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <div class="tx">Image 5</div><input type="file" name="up5h" id="up5h" accept="image/*"> <span
+                        class="up_style" id="5_res" style="display:none;"></span><img id="preview5"
+                        src="images/ajax-loader.gif" class="gifcss">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <div class="tx">Image 6</div><input type="file" name="up6h" id="up6h" accept="image/*"> <span
+                        class="up_style" id="6_res" style="display:none;"></span><img id="preview6"
+                        src="images/ajax-loader.gif" class="gifcss">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <br><input class="btnintxt" type="button" name="sub" id="sub" value="Add Vehicle">
+                    <input type="hidden" name="exif" id="exif" value="">
+                    <img alt="" id="up_load" src="images/ajax-loader.gif" style="display:none;">
+                    <div class="noScript" style="padding-top: 5px; display: none;">Your browser does not support
+                        JavaScript! Please use Google Chrome</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block bottom %}
+<script>
+    function chngbike() {
+        var x = document.getElementById("vtype").value;
+        if (x == 'motorcycle') {
+            window.location.replace("https://riyasewana.com/add_bike.php");
+        }
+    }
+</script>
+{% endblock %}
