@@ -104,14 +104,18 @@
         <table style="width:275px;margin:auto;">
             <tbody>
                 {% if post_type == 'car' %}
+                <!-- Title -->
                 <tr>
                     <td align="left">
                         <h4 style="color:#333;">Vehicle Info</h4>
                     </td>
                 </tr>
+                <!-- Vehicle Type -->
                 <tr>
                     <td align="left">
-                        <div class="tx">Vehicle Type<span class="red">*</span></div>
+                        <div class="tx">
+                            Vehicle Type<span class="red">*</span>
+                        </div>
                         <select name="vtype" id="vtype" class="intext" style="width:234px;height:31px;" required="">
                             <option value="">Select Type</option>
                             <option value="Car">Car</option>
@@ -131,7 +135,9 @@
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Vehicle Condition<span class="red">*</span></div>
+                        <div class="tx">
+                            Vehicle Condition<span class="red">*</span>
+                        </div>
                         <select name="vcat" id="vcat" class="intext" style="width:234px;height:31px;" required="">
                             <option value="">Select Condition</option>
                             <option value="Antique">Antique</option>
@@ -143,7 +149,9 @@
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Vehicle Make<span class="red">*</span></div>
+                        <div class="tx">
+                            Vehicle Make<span class="red">*</span>
+                        </div>
                         <select name="make" id="make" class="intext" style="width:234px;height:31px;" required="">
                             <option value="">Select Make</option>
                             <option value="Acura">Acura</option>
@@ -280,13 +288,17 @@
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Model<span class="red">*</span></div><input type="text" class="intext"
-                            name="model" id="model" value="" maxlength="100" required="">
+                        <div class="tx">
+                            Model<span class="red">*</span>
+                        </div>
+                        <input type="text" class="intext" name="model" id="model" value="" maxlength="100" required="">
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Manufactured Year<span class="red">*</span></div>
+                        <div class="tx">
+                            Manufactured Year<span class="red">*</span>
+                        </div>
                         <select name="year" id="year" class="intext" style="width:234px;height:31px;" required="">
                             <option value="">Manufactured Year</option>
                             <option value="2022">2022</option>
@@ -370,16 +382,22 @@
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Price (Rs.)</div><input type="number" class="intext" name="price" id="price"
-                            value="">
-                        <div style="padding:5px 0;"><input title="Check if the vehicle has leasing" type="checkbox"
-                                id="lease" name="lease" value="1"> <span
-                                title="Check if the vehicle has leasing">Ongoing Lease</span></div>
+                        <div class="tx">Price (Rs.)</div>
+                        <input type="number" class="intext" name="price" id="price" value="">
+                        <div style="padding:5px 0;">
+                            <input title="Check if the vehicle has leasing" type="checkbox" id="lease" name="lease"
+                                value="1">
+                            <span title="Check if the vehicle has leasing">
+                                Ongoing Lease
+                            </span>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Transmission<span class="red">*</span></div>
+                        <div class="tx">
+                            Transmission<span class="red">*</span>
+                        </div>
                         <select name="transmission" id="transmission" class="intext" style="width:234px;height:31px;"
                             required="">
                             <option value="">Select Transmission</option>
@@ -390,7 +408,9 @@
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Fuel Type<span class="red">*</span></div>
+                        <div class="tx">
+                            Fuel Type<span class="red">*</span>
+                        </div>
                         <select name="fuel" id="fuel" class="intext" style="width:234px;height:31px;" required="">
                             <option value="">Select Fuel Type</option>
                             <option value="Diesel">Diesel</option>
@@ -403,31 +423,51 @@
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Engine Capacity</div><input type="text" class="intext" name="ecc" id="ecc"
-                            value="">
+                        <div class="tx">Engine Capacity</div>
+                        <input type="text" class="intext" name="ecc" id="ecc" value="">
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
-                        <div class="tx">Mileage (km)<span class="red">*</span></div><input type="number" class="intext"
-                            name="vno" id="vno" value="" required="">
+                        <div class="tx">
+                            Mileage (km)<span class="red">*</span>
+                        </div>
+                        <input type="number" class="intext" name="vno" id="vno" value="" required="">
                     </td>
                 </tr>
                 <tr>
                     <td align="left">
                         <div class="tx">Options</div>
                         <div style="font-size:12px;">
-                            <div class="chstyl"><input style="vertical-align:middle;" type="checkbox" name="options[]"
-                                    value="AIR CONDITION"> <span style="vertical-align:middle;">Air Condition</span>
+                            <div class="chstyl">
+                                <input style="vertical-align:middle;" type="checkbox" name="options[]"
+                                    value="AIR CONDITION">
+                                <span style="vertical-align:middle;">
+                                    Air Condition
+                                </span>
                             </div>
-                            <div class="chstyl"><input style="vertical-align:middle;" type="checkbox" name="options[]"
-                                    value="POWER STEERING"> <span style="vertical-align:middle;">Power Steering</span>
+                            <div class="chstyl">
+                                <input style="vertical-align:middle;" type="checkbox" name="options[]"
+                                    value="POWER STEERING">
+                                <span style="vertical-align:middle;">
+                                    Power Steering
+                                </span>
                             </div>
                             <div class="clear"></div>
-                            <div class="chstyl"><input style="vertical-align:middle;" type="checkbox" name="options[]"
-                                    value="POWER MIRROR"> <span style="vertical-align:middle;">Power Mirror</span></div>
-                            <div class="chstyl"><input style="vertical-align:middle;" type="checkbox" name="options[]"
-                                    value="POWER WINDOW"> <span style="vertical-align:middle;">Power Window</span></div>
+                            <div class="chstyl">
+                                <input style="vertical-align:middle;" type="checkbox" name="options[]"
+                                    value="POWER MIRROR">
+                                <span style="vertical-align:middle;">
+                                    Power Mirror
+                                </span>
+                            </div>
+                            <div class="chstyl">
+                                <input style="vertical-align:middle;" type="checkbox" name="options[]"
+                                    value="POWER WINDOW">
+                                <span style="vertical-align:middle;">
+                                    Power Window
+                                </span>
+                            </div>
                             <div class="clear"></div>
                         </div>
                     </td>
@@ -472,6 +512,12 @@
                 </tr>
                 <tr>
                     <td align="left">
+                        <div class="tx">Size</div>
+                        <input type="text" class="intext" name="size" id="size" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
                         <div class="tx">Options</div>
                         <div style="font-size:12px;">
                             <div class="chstyl"><input style="vertical-align:middle;" type="checkbox" name="options[]"
@@ -497,6 +543,7 @@
                         <textarea name="more" id="more" rows="5" class="intext" style="height:100px;"></textarea>
                     </td>
                 </tr>
+
             </tbody>
         </table>
     </form>
