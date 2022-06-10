@@ -50,5 +50,14 @@ def new_post_car():
     data['page_bottom'] = Dekstop.bottom
     data['page_top'] = Dekstop.top
     data['page_header'] = Dekstop.header
+    data['post_type'] = "car"
 
     return render_template('new/car.html', **data)
+
+
+def new_post_process(mode):
+    if request.method == 'POST':
+        return "POST"
+
+    elif request.method == 'GET':
+        return "GET"
