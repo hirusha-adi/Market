@@ -52,7 +52,18 @@ def new_post_car():
     data['page_header'] = Dekstop.header
     data['post_type'] = "car"
 
-    return render_template('new/car.html', **data)
+    return render_template('new/mobile.html', **data)
+
+
+def new_post_land():
+    data = {}
+    data['title'] = "Hirusha"
+    data['page_bottom'] = Dekstop.bottom
+    data['page_top'] = Dekstop.top
+    data['page_header'] = Dekstop.header
+    data['post_type'] = "land"
+
+    return render_template('new/mobile.html', **data)
 
 
 def new_post_process(mode):

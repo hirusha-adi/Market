@@ -25,6 +25,7 @@ app.add_url_rule("/profile/edit", 'profile_edit',
 app.add_url_rule("/post", 'post_no_id', post_no_id, methods=['GET'])
 app.add_url_rule("/post/<id>", 'one_post', one_post, methods=['GET'])
 app.add_url_rule("/new/car", 'new_post_car', new_post_car, methods=['GET'])
+app.add_url_rule("/new/land", 'new_post_land', new_post_land, methods=['GET'])
 app.add_url_rule("/new/data", 'new_post_process',
                  new_post_process, methods=['POST'])
 
