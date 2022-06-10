@@ -99,9 +99,11 @@
     <h2 style="font-size:14px;padding:20px 0px 10px 0px;">Add Your Vehicle</h2>
     <div style="font-size:11px;padding-bottom:20px;">Items marked with <span class="red">*</span> are required. </div>
 
-    <form action="" method="post" name="form1" id="form1" enctype="multipart/form-data">
+    <form action="{{ url_for('new_post_process', mode=post_type) }}" method="post" name="form1" id="form1"
+        enctype="multipart/form-data">
         <table style="width:275px;margin:auto;">
             <tbody>
+                {% if post_type == 'car' %}
                 <tr>
                     <td align="left">
                         <h4 style="color:#333;">Vehicle Info</h4>
@@ -430,6 +432,26 @@
                         </div>
                     </td>
                 </tr>
+                {% endif %}
+
+                {% if post_type == 'land' %}
+                <tr>
+                    <td align="left">
+                        <h4 style="color:#333;">Land Info</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="tx">Vehicle Type<span class="red">*</span></div>
+                        <select name="vtype" id="vtype" class="intext" style="width:234px;height:31px;" required="">
+                            <option value="">Select Type</option>
+                            <option value="Buy">Buy</option>
+                            <option value="Rent">Rent</option>
+                        </select>
+                    </td>
+                </tr>
+                {% endif %}
+
                 <tr>
                     <td align="left">
                         <div class="tx">Additional Info (Markdown)</div>
