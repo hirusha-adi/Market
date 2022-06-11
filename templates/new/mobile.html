@@ -103,16 +103,23 @@
         enctype="multipart/form-data">
         <table style="width:275px;margin:auto;">
             <tbody>
-                {% if post_type == 'car' %}
+                <!-- --------------------------- -->
 
                 <!-- Title -->
                 <tr>
                     <td align="left">
+                        {% if post_type == 'car' %}
                         <h4 style="color:#333;">Vehicle Info</h4>
+                        {% elif post_type == 'land' %}
+                        <h4 style="color:#333;">Land Info</h4>
+                        {% elif post_type == 'electronics' %}
+                        <h4 style="color:#333;">Electronics Info</h4>
+                        {% elif post_type == 'parts' %}
+                        <h4 style="color:#333;">Parts Info</h4>
+                        {% endif %}
                     </td>
                 </tr>
 
-                <!-- --------------------------- -->
 
                 <!-- Name -->
                 <tr>
@@ -140,6 +147,8 @@
                 </tr>
 
                 <!-- --------------------------- -->
+
+                {% if post_type == 'car' %}
 
                 <!-- Vehicle Type -->
                 <tr>
@@ -512,41 +521,6 @@
                 {% endif %}
 
                 {% if post_type == 'land' %}
-                <!-- Title -->
-                <tr>
-                    <td align="left">
-                        <h4 style="color:#333;">Land Info</h4>
-                    </td>
-                </tr>
-
-                <!-- --------------------------- -->
-
-                <!-- Name -->
-                <tr>
-                    <td align="left">
-                        <div class="tx">
-                            Name <span class="red">*</span>
-                        </div>
-                        <input type="text" class="intext" name="vno" id="vno" value="" required="">
-                    </td>
-                </tr>
-
-                <!-- Price (Rs.) -->
-                <tr>
-                    <td align="left">
-                        <div class="tx">Price (Rs.)</div>
-                        <input type="number" class="intext" name="price" id="price" value="">
-                        <div style="padding:5px 0;">
-                            <input title="Check if the vehicle has leasing" type="checkbox" id="lease" name="lease"
-                                value="1">
-                            <span title="Check if the vehicle has leasing">
-                                Ongoing Lease
-                            </span>
-                        </div>
-                    </td>
-                </tr>
-
-                <!-- --------------------------- -->
 
                 <!-- Property Type -->
                 <tr>
@@ -611,41 +585,6 @@
                 {% endif %}
 
                 {% if post_type == 'electronics' %}
-                <!-- Title -->
-                <tr>
-                    <td align="left">
-                        <h4 style="color:#333;">Electronics Info</h4>
-                    </td>
-                </tr>
-
-                <!-- --------------------------- -->
-
-                <!-- Name -->
-                <tr>
-                    <td align="left">
-                        <div class="tx">
-                            Name <span class="red">*</span>
-                        </div>
-                        <input type="text" class="intext" name="vno" id="vno" value="" required="">
-                    </td>
-                </tr>
-
-                <!-- Price (Rs.) -->
-                <tr>
-                    <td align="left">
-                        <div class="tx">Price (Rs.)</div>
-                        <input type="number" class="intext" name="price" id="price" value="">
-                        <div style="padding:5px 0;">
-                            <input title="Check if the vehicle has leasing" type="checkbox" id="lease" name="lease"
-                                value="1">
-                            <span title="Check if the vehicle has leasing">
-                                Ongoing Lease
-                            </span>
-                        </div>
-                    </td>
-                </tr>
-
-                <!-- --------------------------- -->
 
                 <!-- Make -->
                 <tr>
@@ -773,42 +712,6 @@
                 {% endif %}
 
                 {% if post_type == 'parts' %}
-
-                <!-- Title -->
-                <tr>
-                    <td align="left">
-                        <h4 style="color:#333;">Parts Info</h4>
-                    </td>
-                </tr>
-
-                <!-- --------------------------- -->
-
-                <!-- Name -->
-                <tr>
-                    <td align="left">
-                        <div class="tx">
-                            Name <span class="red">*</span>
-                        </div>
-                        <input type="text" class="intext" name="vno" id="vno" value="" required="">
-                    </td>
-                </tr>
-
-                <!-- Price (Rs.) -->
-                <tr>
-                    <td align="left">
-                        <div class="tx">Price (Rs.)</div>
-                        <input type="number" class="intext" name="price" id="price" value="">
-                        <div style="padding:5px 0;">
-                            <input title="Check if the vehicle has leasing" type="checkbox" id="lease" name="lease"
-                                value="1">
-                            <span title="Check if the vehicle has leasing">
-                                Ongoing Lease
-                            </span>
-                        </div>
-                    </td>
-                </tr>
-
-                <!-- --------------------------- -->
 
                 <!-- Make -->
                 <tr>
