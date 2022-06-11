@@ -31,13 +31,17 @@
         "id": 2,
         "username": "admin",
         "date": "3033 May 33 11:03",
+        "type": "land",
+        
         "price": "888",
         "name": "Ad Name Comes Here",
         "details": "Very long markdown description goes here",
-        "type": "land",
+
         "fields": {
-            "options": "options",
-            "size": "99 perches"
+            "ptype": "Property Type",
+            "btype": "Purchase Type",
+            "size": "99 perches",
+            "options": "options"
         },
         "images": [
             "http://hirusha.xyz",
@@ -48,13 +52,17 @@
         "id": 3,
         "username": "admin",
         "date": "7077 May 77 11:03",
+        "type": "electronics",
+
         "price": "7777",
         "name": "Ad Name Comes Here",
         "details": "Very long markdown description goes here",
-        "type": "electronics",
+
         "fields": {
             "make": "make",
             "model": "model",
+            "yom": "yom",
+            "power": "power",
             "options": "options"
         },
         "images": [
@@ -66,16 +74,19 @@
         "id": 4,
         "username": "admin",
         "date": "5055 May 55 11:03",
+        "type": "parts",
+
         "price": "5555",
         "name": "Ad Name Comes Here",
         "details": "Very long markdown description goes here",
-        "type": "parts",
+
         "fields": {
-            "whatfor": "for this item",
             "make": "make",
             "model": "model",
-            "options": "options",
-            "size": "small"
+            "yom": "yom",
+            "whatfor": "for this item",
+            "size": "small",
+            "options": "options"
         },
         "images": [
             "http://hirusha.xyz",
