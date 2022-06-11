@@ -189,10 +189,10 @@ class Posts:
     class Land:
         """
         {
-            "id": 1,
+            "id": 2,
             "username": "",
             "date": "",
-            "type": "car",
+            "type": "land",
 
             "name": "",
             "price": "",
@@ -262,19 +262,24 @@ class Posts:
             "id": 3,
             "username": "",
             "date": "",
-            "price": "",
-            "name": "",
-            "details": "",
             "type": "electronics",
+
+            "name": "",
+            "price": "",
+            "details": "",
+
             "fields": {
                 "make": "",
                 "model": "",
+                "yom": "",
+                "power": "",
                 "options": ""
             },
             "images": [
-                "",
-                ""
+                "http://hirusha.xyz",
+                "http://example.com"
             ]
+
         }
         """
 
@@ -326,24 +331,28 @@ class Posts:
     class Parts:
         """
         {
-            "id": 4,
+            "id": 3,
             "username": "",
             "date": "",
-            "price": "",
+            "type": "electronics",
+
             "name": "",
+            "price": "",
             "details": "",
-            "type": "parts",
+
             "fields": {
-                "whatfor": "",
                 "make": "",
                 "model": "",
-                "options": "",
-                "size": ""
+                "yom": "",
+                "whatfor": "",
+                "size": "",
+                "options": ""
             },
             "images": [
-                "",
-                ""
+                "http://hirusha.xyz",
+                "http://example.com"
             ]
+
         }
         """
 
