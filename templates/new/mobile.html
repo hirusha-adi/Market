@@ -104,12 +104,42 @@
         <table style="width:275px;margin:auto;">
             <tbody>
                 {% if post_type == 'car' %}
+
                 <!-- Title -->
                 <tr>
                     <td align="left">
                         <h4 style="color:#333;">Vehicle Info</h4>
                     </td>
                 </tr>
+
+                <!-- --------------------------- -->
+
+                <!-- Name -->
+                <tr>
+                    <td align="left">
+                        <div class="tx">
+                            Name <span class="red">*</span>
+                        </div>
+                        <input type="text" class="intext" name="vno" id="vno" value="" required="">
+                    </td>
+                </tr>
+
+                <!-- Price (Rs.) -->
+                <tr>
+                    <td align="left">
+                        <div class="tx">Price (Rs.)</div>
+                        <input type="number" class="intext" name="price" id="price" value="">
+                        <div style="padding:5px 0;">
+                            <input title="Check if the vehicle has leasing" type="checkbox" id="lease" name="lease"
+                                value="1">
+                            <span title="Check if the vehicle has leasing">
+                                Ongoing Lease
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- --------------------------- -->
 
                 <!-- Vehicle Type -->
                 <tr>
@@ -129,8 +159,8 @@
                             <option value="Three Wheel">Three Wheel</option>
                             <option value="Tractor">Tractor</option>
                             <option value="Heavy-Duty">Heavy-Duty</option>
-                            <option value="Other">Other</option>
                             <option value="motorcycle">Motorcycle</option>
+                            <option value="Other">Other</option>
                         </select>
                     </td>
                 </tr>
@@ -292,7 +322,7 @@
                     </td>
                 </tr>
 
-                <!-- Model -->
+                <!-- Vehicle Model -->
                 <tr>
                     <td align="left">
                         <div class="tx">
@@ -302,7 +332,7 @@
                     </td>
                 </tr>
 
-                <!-- Manufactured Year -->
+                <!-- YOM -->
                 <tr>
                     <td align="left">
                         <div class="tx">
@@ -387,21 +417,6 @@
                             <option value="1948">1948</option>
                             <option value="1900">Before 1948</option>
                         </select>
-                    </td>
-                </tr>
-
-                <!-- Price (Rs.) -->
-                <tr>
-                    <td align="left">
-                        <div class="tx">Price (Rs.)</div>
-                        <input type="number" class="intext" name="price" id="price" value="">
-                        <div style="padding:5px 0;">
-                            <input title="Check if the vehicle has leasing" type="checkbox" id="lease" name="lease"
-                                value="1">
-                            <span title="Check if the vehicle has leasing">
-                                Ongoing Lease
-                            </span>
-                        </div>
                     </td>
                 </tr>
 
@@ -582,6 +597,13 @@
                 {% endif %}
 
                 {% if post_type == 'electronics' %}
+                <!-- Title -->
+                <tr>
+                    <td align="left">
+                        <h4 style="color:#333;">Electronics Info</h4>
+                    </td>
+                </tr>
+
                 {% endif %}
 
                 <tr>
