@@ -189,21 +189,26 @@ class Posts:
     class Land:
         """
         {
-            "id": 2,
+            "id": 1,
             "username": "",
             "date": "",
-            "price": "",
+            "type": "car",
+
             "name": "",
+            "price": "",
             "details": "",
-            "type": "land",
+
             "fields": {
-                "options": "",
-                "size": ""
+                "ptype": "",
+                "btype": "",
+                "size": "",
+                "options": ""
             },
             "images": [
-                "",
-                ""
+                "http://hirusha.xyz",
+                "http://example.com"
             ]
+
         }
         """
         def getAllPosts():
