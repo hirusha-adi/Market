@@ -66,8 +66,20 @@ def new_post_land():
     return render_template('new/mobile.html', **data)
 
 
+def new_post_electronics():
+    data = {}
+    data['title'] = "Hirusha"
+    data['page_bottom'] = Dekstop.bottom
+    data['page_top'] = Dekstop.top
+    data['page_header'] = Dekstop.header
+    data['post_type'] = "electronics"
+
+    return render_template('new/mobile.html', **data)
+
+
 def new_post_process(mode):
     if request.method == 'POST':
+        # request.form.get()
         return "POST"
 
     elif request.method == 'GET':
