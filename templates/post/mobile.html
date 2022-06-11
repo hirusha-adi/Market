@@ -506,6 +506,17 @@
             </tr>
             {% endif %}
 
+            {% if post_info.type == "electronics" %}
+            <tr>
+                <td>
+                    <p class="moreh">Power Requirement</p>
+                </td>
+                <td>{{ post_info.fields.power }}</td>
+            </tr>
+            {% endif %}
+
+
+
             {% if post_info.type == "car" %}
             <tr>
                 <td>
