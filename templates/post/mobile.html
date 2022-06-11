@@ -452,90 +452,89 @@
                 </td>
                 <td>{{ user_info.city }}</td>
             </tr>
-            {% if post_info.type == "car" %}
-            <tr>
-                <td>
-                    <p class="moreh">YOM</p>
-                </td>
-                <td>{{ post_info.fields.yom }}</td>
-            </tr>
-            {% endif %}
-            {% if post_info.type == "car" %}
-            <tr>
-                <td>
-                    <p class="moreh">Mileage (km)</p>
-                </td>
-                <td>{{ post_info.fields.mileage }}</td>
-            </tr>
-            {% endif %}
+
+
             <tr>
                 <td>
                     <p class="moreh">Ad Date</p>
                 </td>
                 <td>{{ post_info.date }}</td>
             </tr>
+
             <tr>
                 <td>
                     <p class="moreh">Name</p>
                 </td>
                 <td>{{ user_info.name }}</td>
             </tr>
-            {% if (post_info.type == "car") or (post_info.type == "electronics") or (post_info.type == "parts") %}
+
+            <!-- Fields According to Ad Type set dynamically -->
+
+            {% if post_info.type == "car" %}
+            <tr>
+                <td>
+                    <p class="moreh">Vehicle Type</p>
+                </td>
+                <td>{{ post_info.fields.ctype }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Vehicle Condition</p>
+                </td>
+                <td>{{ post_info.fields.ctype }}</td>
+            </tr>
+            {% endif %}
+
+            {% if not(post_info.type == "land") %}
             <tr>
                 <td>
                     <p class="moreh">Make</p>
                 </td>
                 <td>{{ post_info.fields.make }}</td>
             </tr>
-            {% endif %}
-            {% if (post_info.type == "car") or (post_info.type == "electronics") or (post_info.type == "parts") %}
             <tr>
                 <td>
-                    <p class="moreh"> Model</p>
+                    <p class="moreh">Model</p>
                 </td>
                 <td>{{ post_info.fields.model }}</td>
             </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Manufacture Year</p>
+                </td>
+                <td>{{ post_info.fields.yom }}</td>
+            </tr>
             {% endif %}
+
             {% if post_info.type == "car" %}
             <tr>
                 <td>
-                    <p class="moreh">Transmission </p>
+                    <p class="moreh">Transmission</p>
                 </td>
                 <td>{{ post_info.fields.transmission }}</td>
             </tr>
-            {% endif %}
-            {% if post_info.type == "car" %}
             <tr>
                 <td>
                     <p class="moreh">Fuel Type</p>
                 </td>
                 <td>{{ post_info.fields.fueltype }}</td>
             </tr>
-            {% endif %}
-            {% if post_info.type == "car" %}
             <tr>
                 <td>
-                    <p class="moreh">Engine (cc) </p>
+                    <p class="moreh">Engine</p>
                 </td>
                 <td>{{ post_info.fields.engine }}</td>
             </tr>
-            {% endif %}
-            {% if post_info.type == "land" %}
             <tr>
                 <td>
-                    <p class="moreh">Size</p>
+                    <p class="moreh">Mileage</p>
                 </td>
-                <td>{{ post_info.fields.size }}</td>
+                <td>{{ post_info.fields.mileage }}</td>
             </tr>
             {% endif %}
-            {% if post_info.type == "parts" %}
-            <tr>
-                <td>
-                    <p class="moreh">For</p>
-                </td>
-                <td>{{ post_info.fields.whatfor }}</td>
-            </tr>
-            {% endif %}
+
+            <!-- ------------------------------------------- -->
+
             <tr>
                 <td>
                     <p class="moreh">Options</p>
