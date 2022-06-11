@@ -3,24 +3,29 @@
         "id": 1,
         "username": "admin",
         "date": "2022 May 28 11:03",
-        "price": "9999",
-        "name": "Ad Name Comes Here",
-        "details": "Very long markdown description goes here",
         "type": "car",
+
+        "name": "Ad Name Comes Here",
+        "price": "9999",
+        "details": "Very long markdown description goes here",
+
         "fields": {
+            "ctype": "vehicle type",
+            "condition": "condition",
             "make": "make",
             "model": "model",
             "yom": "2018",
-            "mileage": "130 KM",
             "transmission": "trans",
             "fueltype": "fuel",
             "engine": "engine",
+            "mileage": "130 KM",
             "options": "options"
         },
         "images": [
             "http://hirusha.xyz",
             "http://example.com"
         ]
+
     },
     {
         "id": 2,
