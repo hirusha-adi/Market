@@ -99,6 +99,10 @@
     <h2 style="font-size:14px;padding:20px 0px 10px 0px;">Add Your Post</h2>
     <div style="font-size:11px;padding-bottom:20px;">Items marked with <span class="red">*</span> are required. </div>
 
+    <a href="{{ url_for('new_post_process', mode=post_type) }}">
+        <h1>Testing 123</h1>
+    </a>
+
     <form action="{{ url_for('new_post_process', mode=post_type) }}" method="post" name="form1" id="form1"
         enctype="multipart/form-data">
         <table style="width:275px;margin:auto;">
@@ -159,7 +163,7 @@
                         <div class="tx">
                             Vehicle Type<span class="red">*</span>
                         </div>
-                        <select name="vtype" id="vtype" class="intext" style="width:234px;height:31px;" required="">
+                        <select name="VehicleType" id="VehicleType" class="intext" style="width:234px;height:31px;" required="">
                             <option value="">Select Type</option>
                             <option value="Car">Car</option>
                             <option value="Van">Van</option>
@@ -183,7 +187,7 @@
                         <div class="tx">
                             Vehicle Condition<span class="red">*</span>
                         </div>
-                        <select name="vcat" id="vcat" class="intext" style="width:234px;height:31px;" required="">
+                        <select name="VehicleCondition" id="VehicleCondition" class="intext" style="width:234px;height:31px;" required="">
                             <option value="">Select Condition</option>
                             <option value="Antique">Antique</option>
                             <option value="Brand New">Brand New</option>
@@ -199,7 +203,7 @@
                         <div class="tx">
                             Vehicle Make<span class="red">*</span>
                         </div>
-                        <select name="make" id="make" class="intext" style="width:234px;height:31px;" required="">
+                        <select name="VehicleMake" id="VehicleMake" class="intext" style="width:234px;height:31px;" required="">
                             <option value="">Select Make</option>
                             <option value="Acura">Acura</option>
                             <option value="Alfa-Romeo">Alfa-Romeo</option>
@@ -340,7 +344,7 @@
                         <div class="tx">
                             Model<span class="red">*</span>
                         </div>
-                        <input type="text" class="intext" name="model" id="model" value="" maxlength="100" required="">
+                        <input type="text" class="intext" name="VehicleModel" id="VehicleModel" value="" maxlength="100" required="">
                     </td>
                 </tr>
 
@@ -350,7 +354,7 @@
                         <div class="tx">
                             Manufactured Year<span class="red">*</span>
                         </div>
-                        <select name="year" id="year" class="intext" style="width:234px;height:31px;" required="">
+                        <select name="yom" id="yom" class="intext" style="width:234px;height:31px;" required="">
                             <option value="">Manufactured Year</option>
                             <option value="2022">2022</option>
                             <option value="2021">2021</option>
@@ -438,7 +442,7 @@
                         <div class="tx">
                             Transmission<span class="red">*</span>
                         </div>
-                        <select name="transmission" id="transmission" class="intext" style="width:234px;height:31px;"
+                        <select name="VehicleTransmission" id="VehicleTransmission" class="intext" style="width:234px;height:31px;"
                             required="">
                             <option value="">Select Transmission</option>
                             <option value="Automatic">Automatic</option>
@@ -453,7 +457,7 @@
                         <div class="tx">
                             Fuel Type<span class="red">*</span>
                         </div>
-                        <select name="fuel" id="fuel" class="intext" style="width:234px;height:31px;" required="">
+                        <select name="VehicleFuel" id="VehicleFuel" class="intext" style="width:234px;height:31px;" required="">
                             <option value="">Select Fuel Type</option>
                             <option value="Diesel">Diesel</option>
                             <option value="Petrol">Petrol</option>
@@ -468,7 +472,7 @@
                 <tr>
                     <td align="left">
                         <div class="tx">Engine Capacity</div>
-                        <input type="text" class="intext" name="ecc" id="ecc" value="">
+                        <input type="text" class="intext" name="VehicleEngineCapacity" id="VehicleEngineCapacity" value="">
                     </td>
                 </tr>
 
@@ -478,7 +482,7 @@
                         <div class="tx">
                             Mileage (km)<span class="red">*</span>
                         </div>
-                        <input type="number" class="intext" name="vno" id="vno" value="" required="">
+                        <input type="number" class="intext" name="VehicleMileage" id="VehicleMileage" value="" required="">
                     </td>
                 </tr>
 
@@ -856,67 +860,67 @@
 
             </tbody>
         </table>
-    </form>
 
-    <table style="width:275px;margin:auto;">
-        <tbody>
-            <tr>
-                <td align="center">
-                    <div style="font-size:12px;">If upload is taking too long, please add the product without an image.
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <div class="tx">Main Image</div>
-                    <input type="file" name="up1h" id="up1h" accept="image/*">
-                    <span class="up_style" id="1_res" style="display:none;">
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <div class="tx">Image 2</div>
-                    <input type="file" name="up2h" id="up2h" accept="image/*">
-                    <span class="up_style" id="2_res" style="display:none;">
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <div class="tx">Image 3</div>
-                    <input type="file" name="up3h" id="up3h" accept="image/*">
-                    <span class="up_style" id="3_res" style="display:none;">
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <div class="tx">Image 4</div>
-                    <input type="file" name="up4h" id="up4h" accept="image/*">
-                    <span class="up_style" id="4_res" style="display:none;">
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <div class="tx">Image 5</div>
-                    <input type="file" name="up5h" id="up5h" accept="image/*">
-                    <span class="up_style" id="5_res" style="display:none;">
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <br><input class="btnintxt" type="button" name="sub" id="sub" value="Add Vehicle">
-                    <input type="hidden" name="exif" id="exif" value="">
-                    <div class="noScript" style="padding-top: 5px; display: none;">
-                        Your browser does not support JavaScript! Please use the Chromium
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <table style="width:275px;margin:auto;">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <div style="font-size:12px;">If upload is taking too long, please add the product without an image.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <div class="tx">Main Image</div>
+                        <input type="file" name="up1h" id="up1h" accept="image/*">
+                        <span class="up_style" id="1_res" style="display:none;">
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <div class="tx">Image 2</div>
+                        <input type="file" name="up2h" id="up2h" accept="image/*">
+                        <span class="up_style" id="2_res" style="display:none;">
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <div class="tx">Image 3</div>
+                        <input type="file" name="up3h" id="up3h" accept="image/*">
+                        <span class="up_style" id="3_res" style="display:none;">
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <div class="tx">Image 4</div>
+                        <input type="file" name="up4h" id="up4h" accept="image/*">
+                        <span class="up_style" id="4_res" style="display:none;">
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <div class="tx">Image 5</div>
+                        <input type="file" name="up5h" id="up5h" accept="image/*">
+                        <span class="up_style" id="5_res" style="display:none;">
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <br>
+                        <input class="btnintxt" type="button" name="sub" id="sub" value="Add Product" onclick="this.form.submit()">
+                        <div class="noScript" style="padding-top: 5px; display: none;">
+                            Your browser does not support JavaScript! Please use the Chromium
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
 
     <br>
 

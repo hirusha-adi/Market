@@ -2,7 +2,7 @@ from flask import render_template, request, url_for, redirect, session, g
 from database.settings import Dekstop
 from models.user import User
 from database.mongo import Users, Posts
-
+from datetime import datetime
 
 def post_no_id():
     return redirect(url_for('index_no_page'))
@@ -74,11 +74,51 @@ def new_post(ptype):
 
 
 def new_post_process(mode):
-    if request.method == 'POST':
-        
-        ProductName = request.form.get('ProductName')
-        ProductPrice = request.form.get('ProductPrice')
-        
-        if mode == 'car':
-            request.form.get()
-        
+    
+    ProductName = request.form.get('ProductName')
+    ProductPrice = request.form.get('ProductPrice')
+    UploadedBy = g.user['username']
+    UploadedTime = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+    
+    if mode == 'car':
+        VehicleType = request.form.get('VehicleType')
+        VehicleCondition = request.form.get('VehicleCondition')
+        VehicleMake = request.form.get('VehicleMake')
+        VehicleModel = request.form.get('VehicleModel')
+        yom = request.form.get('yom')
+        VehicleTransmission = request.form.get('VehicleTransmission')
+        VehicleFuel = request.form.get('VehicleFuel')
+        VehicleEngineCapacity = request.form.get('VehicleEngineCapacity')
+        VehicleMileage = request.form.get('VehicleMileage')
+    
+    {
+            "id": 1,
+            "username": UploadedBy,
+            "date": UploadedTime,
+            "type": "car",
+
+            "name": ProductName,
+            "price": ProductPrice,
+            "details": "",
+
+            "fields": {
+                "ctype": VehicleType,
+                "condition": VehicleCondition,
+                "make": VehicleMake,
+                "model": VehicleModel,
+                "yom": yom,
+                "transmission": VehicleTransmission,
+                "fueltype": VehicleFuel,
+                "engine": VehicleEngineCapacity,
+                "mileage": VehicleMileage,
+                "options": ""
+            },
+            "images": [
+                "http://hirusha.xyz",
+                "http://example.com"
+            ]
+
+        }
+    
+
+    return "Testing"
