@@ -75,8 +75,10 @@ def new_post(ptype):
 
 def new_post_process(mode):
     if request.method == 'POST':
-        # request.form.get()
-        return "POST"
-
-    elif request.method == 'GET':
-        return "GET"
+        
+        ProductName = request.form.get('ProductName')
+        ProductPrice = request.form.get('ProductPrice')
+        
+        if mode == 'car':
+            request.form.get()
+        
