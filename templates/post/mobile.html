@@ -515,7 +515,38 @@
             </tr>
             {% endif %}
 
+            {% if post_info.type == "land" %}
+            <tr>
+                <td>
+                    <p class="moreh">Property Size</p>
+                </td>
+                <td>{{ post_info.fields.ptype }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="moreh">Purchase Size</p>
+                </td>
+                <td>{{ post_info.fields.btype }}</td>
+            </tr>
+            {% endif %}
 
+            {% if post_info.type == "parts" %}
+            <tr>
+                <td>
+                    <p class="moreh">Made For</p>
+                </td>
+                <td>{{ post_info.fields.whatfor }}</td>
+            </tr>
+            {% endif %}
+
+            {% if (post_info.type == "parts") or (post_info.type == "land") %}
+            <tr>
+                <td>
+                    <p class="moreh">Size</p>
+                </td>
+                <td>{{ post_info.fields.size }}</td>
+            </tr>
+            {% endif %}
 
             {% if post_info.type == "car" %}
             <tr>
