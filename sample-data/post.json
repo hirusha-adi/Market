@@ -4,11 +4,9 @@
         "username": "admin",
         "date": "2022 May 28 11:03",
         "type": "car",
-
         "name": "Ad Name Comes Here",
         "price": "9999",
         "details": "Very long markdown description goes here",
-
         "fields": {
             "ctype": "vehicle type",
             "condition": "condition",
@@ -22,21 +20,18 @@
             "options": "options"
         },
         "images": [
-            "http://hirusha.xyz",
-            "http://example.com"
+            "https://cdn.discordapp.com/attachments/980165687232319538/985090226747736104/unknown.png",
+            "https://cdn.discordapp.com/attachments/980165687232319538/985090328132460574/unknown.png"
         ]
-
     },
     {
         "id": 2,
         "username": "admin",
         "date": "3033 May 33 11:03",
         "type": "land",
-        
         "price": "888",
         "name": "Ad Name Comes Here",
         "details": "Very long markdown description goes here",
-
         "fields": {
             "ptype": "Property Type",
             "btype": "Purchase Type",
@@ -44,8 +39,8 @@
             "options": "options"
         },
         "images": [
-            "http://hirusha.xyz",
-            "http://example.com"
+            "https://cdn.discordapp.com/attachments/980165687232319538/985090226747736104/unknown.png",
+            "https://cdn.discordapp.com/attachments/980165687232319538/985090328132460574/unknown.png"
         ]
     },
     {
@@ -53,11 +48,9 @@
         "username": "admin",
         "date": "7077 May 77 11:03",
         "type": "electronics",
-
         "price": "7777",
         "name": "Ad Name Comes Here",
         "details": "Very long markdown description goes here",
-
         "fields": {
             "make": "make",
             "model": "model",
@@ -66,8 +59,8 @@
             "options": "options"
         },
         "images": [
-            "http://hirusha.xyz",
-            "http://example.com"
+            "https://cdn.discordapp.com/attachments/980165687232319538/985090226747736104/unknown.png",
+            "https://cdn.discordapp.com/attachments/980165687232319538/985090328132460574/unknown.png"
         ]
     },
     {
@@ -75,11 +68,9 @@
         "username": "admin",
         "date": "5055 May 55 11:03",
         "type": "parts",
-
         "price": "5555",
         "name": "Ad Name Comes Here",
         "details": "Very long markdown description goes here",
-
         "fields": {
             "make": "make",
             "model": "model",
@@ -89,8 +80,8 @@
             "options": "options"
         },
         "images": [
-            "http://hirusha.xyz",
-            "http://example.com"
+            "https://cdn.discordapp.com/attachments/980165687232319538/985090226747736104/unknown.png",
+            "https://cdn.discordapp.com/attachments/980165687232319538/985090328132460574/unknown.png"
         ]
     }
 ]
