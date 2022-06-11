@@ -497,11 +497,14 @@
                 {% endif %}
 
                 {% if post_type == 'land' %}
+                <!-- Title -->
                 <tr>
                     <td align="left">
                         <h4 style="color:#333;">Land Info</h4>
                     </td>
                 </tr>
+
+                <!-- Property Type -->
                 <tr>
                     <td align="left">
                         <div class="tx">
@@ -515,6 +518,8 @@
                         </select>
                     </td>
                 </tr>
+
+                <!-- Purchase Type -->
                 <tr>
                     <td align="left">
                         <div class="tx">
@@ -527,6 +532,8 @@
                         </select>
                     </td>
                 </tr>
+
+                <!-- Price (Rs.) -->
                 <tr>
                     <td align="left">
                         <div class="tx">Price (Rs.)</div>
@@ -540,12 +547,16 @@
                         </div>
                     </td>
                 </tr>
+
+                <!-- Size -->
                 <tr>
                     <td align="left">
                         <div class="tx">Size</div>
                         <input type="text" class="intext" name="size" id="size" value="">
                     </td>
                 </tr>
+
+                <!-- Options -->
                 <tr>
                     <td align="left">
                         <div class="tx">Options</div>
@@ -567,6 +578,7 @@
                         </div>
                     </td>
                 </tr>
+
                 {% endif %}
 
                 {% if post_type == 'electronics' %}
