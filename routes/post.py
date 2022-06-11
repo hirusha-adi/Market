@@ -44,46 +44,33 @@ def one_post(id):
     return render_template('post/mobile.html', **data)
 
 
-def new_post_car():
+def new_post(ptype):
+    ptype = str(ptype)
+
     data = {}
     data['title'] = "Hirusha"
     data['page_bottom'] = Dekstop.bottom
     data['page_top'] = Dekstop.top
     data['page_header'] = Dekstop.header
-    data['post_type'] = "car"
 
-    return render_template('new/mobile.html', **data)
+    if ptype.lower() in ("car", "vehicle"):
+        data['title'] = "Hirusha"
+        data['post_type'] = "car"
 
+    elif ptype.lower() in ("land", "building"):
+        data['title'] = "Hirusha"
+        data['post_type'] = "land"
 
-def new_post_land():
-    data = {}
-    data['title'] = "Hirusha"
-    data['page_bottom'] = Dekstop.bottom
-    data['page_top'] = Dekstop.top
-    data['page_header'] = Dekstop.header
-    data['post_type'] = "land"
+    elif ptype.lower() in ("electronics",):
+        data['title'] = "Hirusha"
+        data['post_type'] = "electronics"
 
-    return render_template('new/mobile.html', **data)
+    elif ptype.lower() in ("parts", "accessories"):
+        data['title'] = "Hirusha"
+        data['post_type'] = "parts"
 
-
-def new_post_electronics():
-    data = {}
-    data['title'] = "Hirusha"
-    data['page_bottom'] = Dekstop.bottom
-    data['page_top'] = Dekstop.top
-    data['page_header'] = Dekstop.header
-    data['post_type'] = "electronics"
-
-    return render_template('new/mobile.html', **data)
-
-
-def new_post_parts():
-    data = {}
-    data['title'] = "Hirusha"
-    data['page_bottom'] = Dekstop.bottom
-    data['page_top'] = Dekstop.top
-    data['page_header'] = Dekstop.header
-    data['post_type'] = "electronics"
+    else:
+        return redirect(url_for('profile'))
 
     return render_template('new/mobile.html', **data)
 
