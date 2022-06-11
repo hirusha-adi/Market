@@ -136,13 +136,17 @@
                     <td align="left">
                         <div class="tx">Price (Rs.)</div>
                         <input type="number" class="intext" name="price" id="price" value="">
+
                         <div style="padding:5px 0;">
                             <input title="Check if the vehicle has leasing" type="checkbox" id="lease" name="lease"
                                 value="1">
-                            <span title="Check if the vehicle has leasing">
-                                Ongoing Lease
-                            </span>
+                            {% if post_type == 'car' %}
+                            <span title="Check if the vehicle has leasing">Ongoing Lease</span>
+                            {% else %}
+                            <span title="Check if the vehicle has leasing">Ongoing Loan</span>
+                            {% endif %}
                         </div>
+
                     </td>
                 </tr>
 
