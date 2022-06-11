@@ -133,6 +133,7 @@
                         </select>
                     </td>
                 </tr>
+                <!-- Vehicle Condition -->
                 <tr>
                     <td align="left">
                         <div class="tx">
@@ -147,6 +148,7 @@
                         </select>
                     </td>
                 </tr>
+                <!-- Vehicle Make -->
                 <tr>
                     <td align="left">
                         <div class="tx">
@@ -286,6 +288,7 @@
                         </select>
                     </td>
                 </tr>
+                <!-- Model -->
                 <tr>
                     <td align="left">
                         <div class="tx">
@@ -294,6 +297,7 @@
                         <input type="text" class="intext" name="model" id="model" value="" maxlength="100" required="">
                     </td>
                 </tr>
+                <!-- Manufactured Year -->
                 <tr>
                     <td align="left">
                         <div class="tx">
@@ -380,6 +384,7 @@
                         </select>
                     </td>
                 </tr>
+                <!-- Price (Rs.) -->
                 <tr>
                     <td align="left">
                         <div class="tx">Price (Rs.)</div>
@@ -393,6 +398,7 @@
                         </div>
                     </td>
                 </tr>
+                <!-- Transmission -->
                 <tr>
                     <td align="left">
                         <div class="tx">
@@ -406,6 +412,7 @@
                         </select>
                     </td>
                 </tr>
+                <!-- Fuel Type -->
                 <tr>
                     <td align="left">
                         <div class="tx">
@@ -421,12 +428,14 @@
                         </select>
                     </td>
                 </tr>
+                <!-- Engine Capacity -->
                 <tr>
                     <td align="left">
                         <div class="tx">Engine Capacity</div>
                         <input type="text" class="intext" name="ecc" id="ecc" value="">
                     </td>
                 </tr>
+                <!-- Mileage (km) -->
                 <tr>
                     <td align="left">
                         <div class="tx">
@@ -435,6 +444,7 @@
                         <input type="number" class="intext" name="vno" id="vno" value="" required="">
                     </td>
                 </tr>
+                <!-- Options -->
                 <tr>
                     <td align="left">
                         <div class="tx">Options</div>
@@ -545,6 +555,9 @@
                         </div>
                     </td>
                 </tr>
+                {% endif %}
+
+                {% if post_type == 'electronics' %}
                 {% endif %}
 
                 <tr>
