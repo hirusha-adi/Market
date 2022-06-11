@@ -110,40 +110,6 @@ class Users:
 
 
 class Posts:
-    """
-    {
-
-        "_id": {
-            "$oid": ""
-        },
-        "id": 1,
-        "username": "",
-        "date": "",
-        "price": "",
-        "name": "",
-        "details": "",
-
-        "type": "",         --> car | land | electronics | parts
-        "fields": {
-            "make": "",
-            "model": "",
-            "yom": "",
-            "mileage": "",
-            "transmission": "",
-            "fueltype": "",
-            "engine": "",
-            "options": "",
-            "size": ""
-            "whatfor": "",
-        },
-        "images": [
-            "",
-            ""
-        ]
-
-    }
-    """
-
     class Car:
         """
         {
