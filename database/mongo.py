@@ -116,24 +116,29 @@ class Posts:
             "id": 1,
             "username": "",
             "date": "",
-            "price": "",
-            "name": "",
-            "details": "",
             "type": "car",
+
+            "name": "",
+            "price": "",
+            "details": "",
+
             "fields": {
+                "ctype": "",
+                "condition": "",
                 "make": "",
                 "model": "",
                 "yom": "",
-                "mileage": "",
                 "transmission": "",
                 "fueltype": "",
                 "engine": "",
+                "mileage": "",
                 "options": ""
             },
             "images": [
-                "",
-                ""
+                "http://hirusha.xyz",
+                "http://example.com"
             ]
+
         }
         """
         def getAllPosts():
