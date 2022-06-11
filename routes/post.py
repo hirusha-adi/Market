@@ -37,9 +37,7 @@ def one_post(id):
     except:
         return redirect(url_for('index_no_page'))
 
-    data['imgs'] = ["https://www.w3schools.com/w3css/img_mountains.jpg",
-                    "https://www.w3schools.com/w3css/img_snowtops.jpg",
-                    "https://www.w3schools.com/w3css/img_forest.jpg"]
+    data['imgs'] = data['post_info']['images']
 
     return render_template('post/mobile.html', **data)
 
