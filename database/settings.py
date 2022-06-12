@@ -1,5 +1,6 @@
 import utils.filenames as filenames
 import json
+from typing import Union
 
 with open(filenames.settings, "r", encoding="utf-8") as _file:
     data = json.load(_file)
@@ -8,7 +9,7 @@ with open(filenames.settings, "r", encoding="utf-8") as _file:
 class Web:
     web = data["web"]
     host: str = web["host"]
-    port: int = web["port"]
+    port: Union[int, str] = web["port"]
     debug: bool = web["debug"]
 
 
