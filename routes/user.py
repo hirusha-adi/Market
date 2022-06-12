@@ -1,5 +1,4 @@
 from flask import render_template, request, url_for, redirect, session, g
-import utils.test as test
 from flask_paginate import Pagination
 from database.settings import Dekstop
 from models.user import User
