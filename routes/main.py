@@ -1,4 +1,3 @@
-from django.shortcuts import redirect
 from flask import render_template, request, url_for, redirect, session, g
 from flask_paginate import Pagination
 from database.settings import Dekstop
