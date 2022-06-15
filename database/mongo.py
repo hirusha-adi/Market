@@ -441,3 +441,7 @@ class Posts:
         ):
             temp.append(post)
         return temp
+
+    def addPost(data):
+        posts.insert_one(data)
+        
