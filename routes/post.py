@@ -75,50 +75,38 @@ def new_post(ptype):
 
 def new_post_process(mode):
     
-    ProductName = request.form.get('ProductName')
-    ProductPrice = request.form.get('ProductPrice')
-    UploadedBy = g.user['username']
-    UploadedTime = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
-    
     if mode == 'car':
-        VehicleType = request.form.get('VehicleType')
-        VehicleCondition = request.form.get('VehicleCondition')
-        VehicleMake = request.form.get('VehicleMake')
-        VehicleModel = request.form.get('VehicleModel')
-        yom = request.form.get('yom')
-        VehicleTransmission = request.form.get('VehicleTransmission')
-        VehicleFuel = request.form.get('VehicleFuel')
-        VehicleEngineCapacity = request.form.get('VehicleEngineCapacity')
-        VehicleMileage = request.form.get('VehicleMileage')
     
-    {
+        data = {
             "id": 1,
-            "username": UploadedBy,
-            "date": UploadedTime,
+            "username": str(g.user['username']),
+            "date": str(datetime.now().strftime("%m/%d/%Y, %H:%M:%S")),
             "type": "car",
 
-            "name": ProductName,
-            "price": ProductPrice,
+            "name": request.form.get('ProductName'),
+            "price": request.form.get('ProductPrice'),
             "details": "",
 
             "fields": {
-                "ctype": VehicleType,
-                "condition": VehicleCondition,
-                "make": VehicleMake,
-                "model": VehicleModel,
-                "yom": yom,
-                "transmission": VehicleTransmission,
-                "fueltype": VehicleFuel,
-                "engine": VehicleEngineCapacity,
-                "mileage": VehicleMileage,
+                "ctype": request.form.get('VehicleType'),
+                "condition": request.form.get('VehicleCondition'),
+                "make": request.form.get('VehicleMake'),
+                "model": request.form.get('VehicleModel'),
+                "yom": request.form.get('yom'),
+                "transmission": request.form.get('VehicleTransmission'),
+                "fueltype": request.form.get('VehicleFuel'),
+                "engine": request.form.get('VehicleEngineCapacity'),
+                "mileage": request.form.get('VehicleMileage'),
                 "options": ""
             },
             "images": [
-                "http://hirusha.xyz",
-                "http://example.com"
+                "",
+                ""
             ]
 
         }
+        
+        Posts.addPost(data=data)
     
 
     return "Testing"
