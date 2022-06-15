@@ -1,5 +1,4 @@
 
-from enum import Flag
 import urllib.parse
 from pymongo import MongoClient
 from database.settings import Mongo
