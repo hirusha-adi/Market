@@ -29,12 +29,6 @@ app.add_url_rule("/new/data/<mode>", 'new_post_process',
                  new_post_process, methods=['GET', 'POST'])
 
 
-# DEBUG
-app.add_url_rule("/one_post", 'one_post', one_post, methods=['GET'])
-# app.add_url_rule("/show_all_data/<mode>", 'show_all_data',
-#                show_all_data, methods=['GET'])
-
-
 @app.before_request
 def before_request():
     g.user = None
