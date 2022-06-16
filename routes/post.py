@@ -9,6 +9,7 @@ def post_no_id():
 
 
 def one_post(id):
+    # Base Data
     data = {}
     data['title'] = "Hirusha"
     data['page_bottom'] = Dekstop.bottom
@@ -24,6 +25,7 @@ def one_post(id):
     except:
         return redirect(url_for('index_no_page'))
 
+    # Get the user info
     try:
         _user = Users.getUserByUsername(username=_post['username'])
         if bool(_user) is False:
@@ -32,25 +34,24 @@ def one_post(id):
     except:
         return redirect(url_for('index_no_page'))
 
-    try:
-        pass
-    except:
-        return redirect(url_for('index_no_page'))
-
+    # for handling images easily
     data['imgs'] = data['post_info']['images']
 
     return render_template('post/mobile.html', **data)
 
 
 def new_post(ptype):
+    # Post Type
     ptype = str(ptype)
 
+    # Base Data
     data = {}
     data['title'] = "Hirusha"
     data['page_bottom'] = Dekstop.bottom
     data['page_top'] = Dekstop.top
     data['page_header'] = Dekstop.header
 
+    # Handle `ptype` accordingly
     if ptype.lower() in ("car", "vehicle"):
         data['title'] = "Hirusha"
         data['post_type'] = "car"
@@ -75,6 +76,9 @@ def new_post(ptype):
 
 def new_post_process(mode):
     
+    # SETTING UP THE BASE DATA
+    
+    # if car
     if mode == 'car':
     
         data = {
@@ -107,6 +111,7 @@ def new_post_process(mode):
         
         Posts.addPost(data=data)
     
+    # if land
     elif mode == 'land':
         data = {
             "id": int(Posts.getLastPost()['id']) + 1,
@@ -131,7 +136,8 @@ def new_post_process(mode):
         }
         
         Posts.addPost(data=data)
-        
+    
+    # if electronics
     elif mode == 'electronics':
         data = {
             "id": int(Posts.getLastPost()['id']) + 1,
@@ -158,6 +164,7 @@ def new_post_process(mode):
         
         Posts.addPost(data=data)
     
+    # if parts
     elif mode == 'parts':
         data = {
             "id": int(Posts.getLastPost()['id']) + 1,
@@ -185,7 +192,11 @@ def new_post_process(mode):
         
         Posts.addPost(data=data)
     
+    # if something else
     else:
-        return redirect(url_for('index'))
+        return redirect(url_for('index_no_page'))
+    
+    # HANDLE OPTIONS - (ToDo)
+    # HANDLE IMAGES - (ToDo)
 
     return "Testing"
