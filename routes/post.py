@@ -5,6 +5,7 @@ from database.mongo import Users, Posts
 from datetime import datetime
 
 def post_no_id():
+    # If no post ID is mentioned, redirect to home page
     return redirect(url_for('index_no_page'))
 
 
