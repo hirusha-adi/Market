@@ -157,5 +157,32 @@ def new_post_process(mode):
         }
         
         Posts.addPost(data=data)
+    
+    elif mode == 'parts':
+        data = {
+            "id": int(Posts.getLastPost()['id']) + 1,
+            "username": str(g.user['username']),
+            "date": str(datetime.now().strftime("%m/%d/%Y, %H:%M:%S")),
+            "type": "electronics",
+
+            "name": request.form.get('ProductName'),
+            "price": request.form.get('ProductPrice'),
+            "details": request.form.get('ProductDescription'),
+
+            "fields": {
+                "make": request.form.get('Make'),
+                "model": request.form.get('Model'),
+                "yom": request.form.get('yom'),
+                "whatfor": request.form.get('WhatFor'),
+                "size": request.form.get('Size'),
+                "options": ""
+            },
+            "images": [
+                "",
+                ""
+            ]
+        }
+        
+        Posts.addPost(data=data)
 
     return "Testing"
