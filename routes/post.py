@@ -119,14 +119,14 @@ def new_post_process(mode):
             "details": request.form.get('ProductDescription'),
 
             "fields": {
-                "ptype": "",
-                "btype": "",
-                "size": "",
+                "ptype": request.form.get('PropertyType'),
+                "btype": request.form.get('PurchaseType'),
+                "size": request.form.get('Size'),
                 "options": ""
             },
             "images": [
-                "http://hirusha.xyz",
-                "http://example.com"
+                "",
+                ""
             ]
 
         }
