@@ -7,3 +7,8 @@ settings: str = os.path.join(
     "database",
     "settings.json"
 )
+
+upoad_folder: str = os.path.join(
+    _cwd, 
+    "uploads"
+)
