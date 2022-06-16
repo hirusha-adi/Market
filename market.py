@@ -4,10 +4,11 @@ from routes.post import *
 from routes.user import *
 from database import settings
 from database.mongo import Users
+import utils.filenames
 
 app = Flask(__name__)
 app.secret_key = "VerySecret12345"
-
+app.config['UPLOAD_FOLDER'] = utils.filenames.upoad_folder
 
 # Index Page
 app.add_url_rule("/", 'index_no_page', index_no_page, methods=['GET'])
