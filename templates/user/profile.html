@@ -112,8 +112,39 @@
         <div class="clear"></div>
     </div>
     <div class="clear"></div>
-    <div style="line-height:1.3em;font-size:14px;margin:20px 0px;text-align:center;">You currently have no vehicles
-        saved in your account.</div><br>
+    <div style="line-height:1.3em;font-size:14px;margin:20px 0px;text-align:center;">
+        <ul>
+            {% if all_posts_user_length != 0 %}
+                {% for item in all_posts_user %}
+                    <li>
+                        <div class="item">
+                            <h2 class="more">
+                                <a title="{{ item.name }}" href="{{ url_for('one_post', id=item.id) }}">
+                                    {{ item.name }}
+                                </a>
+                            </h2>
+                            <div class="imgbox"><a title="{{ item.name }}" href="{{ url_for('one_post', id=item.id) }}">
+                                    <img src="{{ item.images[0] }}" alt="{{ item.name }}" width="100" height="75"
+                                        importance="high" />
+                                    <div class="clear"></div>
+                                </a>
+                            </div>
+                            <div class="boxtext">
+                                <div class="boxintxt b"> {{ item.price }}</div>
+                                <div class="boxintxt"> {{ item.details }}</div>
+                                <div class="boxintxt"> by {{ item.username }}</div>
+                                <div class="boxintxt s">on {{ item.date }}</div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                {% endfor %}
+            {% else %}
+                You currently have no posts added from your account.
+            {% endif %}
+        </ul>
+    </div>
+    <br>
 </div>
 {% endif %}
 
@@ -150,7 +181,7 @@
         <br>
         <ul style="margin:2em;padding:5px;list-style:inside;color:#333;">
             {% for error_item in page_edit_errors_list %}
-            <li>{{ error_item }}</li>
+                <li>{{ error_item }}</li>
             {% endfor %}
         </ul>
     </div>

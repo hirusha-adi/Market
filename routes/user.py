@@ -1,8 +1,7 @@
 from flask import render_template, request, url_for, redirect, session, g
 from flask_paginate import Pagination
 from database.settings import Dekstop
-from models.user import User
-from database.mongo import Users
+from database.mongo import Users, Posts
 
 
 def login():
@@ -72,6 +71,8 @@ def profile():
     data['page_bottom'] = Dekstop.bottom
     data['page_top'] = Dekstop.top
     data['page_header'] = Dekstop.header
+    data['all_posts_user'] = Posts.getPostsByUsername(g.user['username'])
+    data['all_posts_user_length'] = len(data['all_posts_user'])
 
     return render_template('user/profile.html', page_home=True, **data)
 
