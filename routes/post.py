@@ -184,5 +184,8 @@ def new_post_process(mode):
         }
         
         Posts.addPost(data=data)
+    
+    else:
+        return redirect(url_for('index'))
 
     return "Testing"
