@@ -444,4 +444,10 @@ class Posts:
 
     def addPost(data):
         posts.insert_one(data)
-        
+    
+    def getLastPost():
+        temp = []
+        for user in Posts.getAllPosts():
+            temp.append(user)
+        return temp[-1]
+    
