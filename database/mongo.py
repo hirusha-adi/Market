@@ -333,7 +333,7 @@ class Posts:
             "id": 3,
             "username": "",
             "date": "",
-            "type": "electronics",
+            "type": "parts",
 
             "name": "",
             "price": "",
