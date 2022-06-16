@@ -78,14 +78,14 @@ def new_post_process(mode):
     if mode == 'car':
     
         data = {
-            "id": 1,
+            "id": int(Posts.getLastPost()['id']) + 1,
             "username": str(g.user['username']),
             "date": str(datetime.now().strftime("%m/%d/%Y, %H:%M:%S")),
             "type": "car",
 
             "name": request.form.get('ProductName'),
             "price": request.form.get('ProductPrice'),
-            "details": "",
+            "details": request.form.get('ProductDescription'),
 
             "fields": {
                 "ctype": request.form.get('VehicleType'),
@@ -103,10 +103,32 @@ def new_post_process(mode):
                 "",
                 ""
             ]
-
         }
         
         Posts.addPost(data=data)
     
+    elif mode == 'land':
+        data = {
+            "id": int(Posts.getLastPost()['id']) + 1,
+            "username": str(g.user['username']),
+            "date": str(datetime.now().strftime("%m/%d/%Y, %H:%M:%S")),
+            "type": "land",
+
+            "name": request.form.get('ProductName'),
+            "price": request.form.get('ProductPrice'),
+            "details": request.form.get('ProductDescription'),
+
+            "fields": {
+                "ptype": "",
+                "btype": "",
+                "size": "",
+                "options": ""
+            },
+            "images": [
+                "http://hirusha.xyz",
+                "http://example.com"
+            ]
+
+        }
 
     return "Testing"
