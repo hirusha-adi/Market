@@ -111,7 +111,7 @@
 
                 <!-- Title -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         {% if post_type == 'car' %}
                         <h4 style="color:#333;">Vehicle Info</h4>
                         {% elif post_type == 'land' %}
@@ -127,7 +127,7 @@
 
                 <!-- Name -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Name <span class="red">*</span>
                         </div>
@@ -137,7 +137,7 @@
 
                 <!-- Price (Rs.) -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">Price (Rs.)</div>
                         <input type="number" class="intext" name="ProductPrice" id="ProductPrice" value="">
 
@@ -159,11 +159,12 @@
 
                 <!-- Vehicle Type -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Vehicle Type<span class="red">*</span>
                         </div>
-                        <select name="VehicleType" id="VehicleType" class="intext" style="width:234px;height:31px;" required="">
+                        <select name="VehicleType" id="VehicleType" class="intext" style="width:234px;height:31px;"
+                            required="">
                             <option value="">Select Type</option>
                             <option value="Car">Car</option>
                             <option value="Van">Van</option>
@@ -183,11 +184,12 @@
 
                 <!-- Vehicle Condition -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Vehicle Condition<span class="red">*</span>
                         </div>
-                        <select name="VehicleCondition" id="VehicleCondition" class="intext" style="width:234px;height:31px;" required="">
+                        <select name="VehicleCondition" id="VehicleCondition" class="intext"
+                            style="width:234px;height:31px;" required="">
                             <option value="">Select Condition</option>
                             <option value="Antique">Antique</option>
                             <option value="Brand New">Brand New</option>
@@ -199,11 +201,12 @@
 
                 <!-- Vehicle Make -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Vehicle Make<span class="red">*</span>
                         </div>
-                        <select name="VehicleMake" id="VehicleMake" class="intext" style="width:234px;height:31px;" required="">
+                        <select name="VehicleMake" id="VehicleMake" class="intext" style="width:234px;height:31px;"
+                            required="">
                             <option value="">Select Make</option>
                             <option value="Acura">Acura</option>
                             <option value="Alfa-Romeo">Alfa-Romeo</option>
@@ -340,17 +343,18 @@
 
                 <!-- Vehicle Model -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Model<span class="red">*</span>
                         </div>
-                        <input type="text" class="intext" name="VehicleModel" id="VehicleModel" value="" maxlength="100" required="">
+                        <input type="text" class="intext" name="VehicleModel" id="VehicleModel" value="" maxlength="100"
+                            required="">
                     </td>
                 </tr>
 
                 <!-- YOM -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Manufactured Year<span class="red">*</span>
                         </div>
@@ -438,12 +442,12 @@
 
                 <!-- Transmission -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Transmission<span class="red">*</span>
                         </div>
-                        <select name="VehicleTransmission" id="VehicleTransmission" class="intext" style="width:234px;height:31px;"
-                            required="">
+                        <select name="VehicleTransmission" id="VehicleTransmission" class="intext"
+                            style="width:234px;height:31px;" required="">
                             <option value="">Select Transmission</option>
                             <option value="Automatic">Automatic</option>
                             <option value="Manual">Manual</option>
@@ -453,11 +457,12 @@
 
                 <!-- Fuel Type -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Fuel Type<span class="red">*</span>
                         </div>
-                        <select name="VehicleFuel" id="VehicleFuel" class="intext" style="width:234px;height:31px;" required="">
+                        <select name="VehicleFuel" id="VehicleFuel" class="intext" style="width:234px;height:31px;"
+                            required="">
                             <option value="">Select Fuel Type</option>
                             <option value="Diesel">Diesel</option>
                             <option value="Petrol">Petrol</option>
@@ -470,25 +475,27 @@
 
                 <!-- Engine Capacity -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">Engine Capacity</div>
-                        <input type="text" class="intext" name="VehicleEngineCapacity" id="VehicleEngineCapacity" value="">
+                        <input type="text" class="intext" name="VehicleEngineCapacity" id="VehicleEngineCapacity"
+                            value="">
                     </td>
                 </tr>
 
                 <!-- Mileage (km) -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Mileage (km)<span class="red">*</span>
                         </div>
-                        <input type="number" class="intext" name="VehicleMileage" id="VehicleMileage" value="" required="">
+                        <input type="number" class="intext" name="VehicleMileage" id="VehicleMileage" value=""
+                            required="">
                     </td>
                 </tr>
 
                 <!-- Options -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">Options</div>
                         <div style="font-size:12px;">
                             <div class="chstyl">
@@ -531,11 +538,12 @@
 
                 <!-- Property Type -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Property Type<span class="red">*</span>
                         </div>
-                        <select name="PropertyType" id="vtype" class="intext" style="width:234px;height:31px;" required="">
+                        <select name="PropertyType" id="vtype" class="intext" style="width:234px;height:31px;"
+                            required="">
                             <option value="">Select Type</option>
                             <option value="Building">Building</option>
                             <option value="House">House</option>
@@ -546,11 +554,12 @@
 
                 <!-- Purchase Type -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Purchase Type<span class="red">*</span>
                         </div>
-                        <select name="PurchaseType" id="vtype" class="intext" style="width:234px;height:31px;" required="">
+                        <select name="PurchaseType" id="vtype" class="intext" style="width:234px;height:31px;"
+                            required="">
                             <option value="">Select Type</option>
                             <option value="Buy">Buy</option>
                             <option value="Rent">Rent</option>
@@ -560,7 +569,7 @@
 
                 <!-- Size -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">Size</div>
                         <input type="text" class="intext" name="Size" id="size" value="">
                     </td>
@@ -568,7 +577,7 @@
 
                 <!-- Options -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">Options</div>
                         <div style="font-size:12px;">
                             <div class="chstyl">
@@ -595,7 +604,7 @@
 
                 <!-- Make -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Make<span class="red">*</span>
                         </div>
@@ -605,7 +614,7 @@
 
                 <!-- Model -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Model<span class="red">*</span>
                         </div>
@@ -615,7 +624,7 @@
 
                 <!-- YOM -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Manufactured Year<span class="red">*</span>
                         </div>
@@ -703,11 +712,12 @@
 
                 <!-- Power Requirement -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Power Requirement<span class="red">*</span>
                         </div>
-                        <select name="PowerRequirement" id="year" class="intext" style="width:234px;height:31px;" required="">
+                        <select name="PowerRequirement" id="year" class="intext" style="width:234px;height:31px;"
+                            required="">
                             <option value="">Power Requirement</option>
                             <option value="AC">AC</option>
                             <option value="DC">DC</option>
@@ -723,7 +733,7 @@
 
                 <!-- Make -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Make<span class="red">*</span>
                         </div>
@@ -733,7 +743,7 @@
 
                 <!-- Model -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Model<span class="red">*</span>
                         </div>
@@ -743,7 +753,7 @@
 
                 <!-- YOM -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Manufactured Year<span class="red">*</span>
                         </div>
@@ -831,17 +841,18 @@
 
                 <!-- Made For -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Made for<span class="red">*</span>
                         </div>
-                        <input type="text" class="intext" name="WhatFor" id="model" value="" maxlength="100" required="">
+                        <input type="text" class="intext" name="WhatFor" id="model" value="" maxlength="100"
+                            required="">
                     </td>
                 </tr>
 
                 <!-- Size -->
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">
                             Size<span class="red">*</span>
                         </div>
@@ -852,10 +863,11 @@
                 {% endif %}
 
                 <tr>
-                    <td align="left">
+                    <td align="center">
                         <div class="tx">Additional Info (Markdown)</div>
                         <!-- <textarea name="more" id="more" rows="5" class="intext" style="height:100px;"></textarea> -->
-                        <textarea id="ProductDescription" class="text" cols="86" rows ="20" name="ProductDescription" style="height: 120px; width: 85%;" form="form1"></textarea>
+                        <textarea id="ProductDescription" class="text" cols="86" rows="20" name="ProductDescription"
+                            style="height: 120px; width: 85%;" form="form1"></textarea>
                     </td>
                 </tr>
 
@@ -864,56 +876,30 @@
 
         <table style="width:275px;margin:auto;">
             <tbody>
+                <!-- Images -->
                 <tr>
                     <td align="center">
-                        <div style="font-size:12px;">If upload is taking too long, please add the product without an image.
-                        </div>
+                        <div class="tx">Image URL 1</div>
+                        <input type="url" class="intext" name="ImageUrl1" id="ImageUrl1" value="">
                     </td>
                 </tr>
                 <tr>
                     <td align="center">
-                        <div class="tx">Main Image</div>
-                        <input type="file" name="up1h" id="up1h" accept="image/*">
-                        <span class="up_style" id="1_res" style="display:none;">
-                        </span>
+                        <div class="tx">Image URL 2</div>
+                        <input type="url" class="intext" name="ImageUrl2" id="ImageUrl2" value="">
                     </td>
                 </tr>
                 <tr>
                     <td align="center">
-                        <div class="tx">Image 2</div>
-                        <input type="file" name="up2h" id="up2h" accept="image/*">
-                        <span class="up_style" id="2_res" style="display:none;">
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center">
-                        <div class="tx">Image 3</div>
-                        <input type="file" name="up3h" id="up3h" accept="image/*">
-                        <span class="up_style" id="3_res" style="display:none;">
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center">
-                        <div class="tx">Image 4</div>
-                        <input type="file" name="up4h" id="up4h" accept="image/*">
-                        <span class="up_style" id="4_res" style="display:none;">
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center">
-                        <div class="tx">Image 5</div>
-                        <input type="file" name="up5h" id="up5h" accept="image/*">
-                        <span class="up_style" id="5_res" style="display:none;">
-                        </span>
+                        <div class="tx">Image URL 3</div>
+                        <input type="url" class="intext" name="ImageUrl3" id="ImageUrl3" value="">
                     </td>
                 </tr>
                 <tr>
                     <td align="center">
                         <br>
-                        <input class="btnintxt" type="button" name="sub" id="sub" value="Add Product" onclick="this.form.submit()">
+                        <input class="btnintxt" type="button" name="sub" id="sub" value="Add Product"
+                            onclick="this.form.submit()">
                         <div class="noScript" style="padding-top: 5px; display: none;">
                             Your browser does not support JavaScript! Please use the Chromium
                         </div>
