@@ -581,7 +581,11 @@
                 <td>
                     <p class="moreh">Options</p>
                 </td>
-                <td>{{ post_info.fields.options }}</td>
+                <td>
+                    {% for option in post_info.fields.options %}
+                    {{ option }},
+                    {% endfor %}
+                </td>
             </tr>
             <tr>
                 <td>
