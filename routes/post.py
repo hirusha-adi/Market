@@ -3,7 +3,7 @@ from database.settings import Dekstop
 from models.user import User
 from database.mongo import Users, Posts
 from datetime import datetime
-from utils.images import get_image_list
+from utils.images import get_image_list, get_options_list
 
 
 def post_no_id():
@@ -103,10 +103,13 @@ def new_post_process(mode):
                 "transmission": request.form.get('VehicleTransmission'),
                 "fueltype": request.form.get('VehicleFuel'),
                 "engine": request.form.get('VehicleEngineCapacity'),
-                "mileage": request.form.get('VehicleMileage'),
-                "options": ""
+                "mileage": request.form.get('VehicleMileage')
             }
         }
+
+        data['fields']['options'] = get_options_list(
+            options=request.form.getlist('options_arr')
+        )
 
         data["images"] = get_image_list(
             img1=request.form.get('ImageUrl1'),
@@ -131,10 +134,13 @@ def new_post_process(mode):
             "fields": {
                 "ptype": request.form.get('PropertyType'),
                 "btype": request.form.get('PurchaseType'),
-                "size": request.form.get('Size'),
-                "options": ""
+                "size": request.form.get('Size')
             }
         }
+
+        data['fields']['options'] = get_options_list(
+            options=request.form.getlist('options_arr')
+        )
 
         data["images"] = get_image_list(
             img1=request.form.get('ImageUrl1'),
@@ -160,10 +166,13 @@ def new_post_process(mode):
                 "make": request.form.get('Make'),
                 "model": request.form.get('Model'),
                 "yom": request.form.get('yom'),
-                "power": request.form.get('PowerRequirement'),
-                "options": ""
+                "power": request.form.get('PowerRequirement')
             }
         }
+
+        data['fields']['options'] = get_options_list(
+            options=request.form.getlist('options_arr')
+        )
 
         data["images"] = get_image_list(
             img1=request.form.get('ImageUrl1'),
@@ -190,10 +199,13 @@ def new_post_process(mode):
                 "model": request.form.get('Model'),
                 "yom": request.form.get('yom'),
                 "whatfor": request.form.get('WhatFor'),
-                "size": request.form.get('Size'),
-                "options": ""
+                "size": request.form.get('Size')
             }
         }
+
+        data['fields']['options'] = get_options_list(
+            options=request.form.getlist('options_arr')
+        )
 
         data["images"] = get_image_list(
             img1=request.form.get('ImageUrl1'),
@@ -207,6 +219,7 @@ def new_post_process(mode):
     else:
         return redirect(url_for('index_no_page'))
 
-    # HANDLE OPTIONS - (ToDo)
-
-    return "Testing"
+    try:
+        return redirect(url_for('one_post', id=data['id']))
+    except:
+        return redirect(url_for('profile'))
