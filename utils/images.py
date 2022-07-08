@@ -1,6 +1,6 @@
 # Upload Handling
 
-from typing import Optional
+from typing import Optional, Iterable
 
 
 def get_image_list(
@@ -13,6 +13,20 @@ def get_image_list(
         try:
             if str(img).lower().startswith('http'):
                 result.append(img)
+        except:
+            continue
+    return result
+
+
+def get_options_list(
+    options: Optional[Iterable[str]] = None
+):
+    result = []
+    for option in options:
+        try:
+            if option in ('AIR CONDITION', 'POWER STEERING', 'POWER MIRROR',
+                          'POWER WINDOW', 'Electrcity', 'Water'):
+                result.append(str(option))
         except:
             continue
     return result
