@@ -1,6 +1,7 @@
 # Upload Handling
 
 from typing import Optional, Iterable
+from database.settings import Settings
 
 
 def get_image_list(
@@ -15,6 +16,10 @@ def get_image_list(
                 result.append(img)
         except:
             continue
+
+    if len(result) == 0:
+        return [Settings.default_image] * 3
+
     return result
 
 
@@ -29,4 +34,8 @@ def get_options_list(
                 result.append(str(option))
         except:
             continue
+
+    if len(result) == 0:
+        return ['None']
+
     return result
