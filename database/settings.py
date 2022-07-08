@@ -25,3 +25,8 @@ class Mongo:
     ip: str = mongo["ip"]
     username: str = mongo["username"]
     password: str = mongo["password"]
+
+
+class Settings:
+    settings = data['settings']
+    default_image = settings['default_image']
