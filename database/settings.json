@@ -76,5 +76,8 @@
                 ]
             ]
         }
+    },
+    "settings": {
+        "default_image": "https://cdn.discordapp.com/attachments/980165687232319538/994920347222671431/unknown.png"
     }
 }
