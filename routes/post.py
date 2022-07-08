@@ -3,6 +3,8 @@ from database.settings import Dekstop
 from models.user import User
 from database.mongo import Users, Posts
 from datetime import datetime
+from utils.images import get_image_list
+
 
 def post_no_id():
     # If no post ID is mentioned, redirect to home page
@@ -76,12 +78,12 @@ def new_post(ptype):
 
 
 def new_post_process(mode):
-    
+
     # SETTING UP THE BASE DATA
-    
+
     # if car
     if mode == 'car':
-    
+
         data = {
             "id": int(Posts.getLastPost()['id']) + 1,
             "username": str(g.user['username']),
@@ -103,15 +105,17 @@ def new_post_process(mode):
                 "engine": request.form.get('VehicleEngineCapacity'),
                 "mileage": request.form.get('VehicleMileage'),
                 "options": ""
-            },
-            "images": [
-                "",
-                ""
-            ]
+            }
         }
-        
+
+        data["images"] = get_image_list(
+            img1=request.form.get('ImageUrl1'),
+            img2=request.form.get('ImageUrl2'),
+            img3=request.form.get('ImageUrl3')
+        )
+
         Posts.addPost(data=data)
-    
+
     # if land
     elif mode == 'land':
         data = {
@@ -129,15 +133,17 @@ def new_post_process(mode):
                 "btype": request.form.get('PurchaseType'),
                 "size": request.form.get('Size'),
                 "options": ""
-            },
-            "images": [
-                "",
-                ""
-            ]
+            }
         }
-        
+
+        data["images"] = get_image_list(
+            img1=request.form.get('ImageUrl1'),
+            img2=request.form.get('ImageUrl2'),
+            img3=request.form.get('ImageUrl3')
+        )
+
         Posts.addPost(data=data)
-    
+
     # if electronics
     elif mode == 'electronics':
         data = {
@@ -156,15 +162,17 @@ def new_post_process(mode):
                 "yom": request.form.get('yom'),
                 "power": request.form.get('PowerRequirement'),
                 "options": ""
-            },
-            "images": [
-                "",
-                ""
-            ]
+            }
         }
-        
+
+        data["images"] = get_image_list(
+            img1=request.form.get('ImageUrl1'),
+            img2=request.form.get('ImageUrl2'),
+            img3=request.form.get('ImageUrl3')
+        )
+
         Posts.addPost(data=data)
-    
+
     # if parts
     elif mode == 'parts':
         data = {
@@ -184,20 +192,21 @@ def new_post_process(mode):
                 "whatfor": request.form.get('WhatFor'),
                 "size": request.form.get('Size'),
                 "options": ""
-            },
-            "images": [
-                "",
-                ""
-            ]
+            }
         }
-        
+
+        data["images"] = get_image_list(
+            img1=request.form.get('ImageUrl1'),
+            img2=request.form.get('ImageUrl2'),
+            img3=request.form.get('ImageUrl3')
+        )
+
         Posts.addPost(data=data)
-    
+
     # if something else
     else:
         return redirect(url_for('index_no_page'))
-    
+
     # HANDLE OPTIONS - (ToDo)
-    # HANDLE IMAGES - (ToDo)
 
     return "Testing"
