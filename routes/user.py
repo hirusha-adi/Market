@@ -1,5 +1,4 @@
 from flask import render_template, request, url_for, redirect, session, g
-from flask_paginate import Pagination
 from database.settings import Dekstop
 from database.mongo import Users, Posts
 
@@ -27,13 +26,6 @@ def login():
         data['page_header'] = Dekstop.header
 
         return render_template('user/login.html', **data)
-
-
-def show_all_data():
-    print("-"*20)
-    data = str(Users.getLastUser())
-    print(data)
-    return data
 
 
 def register():
