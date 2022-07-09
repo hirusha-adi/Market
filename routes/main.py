@@ -1,4 +1,4 @@
-from flask import render_template, request, url_for, redirect, session, g
+from flask import render_template, url_for, redirect, g
 from flask_paginate import Pagination
 from database.settings import Dekstop
 from database.mongo import Posts

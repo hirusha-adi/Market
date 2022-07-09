@@ -1,6 +1,5 @@
-from flask import render_template, request, url_for, redirect, session, g
+from flask import render_template, request, url_for, redirect, g
 from database.settings import Dekstop
-from models.user import User
 from database.mongo import Users, Posts
 from datetime import datetime
 from utils.images import get_image_list, get_options_list
