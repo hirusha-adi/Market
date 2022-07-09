@@ -29,4 +29,5 @@ class Mongo:
 
 class Settings:
     settings = data['settings']
+    name = settings['name']
     default_image = settings['default_image']
